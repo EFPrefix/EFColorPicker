@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1208FD381F7CD65500425A97 /* MSSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208FD371F7CD65500425A97 /* MSSliderView.swift */; };
+		1208FD3A1F7CFF0200425A97 /* MSThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208FD391F7CFF0200425A97 /* MSThumbView.swift */; };
+		1208FD3C1F7D0C0500425A97 /* UIControl+HitTestEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208FD3B1F7D0C0500425A97 /* UIControl+HitTestEdgeInsets.swift */; };
 		3CB9DBDA5AAB8FDF509DE3F439568CAE /* EFColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F30A90E22787F56A5E58A3AE8D23A /* EFColorPicker-dummy.m */; };
 		608612A0B711D63F76038B1AE15E62D5 /* Pods-EFColorPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDB13665239BC5611B515FD719F306 /* Pods-EFColorPicker_Example-dummy.m */; };
 		6527E1632237DF5F7F2EC9D116163841 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -15,7 +18,7 @@
 		724DDEDDEC2B83CE355B919A72204BBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		7AB211C6014E3B43FD28BE15FDA2FF9F /* Pods-EFColorPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22453DCDE19AEB10CBE8024A32CB2D10 /* Pods-EFColorPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B6ECF18363C92ECE776EC8E1435BD8 /* Pods-EFColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E6036C87E2AE5096F7377C0ECC41A6 /* Pods-EFColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD04C7CC74D0C0080F224ECD81E698BF /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E16F5F7C39B3310F1C09933772F023 /* ReplaceMe.swift */; };
+		BD04C7CC74D0C0080F224ECD81E698BF /* MSColorComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E16F5F7C39B3310F1C09933772F023 /* MSColorComponentView.swift */; };
 		BDFC5DDE9CBC564605FEAF91F620C539 /* EFColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2D22C43C8EACB8DB68D34FD88680511 /* EFColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -30,34 +33,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1208FD371F7CD65500425A97 /* MSSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSSliderView.swift; sourceTree = "<group>"; };
+		1208FD391F7CFF0200425A97 /* MSThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSThumbView.swift; sourceTree = "<group>"; };
+		1208FD3B1F7D0C0500425A97 /* UIControl+HitTestEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+HitTestEdgeInsets.swift"; sourceTree = "<group>"; };
 		19D5DCEF795AFC44CCECCE544BC26FD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C3F30A90E22787F56A5E58A3AE8D23A /* EFColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFColorPicker-dummy.m"; sourceTree = "<group>"; };
 		22453DCDE19AEB10CBE8024A32CB2D10 /* Pods-EFColorPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
 		25A0E3D229DBCB989B26AE8F7448B272 /* EFColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-prefix.pch"; sourceTree = "<group>"; };
-		3AA6C2F5604476D39926621A99F1C66D /* EFColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EFColorPicker.modulemap; sourceTree = "<group>"; };
+		3AA6C2F5604476D39926621A99F1C66D /* EFColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EFColorPicker.modulemap; sourceTree = "<group>"; };
 		3B2C47D5E043ABEDE71CFE2401BD248E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E0EB872B077D4671428F591F90C3A9 /* Pods-EFColorPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		50805E75760181BD284193D10B47F262 /* Pods-EFColorPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		62A12EFF178B8E7975FA979430056EF6 /* Pods-EFColorPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EFColorPicker_Example.modulemap"; sourceTree = "<group>"; };
+		62A12EFF178B8E7975FA979430056EF6 /* Pods-EFColorPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EFColorPicker_Example.modulemap"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		698BEC4C312E12ABA7816D6FBC284907 /* Pods-EFColorPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6B5A38FFC34CECFE7DB7EDBAF765CA41 /* EFColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFColorPicker.framework; path = EFColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79E16F5F7C39B3310F1C09933772F023 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = EFColorPicker/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		6B5A38FFC34CECFE7DB7EDBAF765CA41 /* EFColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EFColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E16F5F7C39B3310F1C09933772F023 /* MSColorComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MSColorComponentView.swift; path = EFColorPicker/Classes/MSColorComponentView.swift; sourceTree = "<group>"; };
 		82196C3A66E5BC6730D35ACD05663BE5 /* Pods-EFColorPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95E6036C87E2AE5096F7377C0ECC41A6 /* Pods-EFColorPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Example-umbrella.h"; sourceTree = "<group>"; };
 		97C4BC816FF34C8A9E9E440AE3BCD191 /* Pods-EFColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9AEDB13665239BC5611B515FD719F306 /* Pods-EFColorPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFColorPicker_Example-dummy.m"; sourceTree = "<group>"; };
 		9CC72A75F2832A51661FA4063BEB59B0 /* Pods-EFColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9F933D185DAF6BBA97E74DAB79A9613F /* Pods_EFColorPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFColorPicker_Example.framework; path = "Pods-EFColorPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F933D185DAF6BBA97E74DAB79A9613F /* Pods_EFColorPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFColorPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CE43850E462AC8EFB11F9E2C0098CB /* Pods-EFColorPicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		A5BB3D2DD6112E9807EDAA9209858DDA /* Pods_EFColorPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFColorPicker_Tests.framework; path = "Pods-EFColorPicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BB3D2DD6112E9807EDAA9209858DDA /* Pods_EFColorPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFColorPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F6B7A6E8834771D5138E3469EE8E3D /* Pods-EFColorPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C805C0876C81FDEEF7C8C9A3AE85A4FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA99451F33EABA116F9526B8F11DD787 /* Pods-EFColorPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Example-resources.sh"; sourceTree = "<group>"; };
 		D2D22C43C8EACB8DB68D34FD88680511 /* EFColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-umbrella.h"; sourceTree = "<group>"; };
 		D74FDE324504159D8E7D5A14EA7C02BD /* Pods-EFColorPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFColorPicker_Tests-dummy.m"; sourceTree = "<group>"; };
-		E166000A7BEBA6CC21C91EAA892CDFE9 /* Pods-EFColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EFColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
+		E166000A7BEBA6CC21C91EAA892CDFE9 /* Pods-EFColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EFColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
 		E7A742D764F5F4313A4ECBBFB2EF017D /* Pods-EFColorPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Tests-resources.sh"; sourceTree = "<group>"; };
 		ECE366C8EFB0FC326607E92DE9778833 /* EFColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFColorPicker.xcconfig; sourceTree = "<group>"; };
 		FB35C600EE03E1962D4667DA2629C33A /* Pods-EFColorPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFColorPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -140,7 +146,10 @@
 		6D1CD879FA317AAE8BC7CFB79E3BD6B8 /* EFColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				79E16F5F7C39B3310F1C09933772F023 /* ReplaceMe.swift */,
+				79E16F5F7C39B3310F1C09933772F023 /* MSColorComponentView.swift */,
+				1208FD371F7CD65500425A97 /* MSSliderView.swift */,
+				1208FD391F7CFF0200425A97 /* MSThumbView.swift */,
+				1208FD3B1F7D0C0500425A97 /* UIControl+HitTestEdgeInsets.swift */,
 				7E70EAEC1A66868B575452ED11559042 /* Support Files */,
 			);
 			name = EFColorPicker;
@@ -295,7 +304,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					ABCD13998B3A3DE7316AB1059A41067A = {
+						LastSwiftMigration = 0900;
+					};
+					CA29B8726D4FAB09880E490FD7C58C2C = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -322,7 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB9DBDA5AAB8FDF509DE3F439568CAE /* EFColorPicker-dummy.m in Sources */,
-				BD04C7CC74D0C0080F224ECD81E698BF /* ReplaceMe.swift in Sources */,
+				1208FD381F7CD65500425A97 /* MSSliderView.swift in Sources */,
+				1208FD3C1F7D0C0500425A97 /* UIControl+HitTestEdgeInsets.swift in Sources */,
+				BD04C7CC74D0C0080F224ECD81E698BF /* MSColorComponentView.swift in Sources */,
+				1208FD3A1F7CFF0200425A97 /* MSThumbView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +442,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -475,7 +496,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -483,14 +506,20 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -504,6 +533,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -540,7 +570,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -557,7 +588,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -565,15 +598,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -624,7 +663,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -659,7 +699,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
