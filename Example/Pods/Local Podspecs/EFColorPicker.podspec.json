@@ -1,0 +1,22 @@
+{
+  "name": "EFColorPicker",
+  "version": "0.1.0",
+  "summary": "A short description of EFColorPicker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/EyreFree/EFColorPicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "EyreFree": "zheng.xu03@ele.me"
+  },
+  "source": {
+    "git": "https://github.com/EyreFree/EFColorPicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EFColorPicker/Classes/**/*"
+}
