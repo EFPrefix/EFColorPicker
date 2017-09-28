@@ -17,13 +17,13 @@ class MSSliderView: EFControl {
     private var thumbView: MSThumbView = MSThumbView()
     private var trackLayer: CAGradientLayer = CAGradientLayer()
 
-    /// The slider's current value. The default value is 0.0.
+    // The slider's current value. The default value is 0.0.
     private(set) var value: CGFloat = 0
 
-    /// The minimum value of the slider. The default value is 0.0.
+    // The minimum value of the slider. The default value is 0.0.
     var minimumValue: CGFloat = 0
 
-    /// The maximum value of the slider. The default value is 1.0.
+    // The maximum value of the slider. The default value is 1.0.
     var maximumValue: CGFloat = 1
 
     override init(frame: CGRect) {
@@ -81,9 +81,9 @@ class MSSliderView: EFControl {
         self.ms_updateThumbPositionWithValue(value: self.value)
     }
 
-    /// Sets the array of CGColorRef objects defining the color of each gradient stop on the track.
-    /// The location of each gradient stop is evaluated with formula: i * width_of_the_track / number_of_colors.
-    /// @param colors An array of CGColorRef objects.
+    // Sets the array of CGColorRef objects defining the color of each gradient stop on the track.
+    // The location of each gradient stop is evaluated with formula: i * width_of_the_track / number_of_colors.
+    // @param colors An array of CGColorRef objects.
     func setColors(colors: [CGColor]) {
         if colors.count <= 1 {
             fatalError("‘colors: [CGColor]’ at least need to have 2 elements")
