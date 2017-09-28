@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EFColorPicker_Example' do
+  pod 'EFColorPicker', :path => '../'
+
+  target 'EFColorPicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
