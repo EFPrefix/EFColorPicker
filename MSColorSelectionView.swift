@@ -27,7 +27,7 @@ public class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
 
     weak public var delegate: MSColorViewDelegate?
 
-    public var color: UIColor = UIColor.clear {
+    public var color: UIColor = UIColor.white {
         didSet {
             self.selectedView()?.color = color
         }
@@ -53,7 +53,7 @@ public class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
             [weak self] in
             if let strongSelf = self {
                 strongSelf.rgbColorView.alpha = MSSelectedColorView.RGB == index ? 1.0 : 0.0
-                strongSelf.hsbColorView.alpha = MSSelectedColorView.RGB == index ? 1.0 : 0.0
+                strongSelf.hsbColorView.alpha = MSSelectedColorView.HSB == index ? 1.0 : 0.0
             }
         }
     }

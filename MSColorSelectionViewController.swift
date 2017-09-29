@@ -45,7 +45,7 @@ public class MSColorSelectionViewController: UIViewController, MSColorViewDelega
         )
         segmentControl.addTarget(
             self,
-            action: #selector(segmentControlDidChangeValue(segmentedControl:)),
+            action: #selector(segmentControlDidChangeValue(_:)),
             for: UIControlEvents.valueChanged
         )
         segmentControl.selectedSegmentIndex = 0
@@ -56,7 +56,7 @@ public class MSColorSelectionViewController: UIViewController, MSColorViewDelega
         self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
     }
 
-    @IBAction func segmentControlDidChangeValue(segmentedControl: UISegmentedControl) {
+    @IBAction func segmentControlDidChangeValue(_ segmentedControl: UISegmentedControl) {
         self.colorSelectionView().setSelectedIndex(
             index: MSSelectedColorView(rawValue: segmentedControl.selectedSegmentIndex) ?? MSSelectedColorView.RGB,
             animated: true

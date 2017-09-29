@@ -130,7 +130,7 @@ func MSHSB2RGB(hsb: HSB) -> RGB {
 // @param color The color value.
 // @return The values of the color components (including alpha).
 func MSRGBColorComponents(color: UIColor) -> RGB {
-    var result = RGB(0.0, 0.0, 0.0, 0.0)
+    var result = RGB(1, 1, 1, 1)
     guard let colorSpaceModel: CGColorSpaceModel = color.cgColor.colorSpace?.model else {
         return result
     }

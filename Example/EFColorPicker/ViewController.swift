@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor.white
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,9 +28,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
             destNav.popoverPresentationController?.delegate = self
             if let colorSelectionController = destNav.visibleViewController as? MSColorSelectionViewController {
                 colorSelectionController.delegate = self
-                if let color = self.view.backgroundColor {
-                    colorSelectionController.color = color
-                }
+                colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
 
                 if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
                     let doneBtn: UIBarButtonItem = UIBarButtonItem(
@@ -44,20 +43,20 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         }
     }
 
-    @IBAction func onButtonTap(button: UIButton) {
+    @IBAction func onButtonClick(_ sender: UIButton) {
         let colorSelectionController = MSColorSelectionViewController()
         let navCtrl = UINavigationController(rootViewController: colorSelectionController)
 
         navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
         navCtrl.popoverPresentationController?.delegate = self
-        navCtrl.popoverPresentationController?.sourceView = button
-        navCtrl.popoverPresentationController?.sourceRect = button.bounds
-        navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        navCtrl.popoverPresentationController?.sourceView = sender
+        navCtrl.popoverPresentationController?.sourceRect = sender.bounds
+        navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(
+            UILayoutFittingCompressedSize
+        )
 
         colorSelectionController.delegate = self
-        if let color = self.view.backgroundColor {
-            colorSelectionController.color = color
-        }
+        colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
 
         if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
             let doneBtn: UIBarButtonItem = UIBarButtonItem(
@@ -74,14 +73,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     // MARK:- MSColorViewDelegate
     func colorViewController(colorViewCntroller: MSColorSelectionViewController, didChangeColor color: UIColor) {
         self.view.backgroundColor = color
+        print(color)
     }
-
-    //#pragma mark - UIAdaptivePresentationControllerDelegate methods
-    //
-    //- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
-    //{
-    //    return UIModalPresentationFullScreen;
-    //}
 
     // MARK:- Private
     @objc func ms_dismissViewController(sender: UIBarButtonItem) {

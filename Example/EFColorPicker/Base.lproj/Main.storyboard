@@ -28,7 +28,7 @@
         <!--Color Selection View Controller-->
         <scene sceneID="Nqf-qr-iY8">
             <objects>
-                <viewController id="Ylq-Co-Jgs" customClass="MSColorSelectionViewController" sceneMemberID="viewController">
+                <viewController id="Ylq-Co-Jgs" customClass="MSColorSelectionViewController" customModule="EFColorPicker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sdx-DH-Vq3"/>
                         <viewControllerLayoutGuide type="bottom" id="GsM-80-DlT"/>
@@ -49,7 +49,7 @@
         <!--View Controller-->
         <scene sceneID="v2W-HF-5tU">
             <objects>
-                <viewController id="8pF-fe-si3" customClass="MSViewController" sceneMemberID="viewController">
+                <viewController id="8pF-fe-si3" customClass="ViewController" customModule="EFColorPicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hok-Lr-XUQ"/>
                         <viewControllerLayoutGuide type="bottom" id="TtO-3r-2E7"/>
@@ -58,18 +58,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3C-3I-Gms">
-                                <rect key="frame" x="182" y="182" width="237" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3C-3I-Gms">
+                                <rect key="frame" x="71.5" y="215.5" width="232" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Set color programmatically">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onButtonTap:" destination="8pF-fe-si3" eventType="touchUpInside" id="GOs-CX-5GZ"/>
+                                    <action selector="onButtonClick:" destination="8pF-fe-si3" eventType="touchUpInside" id="vvK-3p-oOk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ww-LN-4f3">
-                                <rect key="frame" x="195" y="268" width="210" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ww-LN-4f3">
+                                <rect key="frame" x="85" y="301.5" width="205" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Set color via storyboard">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

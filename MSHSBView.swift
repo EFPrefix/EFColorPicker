@@ -18,7 +18,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
     private let brightnessView: MSColorComponentView = MSColorComponentView()
     private let colorSample: UIView = UIView()
 
-    private var colorComponents: HSB = HSB(0, 0, 0, 0)
+    private var colorComponents: HSB = HSB(1, 1, 1, 1)
     private var layoutConstraints: [NSLayoutConstraint] = []
 
     weak public var delegate: MSColorViewDelegate?
@@ -116,7 +116,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         var layoutConstraints: [NSLayoutConstraint] = []
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[_colorSample]-margin-|",
+                withVisualFormat: "H:|-margin-[colorSample]-margin-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -124,7 +124,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         )
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[_colorWheel(>=color_wheel_dimension)]-margin-|",
+                withVisualFormat: "H:|-margin-[colorWheel(>=color_wheel_dimension)]-margin-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -132,7 +132,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         )
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[_brightnessView]-margin-|",
+                withVisualFormat: "H:|-margin-[brightnessView]-margin-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -140,7 +140,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         )
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-margin-[_colorSample(height)]-margin-[_colorWheel]-margin-[_brightnessView]-(>=margin@250)-|",
+                withVisualFormat: "V:|-margin-[colorSample(height)]-margin-[colorWheel]-margin-[brightnessView]-(>=margin@250)-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -174,7 +174,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         var layoutConstraints: [NSLayoutConstraint] = []
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[_colorSample]-margin-|",
+                withVisualFormat: "H:|-margin-[colorSample]-margin-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -182,7 +182,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         )
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[_colorWheel(>=color_wheel_dimension)]-margin-[_brightnessView]-(margin@500)-|",
+                withVisualFormat: "H:|-margin-[colorWheel(>=color_wheel_dimension)]-margin-[brightnessView]-(margin@500)-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -190,7 +190,7 @@ public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         )
         layoutConstraints.append(
             contentsOf: NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-margin-[_colorSample(height)]-margin-[_colorWheel]-(margin@500)-|",
+                withVisualFormat: "V:|-margin-[colorSample(height)]-margin-[colorWheel]-(margin@500)-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views

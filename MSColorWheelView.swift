@@ -153,7 +153,7 @@ public class MSColorWheelView: UIControl {
                 var hue: CGFloat = 0, saturation: CGFloat = 0, a: CGFloat = 0.0
                 self.ms_colorWheelValueWithPosition(position: CGPoint(x: x, y: y), hue: &hue, saturation: &saturation)
 
-                var rgb: RGB = RGB(0.0, 0.0, 0.0, 0.0)
+                var rgb: RGB = RGB(1, 1, 1, 1)
                 if saturation < 1.0 {
                     // Antialias the edge of the circle.
                     if saturation > 0.99 {

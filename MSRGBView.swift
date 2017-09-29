@@ -16,7 +16,7 @@ public class MSRGBView: UIView, MSColorView {
 
     private let colorSample: UIView = UIView()
     private var colorComponentViews: [UIControl] = []
-    private var colorComponents: RGB = RGB(0, 0, 0, 0)
+    private var colorComponents: RGB = RGB(1, 1, 1, 1)
 
     weak public var delegate: MSColorViewDelegate?
 
@@ -76,7 +76,7 @@ public class MSRGBView: UIView, MSColorView {
             )
             self.addSubview(colorComponentView)
             colorComponentView.addTarget(
-                self, action: #selector(ms_colorComponentDidChangeValue(sender:)), for: UIControlEvents.valueChanged
+                self, action: #selector(ms_colorComponentDidChangeValue(_:)), for: UIControlEvents.valueChanged
             )
             tmp.append(colorComponentView)
         }
@@ -85,7 +85,7 @@ public class MSRGBView: UIView, MSColorView {
         self.ms_installConstraints()
     }
 
-    @objc @IBAction private func ms_colorComponentDidChangeValue(sender: MSColorComponentView) {
+    @objc @IBAction private func ms_colorComponentDidChangeValue(_ sender: MSColorComponentView) {
         self.ms_setColorComponentValue(value: sender.value / sender.maximumValue, atIndex: UInt(sender.tag))
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
         self.reloadData()
@@ -129,7 +129,7 @@ public class MSRGBView: UIView, MSColorView {
 
         self.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[_colorSample]-margin-|",
+                withVisualFormat: "H:|-margin-[colorSample]-margin-|",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
@@ -137,7 +137,7 @@ public class MSRGBView: UIView, MSColorView {
         )
         self.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-margin-[_colorSample(height)]",
+                withVisualFormat: "V:|-margin-[colorSample(height)]",
                 options: NSLayoutFormatOptions(rawValue: 0),
                 metrics: metrics,
                 views: views
