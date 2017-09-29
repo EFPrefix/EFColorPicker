@@ -9,7 +9,7 @@ import UIKit
 
 //  The delegate of a MSColorView object must adopt the MSColorViewDelegate protocol.
 //  Methods of the protocol allow the delegate to handle color value changes.
-protocol MSColorViewDelegate {
+protocol MSColorViewDelegate: class {
 
     // Tells the data source to return the color components.
     // @param colorView The color view.
@@ -18,10 +18,10 @@ protocol MSColorViewDelegate {
 }
 
 /// The \c MSColorView protocol declares a view's interface for displaying and editing color value.
-protocol MSColorView {
+protocol MSColorView: class {
 
     // The object that acts as the delegate of the receiving color selection view.
-    var delegate: MSColorViewDelegate? { get set }
+    weak var delegate: MSColorViewDelegate? { get set }
 
     // The current color.
     var color: UIColor { get set }

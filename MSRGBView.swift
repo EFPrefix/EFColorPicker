@@ -18,7 +18,7 @@ class MSRGBView: UIView, MSColorView {
     private var colorComponentViews: [UIControl] = []
     private var colorComponents: RGB = RGB(0, 0, 0, 0)
 
-    var delegate: MSColorViewDelegate?
+    weak var delegate: MSColorViewDelegate?
 
     var color: UIColor {
         get {

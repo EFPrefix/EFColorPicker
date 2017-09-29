@@ -21,7 +21,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
     private var colorComponents: HSB = HSB(0, 0, 0, 0)
     private var layoutConstraints: [NSLayoutConstraint] = []
 
-    var delegate: MSColorViewDelegate?
+    weak var delegate: MSColorViewDelegate?
 
     var color: UIColor {
         get {
