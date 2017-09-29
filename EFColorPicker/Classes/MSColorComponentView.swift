@@ -108,7 +108,7 @@ class MSColorComponentView: UIControl, UITextFieldDelegate {
     }
 
     // MARK:- Private methods
-    func ms_baseInit() {
+    private func ms_baseInit() {
         self.accessibilityLabel = "color_component_view"
 
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -134,12 +134,12 @@ class MSColorComponentView: UIControl, UITextFieldDelegate {
         self.ms_installConstraints()
     }
 
-    @objc func ms_didChangeSliderValue(sender: MSSliderView) {
+    @objc private func ms_didChangeSliderValue(sender: MSSliderView) {
         self.value = sender.value
         self.sendActions(for: UIControlEvents.valueChanged)
     }
 
-    func ms_installConstraints() {
+    private func ms_installConstraints() {
         if COLOR_TEXT_FIELD_ENABLED {
             let views: [String : Any] = [
                 "label" : label,

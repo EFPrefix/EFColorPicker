@@ -60,7 +60,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
     }
 
     // MARK:- Private methods
-    func ms_baseInit() {
+    private func ms_baseInit() {
         self.accessibilityLabel = "hsb_view"
 
         colorSample.accessibilityLabel = "color_sample"
@@ -88,7 +88,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         self.setNeedsUpdateConstraints()
     }
 
-    func ms_updateConstraints() {
+    private func ms_updateConstraints() {
         // remove all constraints first
         if !layoutConstraints.isEmpty {
             self.removeConstraints(layoutConstraints)
@@ -101,7 +101,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         self.addConstraints(layoutConstraints)
     }
 
-    func ms_constraintsForRegularVerticalSizeClass() -> [NSLayoutConstraint] {
+    private func ms_constraintsForRegularVerticalSizeClass() -> [NSLayoutConstraint] {
         let metrics = [
             "margin" : MSViewMargin,
             "height" : MSColorSampleViewHeight,
@@ -159,7 +159,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         return layoutConstraints
     }
 
-    func ms_constraintsForCompactVerticalSizeClass() -> [NSLayoutConstraint] {
+    private func ms_constraintsForCompactVerticalSizeClass() -> [NSLayoutConstraint] {
         let metrics = [
             "margin" : MSViewMargin,
             "height" : MSColorSampleViewHeight,
@@ -219,26 +219,26 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         return layoutConstraints
     }
 
-    func ms_reloadViewsWithColorComponents(colorComponents: HSB) {
+    private func ms_reloadViewsWithColorComponents(colorComponents: HSB) {
         colorWheel.hue = colorComponents.hue
         colorWheel.saturation = colorComponents.saturation
         self.ms_updateSlidersWithColorComponents(colorComponents: colorComponents)
     }
 
-    func ms_updateSlidersWithColorComponents(colorComponents: HSB) {
+    private func ms_updateSlidersWithColorComponents(colorComponents: HSB) {
         brightnessView.value = colorComponents.brightness
         let tmp: UIColor = UIColor(hue: colorComponents.hue, saturation: colorComponents.saturation , brightness: 1, alpha: 1)
         brightnessView.setColors(colors: [UIColor.black.cgColor, tmp.cgColor])
     }
 
-    @objc func ms_colorDidChangeValue(sender: MSColorWheelView) {
+    @objc private func ms_colorDidChangeValue(sender: MSColorWheelView) {
         colorComponents.hue = sender.hue
         colorComponents.saturation = sender.saturation
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
         self.reloadData()
     }
 
-    @objc func ms_brightnessDidChangeValue(sender: MSColorComponentView) {
+    @objc private func ms_brightnessDidChangeValue(sender: MSColorComponentView) {
         colorComponents.brightness = sender.value
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
         self.reloadData()

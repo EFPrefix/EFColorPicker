@@ -122,7 +122,7 @@ class MSSliderView: EFControl {
     }
 
     // MARK:- Private methods
-    func ms_setValueWithTranslation(translation: CGFloat) {
+    private func ms_setValueWithTranslation(translation: CGFloat) {
         let width: CGFloat = self.bounds.width - thumbView.bounds.width
         let valueRange: CGFloat = maximumValue - minimumValue
         let value: CGFloat = self.value + valueRange * translation / width
@@ -131,7 +131,7 @@ class MSSliderView: EFControl {
         self.sendActions(for: UIControlEvents.valueChanged)
     }
 
-    func ms_updateLocations() {
+    private func ms_updateLocations() {
         let size: Int = trackLayer.colors?.count ?? 2
         if size == trackLayer.locations?.count {
             return
@@ -150,7 +150,7 @@ class MSSliderView: EFControl {
         trackLayer.locations = locations
     }
 
-    func ms_updateThumbPositionWithValue(value: CGFloat) {
+    private func ms_updateThumbPositionWithValue(value: CGFloat) {
         let thumbWidth: CGFloat = thumbView.bounds.width
         let thumbHeight: CGFloat = thumbView.bounds.height
         let width: CGFloat = self.bounds.width - thumbWidth
