@@ -8,7 +8,7 @@
 import Foundation
 
 // The enum to define the MSColorView's types.
-enum MSSelectedColorView: UInt {
+enum MSSelectedColorView: Int {
     // The RGB color view type.
     case RGB = 0
 

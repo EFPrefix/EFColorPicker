@@ -85,7 +85,7 @@ class MSRGBView: UIView, MSColorView {
         self.ms_installConstraints()
     }
 
-    @objc private func ms_colorComponentDidChangeValue(sender: MSColorComponentView) {
+    @objc @IBAction private func ms_colorComponentDidChangeValue(sender: MSColorComponentView) {
         self.ms_setColorComponentValue(value: sender.value / sender.maximumValue, atIndex: UInt(sender.tag))
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
         self.reloadData()
