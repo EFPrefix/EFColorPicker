@@ -9,7 +9,7 @@ import UIKit
 import CoreGraphics
 
 // The color wheel view.
-class MSColorWheelView: UIControl {
+public class MSColorWheelView: UIControl {
 
     // The hue value.
     var hue: CGFloat = 0.0 {
@@ -62,23 +62,23 @@ class MSColorWheelView: UIControl {
         // [self setSelectedPoint:CGPointMake(dimension / 2, dimension / 2)];
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let position: CGPoint = touches.first?.location(in: self) {
             self.onTouchEventWithPosition(point: position)
         }
     }
 
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let position: CGPoint = touches.first?.location(in: self) {
             self.onTouchEventWithPosition(point: position)
         }
     }
 
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let position: CGPoint = touches.first?.location(in: self) {
             self.onTouchEventWithPosition(point: position)
         }
@@ -109,7 +109,7 @@ class MSColorWheelView: UIControl {
     }
 
     // MARK:- CALayerDelegate methods
-    override func display(_ layer: CALayer) {
+    override public func display(_ layer: CALayer) {
         let dimension: CGFloat = min(self.frame.width, self.frame.height)
         guard let bitmapData = CFDataCreateMutable(nil, 0) else {
             return
@@ -125,7 +125,7 @@ class MSColorWheelView: UIControl {
         }
     }
 
-    override func layoutSublayers(of layer: CALayer) {
+    override public func layoutSublayers(of layer: CALayer) {
         if layer == self.layer {
             self.setSelectedPoint(point: self.ms_selectedPoint())
             self.layer.setNeedsDisplay()

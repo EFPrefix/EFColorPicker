@@ -9,7 +9,7 @@ import UIKit
 
 // The delegate of a MSColorSelectionViewController object must adopt the MSColorSelectionViewController protocol.
 // Methods of the protocol allow the delegate to handle color value changes.
-protocol MSColorSelectionViewControllerDelegate: class {
+public protocol MSColorSelectionViewControllerDelegate: class {
 
     // Tells the data source to return the color components.
     // @param colorViewCntroller The color view.
@@ -17,13 +17,13 @@ protocol MSColorSelectionViewControllerDelegate: class {
     func colorViewController(colorViewCntroller: MSColorSelectionViewController, didChangeColor color: UIColor)
 }
 
-class MSColorSelectionViewController: UIViewController, MSColorViewDelegate {
+public class MSColorSelectionViewController: UIViewController, MSColorViewDelegate {
 
     // The controller's delegate. Controller notifies a delegate on color change.
-    weak var delegate: MSColorSelectionViewControllerDelegate?
+    public weak var delegate: MSColorSelectionViewControllerDelegate?
 
     // The current color value.
-    var color: UIColor {
+    public var color: UIColor {
         get {
             return self.colorSelectionView().color
         }
@@ -32,12 +32,12 @@ class MSColorSelectionViewController: UIViewController, MSColorViewDelegate {
         }
     }
 
-    override func loadView() {
+    override public func loadView() {
         let colorSelectionView: MSColorSelectionView = MSColorSelectionView(frame: UIScreen.main.bounds)
         self.view = colorSelectionView
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         let segmentControl: UISegmentedControl = UISegmentedControl(
@@ -63,7 +63,7 @@ class MSColorSelectionViewController: UIViewController, MSColorViewDelegate {
         )
     }
 
-    override func viewWillLayoutSubviews() {
+    override public func viewWillLayoutSubviews() {
         self.colorSelectionView().setNeedsUpdateConstraints()
         self.colorSelectionView().updateConstraintsIfNeeded()
     }
@@ -73,7 +73,7 @@ class MSColorSelectionViewController: UIViewController, MSColorViewDelegate {
     }
 
     // MARK:- MSColorViewDelegate
-    func colorView(colorView: MSColorView, didChangeColor color: UIColor) {
+    public func colorView(colorView: MSColorView, didChangeColor color: UIColor) {
         self.delegate?.colorViewController(colorViewCntroller: self, didChangeColor: color)
     }
 }

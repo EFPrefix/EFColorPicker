@@ -8,7 +8,7 @@
 import Foundation
 
 // The enum to define the MSColorView's types.
-enum MSSelectedColorView: Int {
+public enum MSSelectedColorView: Int {
     // The RGB color view type.
     case RGB = 0
 
@@ -17,7 +17,7 @@ enum MSSelectedColorView: Int {
 }
 
 // The MSColorSelectionView aggregates views that should be used to edit color components.
-class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
+public class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
 
     // The selected color view
     private(set) var selectedIndex: MSSelectedColorView = MSSelectedColorView.RGB
@@ -25,9 +25,9 @@ class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
     private let rgbColorView: UIView = MSRGBView()
     private let hsbColorView: UIView = MSHSBView()
 
-    weak var delegate: MSColorViewDelegate?
+    weak public var delegate: MSColorViewDelegate?
 
-    var color: UIColor = UIColor.clear {
+    public var color: UIColor = UIColor.clear {
         didSet {
             self.selectedView()?.color = color
         }
@@ -38,7 +38,7 @@ class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
         self.ms_init()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.ms_init()
     }
@@ -89,14 +89,14 @@ class MSColorSelectionView: UIView, MSColorView, MSColorViewDelegate {
         }
     }
 
-    override func updateConstraints() {
+    override public func updateConstraints() {
         self.rgbColorView.setNeedsUpdateConstraints()
         self.hsbColorView.setNeedsUpdateConstraints()
         super.updateConstraints()
     }
 
     // MARK:- FBColorViewDelegate methods
-    func colorView(colorView: MSColorView, didChangeColor color: UIColor) {
+    public func colorView(colorView: MSColorView, didChangeColor color: UIColor) {
         self.color = color
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
     }

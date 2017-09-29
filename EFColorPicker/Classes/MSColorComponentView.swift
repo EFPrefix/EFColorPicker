@@ -2,7 +2,7 @@
 import UIKit
 
 // The view to edit a color component.
-class MSColorComponentView: UIControl, UITextFieldDelegate {
+public class MSColorComponentView: UIControl, UITextFieldDelegate {
 
     // Temporary disabled the color component editing via text field
     let COLOR_TEXT_FIELD_ENABLED: Bool = false
@@ -70,23 +70,23 @@ class MSColorComponentView: UIControl, UITextFieldDelegate {
         ms_baseInit()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         ms_baseInit()
     }
 
     // MARK:- UITextFieldDelegate methods
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         self.value = CGFloat(Double(textField.text ?? "") ?? 0)
         self.sendActions(for: UIControlEvents.valueChanged)
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let newString = NSString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
         //first, check if the new string is numeric only. If not, return NO;
         let characterSet = NSCharacterSet(charactersIn: "0123456789,.").inverted

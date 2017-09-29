@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MSThumbView: EFControl {
+public class MSThumbView: EFControl {
 
     private(set) var gestureRecognizer: UIGestureRecognizer = UIPanGestureRecognizer(target: nil, action: nil)
 
@@ -35,11 +35,11 @@ class MSThumbView: EFControl {
         self.addGestureRecognizer(self.gestureRecognizer)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func layoutSublayers(of layer: CALayer) {
+    override public func layoutSublayers(of layer: CALayer) {
         if layer != self.layer {
             return
         }

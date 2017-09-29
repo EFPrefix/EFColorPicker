@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MSRGBView: UIView, MSColorView {
+public class MSRGBView: UIView, MSColorView {
 
     let MSColorSampleViewHeight: CGFloat = 30.0
     let MSViewMargin: CGFloat = 20.0
@@ -18,9 +18,9 @@ class MSRGBView: UIView, MSColorView {
     private var colorComponentViews: [UIControl] = []
     private var colorComponents: RGB = RGB(0, 0, 0, 0)
 
-    weak var delegate: MSColorViewDelegate?
+    weak public var delegate: MSColorViewDelegate?
 
-    var color: UIColor {
+    public var color: UIColor {
         get {
             return UIColor(
                 red: colorComponents.red,
@@ -40,7 +40,7 @@ class MSRGBView: UIView, MSColorView {
         self.ms_baseInit()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.ms_baseInit()
     }

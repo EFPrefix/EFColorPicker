@@ -8,7 +8,7 @@
 import UIKit
 
 // The view to edit HSB color components.
-class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
+public class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
 
     let MSColorSampleViewHeight: CGFloat = 30.0
     let MSViewMargin: CGFloat = 20.0
@@ -21,9 +21,9 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
     private var colorComponents: HSB = HSB(0, 0, 0, 0)
     private var layoutConstraints: [NSLayoutConstraint] = []
 
-    weak var delegate: MSColorViewDelegate?
+    weak public var delegate: MSColorViewDelegate?
 
-    var color: UIColor {
+    public var color: UIColor {
         get {
             return UIColor(
                 hue: colorComponents.hue,
@@ -43,7 +43,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         self.ms_baseInit()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.ms_baseInit()
     }
@@ -54,7 +54,7 @@ class MSHSBView: UIView, MSColorView, UITextFieldDelegate {
         self.ms_reloadViewsWithColorComponents(colorComponents: colorComponents)
     }
 
-    override func updateConstraints() {
+    override public func updateConstraints() {
         self.ms_updateConstraints()
         super.updateConstraints()
     }

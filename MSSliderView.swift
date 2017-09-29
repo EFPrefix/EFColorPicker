@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MSSliderView: EFControl {
+public class MSSliderView: EFControl {
 
     let MSSliderViewHeight: CGFloat = 28.0
     let MSSliderViewMinWidth: CGFloat = 150.0
@@ -53,7 +53,7 @@ class MSSliderView: EFControl {
         self.setColors(colors: [color, color])
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -63,7 +63,7 @@ class MSSliderView: EFControl {
         }
     }
 
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
         get {
             return CGSize(width: MSSliderViewMinWidth, height: MSSliderViewHeight)
         }
@@ -92,7 +92,7 @@ class MSSliderView: EFControl {
         self.ms_updateLocations()
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         self.ms_updateThumbPositionWithValue(value: self.value)
         self.ms_updateTrackLayer()
     }
