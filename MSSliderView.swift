@@ -14,8 +14,8 @@ class MSSliderView: EFControl {
     let MSSliderViewTrackHeight: CGFloat = 3.0
     let MSThumbViewEdgeInset: CGFloat = -10.0
 
-    private var thumbView: MSThumbView = MSThumbView()
-    private var trackLayer: CAGradientLayer = CAGradientLayer()
+    private let thumbView: MSThumbView = MSThumbView()
+    private let trackLayer: CAGradientLayer = CAGradientLayer()
 
     // The slider's current value. The default value is 0.0.
     private(set) var value: CGFloat = 0

@@ -12,7 +12,7 @@ class MSThumbView: EFControl {
     private(set) var gestureRecognizer: UIGestureRecognizer = UIPanGestureRecognizer(target: nil, action: nil)
 
     private let MSSliderViewThumbDimension: CGFloat = 28.0
-    private var thumbLayer: CALayer = CALayer()
+    private let thumbLayer: CALayer = CALayer()
 
     override init(frame: CGRect) {
         super.init(

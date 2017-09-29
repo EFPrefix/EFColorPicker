@@ -21,7 +21,7 @@ protocol MSColorViewDelegate {
 protocol MSColorView {
 
     // The object that acts as the delegate of the receiving color selection view.
-    var delegate: MSColorViewDelegate { get set }
+    var delegate: MSColorViewDelegate? { get set }
 
     // The current color.
     var color: UIColor { get set }

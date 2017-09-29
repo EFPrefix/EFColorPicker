@@ -55,9 +55,9 @@ class MSColorComponentView: UIControl, UITextFieldDelegate {
     // The format string to use apply for textfield value. \c %.f by default.
     var format: String = "%.f"
 
-    private var label: UILabel = UILabel()
-    private var slider: MSSliderView = MSSliderView() // The color slider to edit color component.
-    private var textField: UITextField = UITextField()
+    private let label: UILabel = UILabel()
+    private let slider: MSSliderView = MSSliderView() // The color slider to edit color component.
+    private let textField: UITextField = UITextField()
 
     override open class var requiresConstraintBasedLayout: Bool {
         get {
