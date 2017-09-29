@@ -30,7 +30,7 @@ public class MSRGBView: UIView, MSColorView {
             )
         }
         set {
-            colorComponents = MSRGBColorComponents(color: color)
+            colorComponents = MSRGBColorComponents(color: newValue)
             self.reloadData()
         }
     }

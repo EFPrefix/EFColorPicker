@@ -28,7 +28,7 @@ public class MSColorSelectionViewController: UIViewController, MSColorViewDelega
             return self.colorSelectionView().color
         }
         set {
-            self.colorSelectionView().color = color
+            self.colorSelectionView().color = newValue
         }
     }
 
