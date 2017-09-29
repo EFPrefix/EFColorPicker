@@ -57,7 +57,7 @@ class MSSliderView: EFControl {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var requiresConstraintBasedLayout: Bool {
+    override open class var requiresConstraintBasedLayout: Bool {
         get {
             return true
         }

@@ -59,7 +59,7 @@ class MSColorComponentView: UIControl, UITextFieldDelegate {
     private var slider: MSSliderView = MSSliderView() // The color slider to edit color component.
     private var textField: UITextField = UITextField()
 
-    var requiresConstraintBasedLayout: Bool {
+    override open class var requiresConstraintBasedLayout: Bool {
         get {
             return true
         }
