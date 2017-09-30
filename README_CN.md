@@ -4,6 +4,7 @@
 <a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="http://img.shields.io/travis/EyreFree/EFColorPicker.svg"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat"></a>
+<a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
 <a href="https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
 <a href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
 <a href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
