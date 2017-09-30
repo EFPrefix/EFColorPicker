@@ -1,5 +1,5 @@
 //
-//  MSColorSelectionViewController.swift
+//  EFColorSelectionViewController.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/29.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-// The delegate of a MSColorSelectionViewController object must adopt the MSColorSelectionViewController protocol.
+// The delegate of a EFColorSelectionViewController object must adopt the EFColorSelectionViewController protocol.
 // Methods of the protocol allow the delegate to handle color value changes.
-public protocol MSColorSelectionViewControllerDelegate: class {
+public protocol EFColorSelectionViewControllerDelegate: class {
 
     // Tells the data source to return the color components.
     // @param colorViewCntroller The color view.
     // @param color The new color value.
-    func colorViewController(colorViewCntroller: MSColorSelectionViewController, didChangeColor color: UIColor)
+    func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor)
 }
 
-public class MSColorSelectionViewController: UIViewController, MSColorViewDelegate {
+public class EFColorSelectionViewController: UIViewController, EFColorViewDelegate {
 
     // The controller's delegate. Controller notifies a delegate on color change.
-    public weak var delegate: MSColorSelectionViewControllerDelegate?
+    public weak var delegate: EFColorSelectionViewControllerDelegate?
 
     // The current color value.
     public var color: UIColor {
@@ -33,7 +33,7 @@ public class MSColorSelectionViewController: UIViewController, MSColorViewDelega
     }
 
     override public func loadView() {
-        let colorSelectionView: MSColorSelectionView = MSColorSelectionView(frame: UIScreen.main.bounds)
+        let colorSelectionView: EFColorSelectionView = EFColorSelectionView(frame: UIScreen.main.bounds)
         self.view = colorSelectionView
     }
 
@@ -51,14 +51,14 @@ public class MSColorSelectionViewController: UIViewController, MSColorViewDelega
         segmentControl.selectedSegmentIndex = 0
         self.navigationItem.titleView = segmentControl
 
-        self.colorSelectionView().setSelectedIndex(index: MSSelectedColorView.RGB, animated: false)
+        self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
         self.colorSelectionView().delegate = self
         self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
     }
 
     @IBAction func segmentControlDidChangeValue(_ segmentedControl: UISegmentedControl) {
         self.colorSelectionView().setSelectedIndex(
-            index: MSSelectedColorView(rawValue: segmentedControl.selectedSegmentIndex) ?? MSSelectedColorView.RGB,
+            index: EFSelectedColorView(rawValue: segmentedControl.selectedSegmentIndex) ?? EFSelectedColorView.RGB,
             animated: true
         )
     }
@@ -68,12 +68,12 @@ public class MSColorSelectionViewController: UIViewController, MSColorViewDelega
         self.colorSelectionView().updateConstraintsIfNeeded()
     }
 
-    func colorSelectionView() -> MSColorSelectionView {
-        return self.view as? MSColorSelectionView ?? MSColorSelectionView()
+    func colorSelectionView() -> EFColorSelectionView {
+        return self.view as? EFColorSelectionView ?? EFColorSelectionView()
     }
 
-    // MARK:- MSColorViewDelegate
-    public func colorView(colorView: MSColorView, didChangeColor color: UIColor) {
+    // MARK:- EFColorViewDelegate
+    public func colorView(colorView: EFColorView, didChangeColor color: UIColor) {
         self.delegate?.colorViewController(colorViewCntroller: self, didChangeColor: color)
     }
 }

@@ -2,14 +2,14 @@
 import UIKit
 
 // The view to edit a color component.
-public class MSColorComponentView: UIControl, UITextFieldDelegate {
+public class EFColorComponentView: UIControl, UITextFieldDelegate {
 
     // Temporary disabled the color component editing via text field
     let COLOR_TEXT_FIELD_ENABLED: Bool = false
 
-    let MSColorComponentViewSpacing: CGFloat = 5.0
-    let MSColorComponentLabelWidth: CGFloat = 60.0
-    let MSColorComponentTextFieldWidth: CGFloat = 50.0
+    let EFColorComponentViewSpacing: CGFloat = 5.0
+    let EFColorComponentLabelWidth: CGFloat = 60.0
+    let EFColorComponentTextFieldWidth: CGFloat = 50.0
 
     // The title.
     var title: String {
@@ -56,7 +56,7 @@ public class MSColorComponentView: UIControl, UITextFieldDelegate {
     var format: String = "%.f"
 
     private let label: UILabel = UILabel()
-    private let slider: MSSliderView = MSSliderView() // The color slider to edit color component.
+    private let slider: EFSliderView = EFSliderView() // The color slider to edit color component.
     private let textField: UITextField = UITextField()
 
     override open class var requiresConstraintBasedLayout: Bool {
@@ -67,12 +67,12 @@ public class MSColorComponentView: UIControl, UITextFieldDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        ms_baseInit()
+        ef_baseInit()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        ms_baseInit()
+        ef_baseInit()
     }
 
     // MARK:- UITextFieldDelegate methods
@@ -108,14 +108,14 @@ public class MSColorComponentView: UIControl, UITextFieldDelegate {
     }
 
     // MARK:- Private methods
-    private func ms_baseInit() {
+    private func ef_baseInit() {
         self.accessibilityLabel = "color_component_view"
 
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontSizeToFitWidth = true
         self.addSubview(label)
 
-        slider.maximumValue = MSRGBColorComponentMaxValue
+        slider.maximumValue = EFRGBColorComponentMaxValue
         slider.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(slider)
 
@@ -128,18 +128,18 @@ public class MSColorComponentView: UIControl, UITextFieldDelegate {
 
         self.value = 0.0
 
-        slider.addTarget(self, action: #selector(ms_didChangeSliderValue(sender:)), for: UIControlEvents.valueChanged)
+        slider.addTarget(self, action: #selector(ef_didChangeSliderValue(sender:)), for: UIControlEvents.valueChanged)
         textField.delegate = self
 
-        self.ms_installConstraints()
+        self.ef_installConstraints()
     }
 
-    @objc private func ms_didChangeSliderValue(sender: MSSliderView) {
+    @objc private func ef_didChangeSliderValue(sender: EFSliderView) {
         self.value = sender.value
         self.sendActions(for: UIControlEvents.valueChanged)
     }
 
-    private func ms_installConstraints() {
+    private func ef_installConstraints() {
         if COLOR_TEXT_FIELD_ENABLED {
             let views: [String : Any] = [
                 "label" : label,
@@ -147,9 +147,9 @@ public class MSColorComponentView: UIControl, UITextFieldDelegate {
                 "textField" : textField
             ]
             let metrics: [String : Any] = [
-                "spacing" : MSColorComponentViewSpacing,
-                "label_width" : MSColorComponentLabelWidth,
-                "textfield_width" : MSColorComponentTextFieldWidth
+                "spacing" : EFColorComponentViewSpacing,
+                "label_width" : EFColorComponentLabelWidth,
+                "textfield_width" : EFColorComponentTextFieldWidth
             ]
 
             self.addConstraints(
@@ -182,8 +182,8 @@ public class MSColorComponentView: UIControl, UITextFieldDelegate {
                 "slider" : slider
             ]
             let metrics: [String : Any] = [
-                "spacing" : MSColorComponentViewSpacing,
-                "label_width" : MSColorComponentLabelWidth
+                "spacing" : EFColorComponentViewSpacing,
+                "label_width" : EFColorComponentLabelWidth
             ]
             self.addConstraints(
                 NSLayoutConstraint.constraints(

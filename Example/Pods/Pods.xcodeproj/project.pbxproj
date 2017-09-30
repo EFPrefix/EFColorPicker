@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		120119941F7E958600EAA31A /* UIControl+HitTestEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198A1F7E958600EAA31A /* UIControl+HitTestEdgeInsets.swift */; };
-		120119951F7E958600EAA31A /* MSColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198B1F7E958600EAA31A /* MSColorUtils.swift */; };
-		120119961F7E958600EAA31A /* MSColorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198C1F7E958600EAA31A /* MSColorWheelView.swift */; };
-		120119971F7E958600EAA31A /* MSRGBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198D1F7E958600EAA31A /* MSRGBView.swift */; };
-		120119981F7E958600EAA31A /* MSColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198E1F7E958600EAA31A /* MSColorSelectionView.swift */; };
-		120119991F7E958600EAA31A /* MSColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198F1F7E958600EAA31A /* MSColorSelectionViewController.swift */; };
-		1201199A1F7E958600EAA31A /* MSSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119901F7E958600EAA31A /* MSSliderView.swift */; };
-		1201199B1F7E958600EAA31A /* MSHSBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119911F7E958600EAA31A /* MSHSBView.swift */; };
-		1201199C1F7E958600EAA31A /* MSThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119921F7E958600EAA31A /* MSThumbView.swift */; };
-		1201199D1F7E958600EAA31A /* MSColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119931F7E958600EAA31A /* MSColorView.swift */; };
+		120119941F7E958600EAA31A /* EFControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198A1F7E958600EAA31A /* EFControl.swift */; };
+		120119951F7E958600EAA31A /* EFColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198B1F7E958600EAA31A /* EFColorUtils.swift */; };
+		120119961F7E958600EAA31A /* EFColorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198C1F7E958600EAA31A /* EFColorWheelView.swift */; };
+		120119971F7E958600EAA31A /* EFRGBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198D1F7E958600EAA31A /* EFRGBView.swift */; };
+		120119981F7E958600EAA31A /* EFColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198E1F7E958600EAA31A /* EFColorSelectionView.swift */; };
+		120119991F7E958600EAA31A /* EFColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201198F1F7E958600EAA31A /* EFColorSelectionViewController.swift */; };
+		1201199A1F7E958600EAA31A /* EFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119901F7E958600EAA31A /* EFSliderView.swift */; };
+		1201199B1F7E958600EAA31A /* EFHSBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119911F7E958600EAA31A /* EFHSBView.swift */; };
+		1201199C1F7E958600EAA31A /* EFThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119921F7E958600EAA31A /* EFThumbView.swift */; };
+		1201199D1F7E958600EAA31A /* EFColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120119931F7E958600EAA31A /* EFColorView.swift */; };
 		3CB9DBDA5AAB8FDF509DE3F439568CAE /* EFColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F30A90E22787F56A5E58A3AE8D23A /* EFColorPicker-dummy.m */; };
 		608612A0B711D63F76038B1AE15E62D5 /* Pods-EFColorPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDB13665239BC5611B515FD719F306 /* Pods-EFColorPicker_Example-dummy.m */; };
 		6527E1632237DF5F7F2EC9D116163841 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -25,7 +25,7 @@
 		724DDEDDEC2B83CE355B919A72204BBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		7AB211C6014E3B43FD28BE15FDA2FF9F /* Pods-EFColorPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22453DCDE19AEB10CBE8024A32CB2D10 /* Pods-EFColorPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B6ECF18363C92ECE776EC8E1435BD8 /* Pods-EFColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E6036C87E2AE5096F7377C0ECC41A6 /* Pods-EFColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD04C7CC74D0C0080F224ECD81E698BF /* MSColorComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E16F5F7C39B3310F1C09933772F023 /* MSColorComponentView.swift */; };
+		BD04C7CC74D0C0080F224ECD81E698BF /* EFColorComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E16F5F7C39B3310F1C09933772F023 /* EFColorComponentView.swift */; };
 		BDFC5DDE9CBC564605FEAF91F620C539 /* EFColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2D22C43C8EACB8DB68D34FD88680511 /* EFColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,16 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1201198A1F7E958600EAA31A /* UIControl+HitTestEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+HitTestEdgeInsets.swift"; path = "EFColorPicker/Classes/UIControl+HitTestEdgeInsets.swift"; sourceTree = "<group>"; };
-		1201198B1F7E958600EAA31A /* MSColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSColorUtils.swift; path = EFColorPicker/Classes/MSColorUtils.swift; sourceTree = "<group>"; };
-		1201198C1F7E958600EAA31A /* MSColorWheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSColorWheelView.swift; path = EFColorPicker/Classes/MSColorWheelView.swift; sourceTree = "<group>"; };
-		1201198D1F7E958600EAA31A /* MSRGBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSRGBView.swift; path = EFColorPicker/Classes/MSRGBView.swift; sourceTree = "<group>"; };
-		1201198E1F7E958600EAA31A /* MSColorSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSColorSelectionView.swift; path = EFColorPicker/Classes/MSColorSelectionView.swift; sourceTree = "<group>"; };
-		1201198F1F7E958600EAA31A /* MSColorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSColorSelectionViewController.swift; path = EFColorPicker/Classes/MSColorSelectionViewController.swift; sourceTree = "<group>"; };
-		120119901F7E958600EAA31A /* MSSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSSliderView.swift; path = EFColorPicker/Classes/MSSliderView.swift; sourceTree = "<group>"; };
-		120119911F7E958600EAA31A /* MSHSBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSHSBView.swift; path = EFColorPicker/Classes/MSHSBView.swift; sourceTree = "<group>"; };
-		120119921F7E958600EAA31A /* MSThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSThumbView.swift; path = EFColorPicker/Classes/MSThumbView.swift; sourceTree = "<group>"; };
-		120119931F7E958600EAA31A /* MSColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSColorView.swift; path = EFColorPicker/Classes/MSColorView.swift; sourceTree = "<group>"; };
+		1201198A1F7E958600EAA31A /* EFControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFControl.swift; path = EFColorPicker/Classes/EFControl.swift; sourceTree = "<group>"; };
+		1201198B1F7E958600EAA31A /* EFColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFColorUtils.swift; path = EFColorPicker/Classes/EFColorUtils.swift; sourceTree = "<group>"; };
+		1201198C1F7E958600EAA31A /* EFColorWheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFColorWheelView.swift; path = EFColorPicker/Classes/EFColorWheelView.swift; sourceTree = "<group>"; };
+		1201198D1F7E958600EAA31A /* EFRGBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFRGBView.swift; path = EFColorPicker/Classes/EFRGBView.swift; sourceTree = "<group>"; };
+		1201198E1F7E958600EAA31A /* EFColorSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFColorSelectionView.swift; path = EFColorPicker/Classes/EFColorSelectionView.swift; sourceTree = "<group>"; };
+		1201198F1F7E958600EAA31A /* EFColorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFColorSelectionViewController.swift; path = EFColorPicker/Classes/EFColorSelectionViewController.swift; sourceTree = "<group>"; };
+		120119901F7E958600EAA31A /* EFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFSliderView.swift; path = EFColorPicker/Classes/EFSliderView.swift; sourceTree = "<group>"; };
+		120119911F7E958600EAA31A /* EFHSBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFHSBView.swift; path = EFColorPicker/Classes/EFHSBView.swift; sourceTree = "<group>"; };
+		120119921F7E958600EAA31A /* EFThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFThumbView.swift; path = EFColorPicker/Classes/EFThumbView.swift; sourceTree = "<group>"; };
+		120119931F7E958600EAA31A /* EFColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EFColorView.swift; path = EFColorPicker/Classes/EFColorView.swift; sourceTree = "<group>"; };
 		19D5DCEF795AFC44CCECCE544BC26FD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C3F30A90E22787F56A5E58A3AE8D23A /* EFColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFColorPicker-dummy.m"; sourceTree = "<group>"; };
 		22453DCDE19AEB10CBE8024A32CB2D10 /* Pods-EFColorPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		698BEC4C312E12ABA7816D6FBC284907 /* Pods-EFColorPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B5A38FFC34CECFE7DB7EDBAF765CA41 /* EFColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EFColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79E16F5F7C39B3310F1C09933772F023 /* MSColorComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MSColorComponentView.swift; path = EFColorPicker/Classes/MSColorComponentView.swift; sourceTree = "<group>"; };
+		79E16F5F7C39B3310F1C09933772F023 /* EFColorComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorComponentView.swift; path = EFColorPicker/Classes/EFColorComponentView.swift; sourceTree = "<group>"; };
 		82196C3A66E5BC6730D35ACD05663BE5 /* Pods-EFColorPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95E6036C87E2AE5096F7377C0ECC41A6 /* Pods-EFColorPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -160,17 +160,17 @@
 		6D1CD879FA317AAE8BC7CFB79E3BD6B8 /* EFColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				1201198E1F7E958600EAA31A /* MSColorSelectionView.swift */,
-				1201198F1F7E958600EAA31A /* MSColorSelectionViewController.swift */,
-				1201198B1F7E958600EAA31A /* MSColorUtils.swift */,
-				120119931F7E958600EAA31A /* MSColorView.swift */,
-				1201198C1F7E958600EAA31A /* MSColorWheelView.swift */,
-				120119911F7E958600EAA31A /* MSHSBView.swift */,
-				1201198D1F7E958600EAA31A /* MSRGBView.swift */,
-				120119901F7E958600EAA31A /* MSSliderView.swift */,
-				120119921F7E958600EAA31A /* MSThumbView.swift */,
-				1201198A1F7E958600EAA31A /* UIControl+HitTestEdgeInsets.swift */,
-				79E16F5F7C39B3310F1C09933772F023 /* MSColorComponentView.swift */,
+				1201198E1F7E958600EAA31A /* EFColorSelectionView.swift */,
+				1201198F1F7E958600EAA31A /* EFColorSelectionViewController.swift */,
+				1201198B1F7E958600EAA31A /* EFColorUtils.swift */,
+				120119931F7E958600EAA31A /* EFColorView.swift */,
+				1201198C1F7E958600EAA31A /* EFColorWheelView.swift */,
+				120119911F7E958600EAA31A /* EFHSBView.swift */,
+				1201198D1F7E958600EAA31A /* EFRGBView.swift */,
+				120119901F7E958600EAA31A /* EFSliderView.swift */,
+				120119921F7E958600EAA31A /* EFThumbView.swift */,
+				1201198A1F7E958600EAA31A /* EFControl.swift */,
+				79E16F5F7C39B3310F1C09933772F023 /* EFColorComponentView.swift */,
 				7E70EAEC1A66868B575452ED11559042 /* Support Files */,
 			);
 			name = EFColorPicker;
@@ -359,18 +359,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				120119961F7E958600EAA31A /* MSColorWheelView.swift in Sources */,
+				120119961F7E958600EAA31A /* EFColorWheelView.swift in Sources */,
 				3CB9DBDA5AAB8FDF509DE3F439568CAE /* EFColorPicker-dummy.m in Sources */,
-				1201199B1F7E958600EAA31A /* MSHSBView.swift in Sources */,
-				120119951F7E958600EAA31A /* MSColorUtils.swift in Sources */,
-				120119991F7E958600EAA31A /* MSColorSelectionViewController.swift in Sources */,
-				BD04C7CC74D0C0080F224ECD81E698BF /* MSColorComponentView.swift in Sources */,
-				1201199D1F7E958600EAA31A /* MSColorView.swift in Sources */,
-				120119971F7E958600EAA31A /* MSRGBView.swift in Sources */,
-				120119941F7E958600EAA31A /* UIControl+HitTestEdgeInsets.swift in Sources */,
-				1201199A1F7E958600EAA31A /* MSSliderView.swift in Sources */,
-				120119981F7E958600EAA31A /* MSColorSelectionView.swift in Sources */,
-				1201199C1F7E958600EAA31A /* MSThumbView.swift in Sources */,
+				1201199B1F7E958600EAA31A /* EFHSBView.swift in Sources */,
+				120119951F7E958600EAA31A /* EFColorUtils.swift in Sources */,
+				120119991F7E958600EAA31A /* EFColorSelectionViewController.swift in Sources */,
+				BD04C7CC74D0C0080F224ECD81E698BF /* EFColorComponentView.swift in Sources */,
+				1201199D1F7E958600EAA31A /* EFColorView.swift in Sources */,
+				120119971F7E958600EAA31A /* EFRGBView.swift in Sources */,
+				120119941F7E958600EAA31A /* EFControl.swift in Sources */,
+				1201199A1F7E958600EAA31A /* EFSliderView.swift in Sources */,
+				120119981F7E958600EAA31A /* EFColorSelectionView.swift in Sources */,
+				1201199C1F7E958600EAA31A /* EFThumbView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

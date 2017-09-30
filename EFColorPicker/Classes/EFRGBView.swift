@@ -1,5 +1,5 @@
 //
-//  MSRGBView.swift
+//  EFRGBView.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/29.
@@ -7,18 +7,18 @@
 
 import UIKit
 
-public class MSRGBView: UIView, MSColorView {
+public class EFRGBView: UIView, EFColorView {
 
-    let MSColorSampleViewHeight: CGFloat = 30.0
-    let MSViewMargin: CGFloat = 20.0
-    let MSSliderViewMargin: CGFloat = 30.0
-    let MSRGBColorComponentsSize: Int = 3
+    let EFColorSampleViewHeight: CGFloat = 30.0
+    let EFViewMargin: CGFloat = 20.0
+    let EFSliderViewMargin: CGFloat = 30.0
+    let EFRGBColorComponentsSize: Int = 3
 
     private let colorSample: UIView = UIView()
     private var colorComponentViews: [UIControl] = []
     private var colorComponents: RGB = RGB(1, 1, 1, 1)
 
-    weak public var delegate: MSColorViewDelegate?
+    weak public var delegate: EFColorViewDelegate?
 
     public var color: UIColor {
         get {
@@ -30,29 +30,29 @@ public class MSRGBView: UIView, MSColorView {
             )
         }
         set {
-            colorComponents = MSRGBColorComponents(color: newValue)
+            colorComponents = EFRGBColorComponents(color: newValue)
             self.reloadData()
         }
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.ms_baseInit()
+        self.ef_baseInit()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.ms_baseInit()
+        self.ef_baseInit()
     }
 
     func reloadData() {
         colorSample.backgroundColor = self.color
-        colorSample.accessibilityValue = MSHexStringFromColor(color: self.color)
-        self.ms_reloadColorComponentViews(colorComponents: colorComponents)
+        colorSample.accessibilityValue = EFHexStringFromColor(color: self.color)
+        self.ef_reloadColorComponentViews(colorComponents: colorComponents)
     }
 
     // MARK:- Private methods
-    private func ms_baseInit() {
+    private func ef_baseInit() {
         self.accessibilityLabel = "rgb_view"
 
         colorSample.accessibilityLabel = "color_sample"
@@ -68,30 +68,30 @@ public class MSRGBView: UIView, MSColorView {
             NSLocalizedString("Blue", comment: "")
         ]
         let maxValues: [CGFloat] = [
-            MSRGBColorComponentMaxValue, MSRGBColorComponentMaxValue, MSRGBColorComponentMaxValue
+            EFRGBColorComponentMaxValue, EFRGBColorComponentMaxValue, EFRGBColorComponentMaxValue
         ]
-        for i in 0 ..< MSRGBColorComponentsSize {
-            let colorComponentView = self.ms_colorComponentViewWithTitle(
+        for i in 0 ..< EFRGBColorComponentsSize {
+            let colorComponentView = self.ef_colorComponentViewWithTitle(
                 title: titles[i], tag: i, maxValue: maxValues[i]
             )
             self.addSubview(colorComponentView)
             colorComponentView.addTarget(
-                self, action: #selector(ms_colorComponentDidChangeValue(_:)), for: UIControlEvents.valueChanged
+                self, action: #selector(ef_colorComponentDidChangeValue(_:)), for: UIControlEvents.valueChanged
             )
             tmp.append(colorComponentView)
         }
 
         colorComponentViews = tmp
-        self.ms_installConstraints()
+        self.ef_installConstraints()
     }
 
-    @objc @IBAction private func ms_colorComponentDidChangeValue(_ sender: MSColorComponentView) {
-        self.ms_setColorComponentValue(value: sender.value / sender.maximumValue, atIndex: UInt(sender.tag))
+    @objc @IBAction private func ef_colorComponentDidChangeValue(_ sender: EFColorComponentView) {
+        self.ef_setColorComponentValue(value: sender.value / sender.maximumValue, atIndex: UInt(sender.tag))
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
         self.reloadData()
     }
 
-    private func ms_setColorComponentValue(value: CGFloat, atIndex index: UInt) {
+    private func ef_setColorComponentValue(value: CGFloat, atIndex index: UInt) {
         switch index {
         case 0:
             colorComponents.red = value
@@ -108,8 +108,8 @@ public class MSRGBView: UIView, MSColorView {
         }
     }
 
-    private func ms_colorComponentViewWithTitle(title: String, tag: Int, maxValue: CGFloat) -> UIControl {
-        let colorComponentView: MSColorComponentView = MSColorComponentView()
+    private func ef_colorComponentViewWithTitle(title: String, tag: Int, maxValue: CGFloat) -> UIControl {
+        let colorComponentView: EFColorComponentView = EFColorComponentView()
         colorComponentView.title = title
         colorComponentView.translatesAutoresizingMaskIntoConstraints = false
         colorComponentView.tag = tag
@@ -117,11 +117,11 @@ public class MSRGBView: UIView, MSColorView {
         return colorComponentView
     }
 
-    private func ms_installConstraints() {
+    private func ef_installConstraints() {
         let metrics = [
-            "margin" : MSViewMargin,
-            "height" : MSColorSampleViewHeight,
-            "slider_margin" : MSSliderViewMargin
+            "margin" : EFViewMargin,
+            "height" : EFColorSampleViewHeight,
+            "slider_margin" : EFSliderViewMargin
         ]
         var views = [
             "colorSample" : colorSample
@@ -182,17 +182,17 @@ public class MSRGBView: UIView, MSColorView {
         )
     }
 
-    private func ms_colorComponentsWithRGB(rgb: RGB) -> [CGFloat] {
+    private func ef_colorComponentsWithRGB(rgb: RGB) -> [CGFloat] {
         return [rgb.red, rgb.green, rgb.blue, rgb.alpha]
     }
 
-    private func ms_reloadColorComponentViews(colorComponents: RGB) {
-        let components = self.ms_colorComponentsWithRGB(rgb: colorComponents)
+    private func ef_reloadColorComponentViews(colorComponents: RGB) {
+        let components = self.ef_colorComponentsWithRGB(rgb: colorComponents)
 
         for (idx, colorComponentView) in colorComponentViews.enumerated() {
-            if let colorComponentView = colorComponentView as? MSColorComponentView {
+            if let colorComponentView = colorComponentView as? EFColorComponentView {
                 colorComponentView.setColors(
-                    colors: self.ms_colorsWithColorComponents(
+                    colors: self.ef_colorsWithColorComponents(
                         colorComponents: components, currentColorIndex: colorComponentView.tag
                     )
                 )
@@ -201,10 +201,10 @@ public class MSRGBView: UIView, MSColorView {
         }
     }
 
-    private func ms_colorsWithColorComponents(colorComponents: [CGFloat], currentColorIndex colorIndex: Int) -> [CGColor] {
+    private func ef_colorsWithColorComponents(colorComponents: [CGFloat], currentColorIndex colorIndex: Int) -> [CGColor] {
         let currentColorValue: CGFloat = colorComponents[colorIndex]
         var colors: [CGFloat] = [CGFloat](repeating: 0, count: 12)
-        for i in 0 ..< MSRGBColorComponentsSize {
+        for i in 0 ..< EFRGBColorComponentsSize {
             colors[i] = colorComponents[i]
             colors[i + 4] = colorComponents[i]
             colors[i + 8] = colorComponents[i]

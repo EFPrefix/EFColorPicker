@@ -1,5 +1,5 @@
 //
-//  UIControl+HitTestEdgeInsets.swift
+//  EFControl.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/28.

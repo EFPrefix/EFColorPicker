@@ -1,5 +1,5 @@
 //
-//  MSSliderView.swift
+//  EFSliderView.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/28.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-public class MSSliderView: EFControl {
+public class EFSliderView: EFControl {
 
-    let MSSliderViewHeight: CGFloat = 28.0
-    let MSSliderViewMinWidth: CGFloat = 150.0
-    let MSSliderViewTrackHeight: CGFloat = 3.0
-    let MSThumbViewEdgeInset: CGFloat = -10.0
+    let EFSliderViewHeight: CGFloat = 28.0
+    let EFSliderViewMinWidth: CGFloat = 150.0
+    let EFSliderViewTrackHeight: CGFloat = 3.0
+    let EFThumbViewEdgeInset: CGFloat = -10.0
 
-    private let thumbView: MSThumbView = MSThumbView()
+    private let thumbView: EFThumbView = EFThumbView()
     private let trackLayer: CAGradientLayer = CAGradientLayer()
 
     // The slider's current value. The default value is 0.0.
@@ -37,16 +37,16 @@ public class MSSliderView: EFControl {
 
         self.layer.delegate = self
 
-        trackLayer.cornerRadius = MSSliderViewTrackHeight / 2.0
+        trackLayer.cornerRadius = EFSliderViewTrackHeight / 2.0
         trackLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         trackLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         self.layer.addSublayer(trackLayer)
 
         thumbView.hitTestEdgeInsets = UIEdgeInsets(
-            top: MSThumbViewEdgeInset, left: MSThumbViewEdgeInset,
-            bottom: MSThumbViewEdgeInset, right: MSThumbViewEdgeInset
+            top: EFThumbViewEdgeInset, left: EFThumbViewEdgeInset,
+            bottom: EFThumbViewEdgeInset, right: EFThumbViewEdgeInset
         )
-        thumbView.gestureRecognizer.addTarget(self, action: #selector(ms_didPanThumbView(gestureRecognizer:)))
+        thumbView.gestureRecognizer.addTarget(self, action: #selector(ef_didPanThumbView(gestureRecognizer:)))
         self.addSubview(thumbView)
 
         let color = UIColor.blue.cgColor
@@ -65,7 +65,7 @@ public class MSSliderView: EFControl {
 
     override public var intrinsicContentSize: CGSize {
         get {
-            return CGSize(width: MSSliderViewMinWidth, height: MSSliderViewHeight)
+            return CGSize(width: EFSliderViewMinWidth, height: EFSliderViewHeight)
         }
     }
 
@@ -78,7 +78,7 @@ public class MSSliderView: EFControl {
             self.value = value
         }
 
-        self.ms_updateThumbPositionWithValue(value: self.value)
+        self.ef_updateThumbPositionWithValue(value: self.value)
     }
 
     // Sets the array of CGColorRef objects defining the color of each gradient stop on the track.
@@ -89,16 +89,16 @@ public class MSSliderView: EFControl {
             fatalError("‘colors: [CGColor]’ at least need to have 2 elements")
         }
         trackLayer.colors = colors
-        self.ms_updateLocations()
+        self.ef_updateLocations()
     }
 
     override public func layoutSubviews() {
-        self.ms_updateThumbPositionWithValue(value: self.value)
-        self.ms_updateTrackLayer()
+        self.ef_updateThumbPositionWithValue(value: self.value)
+        self.ef_updateTrackLayer()
     }
 
     // MARK:- UIControl touch tracking events
-    @objc func ms_didPanThumbView(gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func ef_didPanThumbView(gestureRecognizer: UIPanGestureRecognizer) {
         if gestureRecognizer.state != UIGestureRecognizerState.began
             && gestureRecognizer.state != UIGestureRecognizerState.changed {
             return
@@ -107,22 +107,22 @@ public class MSSliderView: EFControl {
         let translation = gestureRecognizer.translation(in: self)
         gestureRecognizer.setTranslation(CGPoint.zero, in: self)
 
-        self.ms_setValueWithTranslation(translation: translation.x)
+        self.ef_setValueWithTranslation(translation: translation.x)
     }
 
-    func ms_updateTrackLayer() {
-        let height: CGFloat = MSSliderViewHeight
+    func ef_updateTrackLayer() {
+        let height: CGFloat = EFSliderViewHeight
         let width: CGFloat = self.bounds.width
 
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
-        trackLayer.bounds = CGRect(x: 0, y: 0, width: width, height: MSSliderViewTrackHeight)
+        trackLayer.bounds = CGRect(x: 0, y: 0, width: width, height: EFSliderViewTrackHeight)
         trackLayer.position = CGPoint(x: self.bounds.width / 2, y: height / 2)
         CATransaction.commit()
     }
 
     // MARK:- Private methods
-    private func ms_setValueWithTranslation(translation: CGFloat) {
+    private func ef_setValueWithTranslation(translation: CGFloat) {
         let width: CGFloat = self.bounds.width - thumbView.bounds.width
         let valueRange: CGFloat = maximumValue - minimumValue
         let value: CGFloat = self.value + valueRange * translation / width
@@ -131,7 +131,7 @@ public class MSSliderView: EFControl {
         self.sendActions(for: UIControlEvents.valueChanged)
     }
 
-    private func ms_updateLocations() {
+    private func ef_updateLocations() {
         let size: Int = trackLayer.colors?.count ?? 2
         if size == trackLayer.locations?.count {
             return
@@ -150,7 +150,7 @@ public class MSSliderView: EFControl {
         trackLayer.locations = locations
     }
 
-    private func ms_updateThumbPositionWithValue(value: CGFloat) {
+    private func ef_updateThumbPositionWithValue(value: CGFloat) {
         let thumbWidth: CGFloat = thumbView.bounds.width
         let thumbHeight: CGFloat = thumbView.bounds.height
         let width: CGFloat = self.bounds.width - thumbWidth

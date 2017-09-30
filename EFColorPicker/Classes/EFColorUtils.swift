@@ -1,5 +1,5 @@
 //
-//  MSColorUtils.swift
+//  EFColorUtils.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/28.
@@ -33,20 +33,20 @@ struct HSB {
 }
 
 // The maximum value of the RGB color components.
-let MSRGBColorComponentMaxValue: CGFloat = 255.0
+let EFRGBColorComponentMaxValue: CGFloat = 255.0
 
 // The maximum value of the alpha component.
-let MSAlphaComponentMaxValue: CGFloat = 100.0
+let EFAlphaComponentMaxValue: CGFloat = 100.0
 
 // The maximum value of the HSB color components.
-let MSHSBColorComponentMaxValue: CGFloat = 1.0
+let EFHSBColorComponentMaxValue: CGFloat = 1.0
 
 // Converts an RGB color value to HSV.
 // Assumes r, g, and b are contained in the set [0, 1] and
 // returns h, s, and b in the set [0, 1].
 // @param rgb   The rgb color values
 // @return The hsb color values
-func MSRGB2HSB(rgb: RGB) -> HSB {
+func EFRGB2HSB(rgb: RGB) -> HSB {
     let rd = Double(rgb.red)
     let gd = Double(rgb.green)
     let bd = Double(rgb.blue)
@@ -80,7 +80,7 @@ func MSRGB2HSB(rgb: RGB) -> HSB {
 // returns r, g, and b in the set [0, 255].
 // @param outRGB   The rgb color values
 // @return The hsb color values
-func MSHSB2RGB(hsb: HSB) -> RGB {
+func EFHSB2RGB(hsb: HSB) -> RGB {
     var r: CGFloat = 0.0, g: CGFloat = 0.0, b: CGFloat = 0.0
 
     let i: Int = Int(hsb.hue * 6)
@@ -129,7 +129,7 @@ func MSHSB2RGB(hsb: HSB) -> RGB {
 // Returns the rgb values of the color components.
 // @param color The color value.
 // @return The values of the color components (including alpha).
-func MSRGBColorComponents(color: UIColor) -> RGB {
+func EFRGBColorComponents(color: UIColor) -> RGB {
     var result = RGB(1, 1, 1, 1)
     guard let colorSpaceModel: CGColorSpaceModel = color.cgColor.colorSpace?.model else {
         return result
@@ -161,7 +161,7 @@ func MSRGBColorComponents(color: UIColor) -> RGB {
 // Converts hex string to the UIColor representation.
 // @param color The color value.
 // @return The hex string color value.
-func MSHexStringFromColor(color: UIColor) -> String? {
+func EFHexStringFromColor(color: UIColor) -> String? {
     guard let colorSpaceModel: CGColorSpaceModel = color.cgColor.colorSpace?.model else {
         return nil
     }
@@ -189,17 +189,17 @@ func MSHexStringFromColor(color: UIColor) -> String? {
 
     return String(
         format: "#%02lX%02lX%02lX%02lX",
-        UInt64(red * MSRGBColorComponentMaxValue),
-        UInt64(green * MSRGBColorComponentMaxValue),
-        UInt64(blue * MSRGBColorComponentMaxValue),
-        UInt64(alpha * MSRGBColorComponentMaxValue)
+        UInt64(red * EFRGBColorComponentMaxValue),
+        UInt64(green * EFRGBColorComponentMaxValue),
+        UInt64(blue * EFRGBColorComponentMaxValue),
+        UInt64(alpha * EFRGBColorComponentMaxValue)
     )
 }
 
 // Converts UIColor value to the hex string.
 // @param hexString The hex string color value.
 // @return The color value.
-func MSColorFromHexString(hexColor: String) -> UIColor? {
+func EFColorFromHexString(hexColor: String) -> UIColor? {
     if !hexColor.hasPrefix("#") {
         return nil
     }
@@ -218,9 +218,9 @@ func MSColorFromHexString(hexColor: String) -> UIColor? {
     let a: CGFloat = CGFloat((hexNum) & 0xFF)
 
     return UIColor(
-        red: r / MSRGBColorComponentMaxValue,
-        green: g / MSRGBColorComponentMaxValue,
-        blue: b / MSRGBColorComponentMaxValue,
-        alpha: a / MSRGBColorComponentMaxValue
+        red: r / EFRGBColorComponentMaxValue,
+        green: g / EFRGBColorComponentMaxValue,
+        blue: b / EFRGBColorComponentMaxValue,
+        alpha: a / EFRGBColorComponentMaxValue
     )
 }

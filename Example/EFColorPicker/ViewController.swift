@@ -9,7 +9,7 @@
 import UIKit
 import EFColorPicker
 
-class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, MSColorSelectionViewControllerDelegate {
+class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, EFColorSelectionViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
                 destNav.preferredContentSize = size
             }
             destNav.popoverPresentationController?.delegate = self
-            if let colorSelectionController = destNav.visibleViewController as? MSColorSelectionViewController {
+            if let colorSelectionController = destNav.visibleViewController as? EFColorSelectionViewController {
                 colorSelectionController.delegate = self
                 colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
 
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
                         title: NSLocalizedString("Done", comment: ""),
                         style: UIBarButtonItemStyle.done,
                         target: self,
-                        action: #selector(ms_dismissViewController(sender:))
+                        action: #selector(ef_dismissViewController(sender:))
                     )
                     colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
                 }
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     }
 
     @IBAction func onButtonClick(_ sender: UIButton) {
-        let colorSelectionController = MSColorSelectionViewController()
+        let colorSelectionController = EFColorSelectionViewController()
         let navCtrl = UINavigationController(rootViewController: colorSelectionController)
 
         navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
@@ -63,21 +63,21 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
                 title: NSLocalizedString("Done", comment: ""),
                 style: UIBarButtonItemStyle.done,
                 target: self,
-                action: #selector(ms_dismissViewController(sender:))
+                action: #selector(ef_dismissViewController(sender:))
             )
             colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
         }
         self.present(navCtrl, animated: true, completion: nil)
     }
 
-    // MARK:- MSColorViewDelegate
-    func colorViewController(colorViewCntroller: MSColorSelectionViewController, didChangeColor color: UIColor) {
+    // MARK:- EFColorViewDelegate
+    func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {
         self.view.backgroundColor = color
         print(color)
     }
 
     // MARK:- Private
-    @objc func ms_dismissViewController(sender: UIBarButtonItem) {
+    @objc func ef_dismissViewController(sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
 }

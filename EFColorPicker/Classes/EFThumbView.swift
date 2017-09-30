@@ -1,5 +1,5 @@
 //
-//  MSThumbView.swift
+//  EFThumbView.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/28.
@@ -7,24 +7,24 @@
 
 import UIKit
 
-public class MSThumbView: EFControl {
+public class EFThumbView: EFControl {
 
     private(set) var gestureRecognizer: UIGestureRecognizer = UIPanGestureRecognizer(target: nil, action: nil)
 
-    private let MSSliderViewThumbDimension: CGFloat = 28.0
+    private let EFSliderViewThumbDimension: CGFloat = 28.0
     private let thumbLayer: CALayer = CALayer()
 
     override init(frame: CGRect) {
         super.init(
             frame: CGRect(
                 x: frame.origin.x, y: frame.origin.y,
-                width: MSSliderViewThumbDimension, height: MSSliderViewThumbDimension
+                width: EFSliderViewThumbDimension, height: EFSliderViewThumbDimension
             )
         )
 
         self.thumbLayer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
         self.thumbLayer.borderWidth = 0.5
-        self.thumbLayer.cornerRadius = MSSliderViewThumbDimension / 2
+        self.thumbLayer.cornerRadius = EFSliderViewThumbDimension / 2
         self.thumbLayer.backgroundColor = UIColor.white.cgColor
         self.thumbLayer.shadowColor = UIColor.black.cgColor
         self.thumbLayer.shadowOffset = CGSize(width: 0, height: 3)
@@ -47,9 +47,9 @@ public class MSThumbView: EFControl {
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         self.thumbLayer.bounds = CGRect(
-            x: 0, y: 0, width: MSSliderViewThumbDimension, height: MSSliderViewThumbDimension
+            x: 0, y: 0, width: EFSliderViewThumbDimension, height: EFSliderViewThumbDimension
         )
-        self.thumbLayer.position = CGPoint(x: MSSliderViewThumbDimension / 2, y: MSSliderViewThumbDimension / 2)
+        self.thumbLayer.position = CGPoint(x: EFSliderViewThumbDimension / 2, y: EFSliderViewThumbDimension / 2)
         CATransaction.commit()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  MSColorWheelView.swift
+//  EFColorWheelView.swift
 //  EFColorPicker
 //
 //  Created by EyreFree on 2017/9/29.
@@ -9,12 +9,12 @@ import UIKit
 import CoreGraphics
 
 // The color wheel view.
-public class MSColorWheelView: UIControl {
+public class EFColorWheelView: UIControl {
 
     // The hue value.
     var hue: CGFloat = 0.0 {
         didSet {
-            self.setSelectedPoint(point: ms_selectedPoint())
+            self.setSelectedPoint(point: ef_selectedPoint())
             self.setNeedsDisplay()
         }
     }
@@ -22,7 +22,7 @@ public class MSColorWheelView: UIControl {
     // The saturation value.
     var saturation: CGFloat = 0.0 {
         didSet {
-            self.setSelectedPoint(point: ms_selectedPoint())
+            self.setSelectedPoint(point: ef_selectedPoint())
             self.setNeedsDisplay()
         }
     }
@@ -92,7 +92,7 @@ public class MSColorWheelView: UIControl {
         let dist: CGFloat = CGFloat(sqrt(mx * mx + my * my))
 
         if dist <= radius {
-            self.ms_colorWheelValueWithPosition(position: point, hue: &hue, saturation: &saturation)
+            self.ef_colorWheelValueWithPosition(position: point, hue: &hue, saturation: &saturation)
             self.setSelectedPoint(point: point)
             self.sendActions(for: UIControlEvents.valueChanged)
         }
@@ -116,24 +116,24 @@ public class MSColorWheelView: UIControl {
         }
 
         CFDataSetLength(bitmapData, CFIndex(dimension * dimension * 4))
-        self.ms_colorWheelBitmap(
+        self.ef_colorWheelBitmap(
             bitmap: CFDataGetMutableBytePtr(bitmapData),
             withSize: CGSize(width: dimension, height: dimension)
         )
-        if let image = self.ms_imageWithRGBAData(data: bitmapData, width: Int(dimension), height: Int(dimension)) {
+        if let image = self.ef_imageWithRGBAData(data: bitmapData, width: Int(dimension), height: Int(dimension)) {
             self.layer.contents = image
         }
     }
 
     override public func layoutSublayers(of layer: CALayer) {
         if layer == self.layer {
-            self.setSelectedPoint(point: self.ms_selectedPoint())
+            self.setSelectedPoint(point: self.ef_selectedPoint())
             self.layer.setNeedsDisplay()
         }
     }
 
     // MARK:- Private methods
-    private func ms_selectedPoint() -> CGPoint {
+    private func ef_selectedPoint() -> CGPoint {
         let dimension: CGFloat = min(self.frame.width, self.frame.height)
 
         let radius: CGFloat = saturation * dimension / 2
@@ -143,7 +143,7 @@ public class MSColorWheelView: UIControl {
         return CGPoint(x: x, y: y)
     }
 
-    private func ms_colorWheelBitmap(bitmap: UnsafeMutablePointer<UInt8>?, withSize size: CGSize) {
+    private func ef_colorWheelBitmap(bitmap: UnsafeMutablePointer<UInt8>?, withSize size: CGSize) {
         if size.width <= 0 || size.height <= 0 {
             return
         }
@@ -151,7 +151,7 @@ public class MSColorWheelView: UIControl {
         for y in 0 ..< Int(size.width) {
             for x in 0 ..< Int(size.height) {
                 var hue: CGFloat = 0, saturation: CGFloat = 0, a: CGFloat = 0.0
-                self.ms_colorWheelValueWithPosition(position: CGPoint(x: x, y: y), hue: &hue, saturation: &saturation)
+                self.ef_colorWheelValueWithPosition(position: CGPoint(x: x, y: y), hue: &hue, saturation: &saturation)
 
                 var rgb: RGB = RGB(1, 1, 1, 1)
                 if saturation < 1.0 {
@@ -163,7 +163,7 @@ public class MSColorWheelView: UIControl {
                     }
 
                     let hsb: HSB = HSB(hue, saturation, 1.0, a)
-                    rgb = MSHSB2RGB(hsb: hsb)
+                    rgb = EFHSB2RGB(hsb: hsb)
                 }
 
                 let i: Int = 4 * (x + y * Int(size.width))
@@ -175,7 +175,7 @@ public class MSColorWheelView: UIControl {
         }
     }
 
-    private func ms_colorWheelValueWithPosition(position: CGPoint, hue: inout CGFloat, saturation: inout CGFloat) {
+    private func ef_colorWheelValueWithPosition(position: CGPoint, hue: inout CGFloat, saturation: inout CGFloat) {
         let c: Int = Int(self.bounds.width / 2)
         let dx: CGFloat = (position.x - CGFloat(c)) / CGFloat(c)
         let dy: CGFloat = (position.y - CGFloat(c)) / CGFloat(c)
@@ -194,7 +194,7 @@ public class MSColorWheelView: UIControl {
         }
     }
 
-    private func ms_imageWithRGBAData(data: CFData, width: Int, height: Int) -> CGImage? {
+    private func ef_imageWithRGBAData(data: CFData, width: Int, height: Int) -> CGImage? {
         guard let dataProvider = CGDataProvider(data: data) else {
             return nil
         }

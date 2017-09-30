@@ -28,7 +28,7 @@
         <!--Color Selection View Controller-->
         <scene sceneID="Nqf-qr-iY8">
             <objects>
-                <viewController id="Ylq-Co-Jgs" customClass="MSColorSelectionViewController" customModule="EFColorPicker" sceneMemberID="viewController">
+                <viewController id="Ylq-Co-Jgs" customClass="EFColorSelectionViewController" customModule="EFColorPicker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sdx-DH-Vq3"/>
                         <viewControllerLayoutGuide type="bottom" id="GsM-80-DlT"/>
