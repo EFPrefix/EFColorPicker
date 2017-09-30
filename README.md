@@ -27,12 +27,12 @@ iPhone | iPad
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first, then build and run `EFColorPicker.xcworkspace` in Xcode, the demo shows how to use and integrate the EFColorPicker into your project.
 
 ## Requirements
 
 - iOS 8.0+
-- XCode 9.0+
+- Xcode 9.0+
 - Swift 4.0+
 
 ## Installation
