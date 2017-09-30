@@ -53,7 +53,7 @@ pod 'EFColorPicker'
 
 ## PS
 
-The first version of [EFColorPicker](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) is converted from [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293).
+The first version of [EFColorPicker](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) is converted from [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293), thanks for [sgl0v](https://github.com/sgl0v)'s work!
 
 ## Author
 
