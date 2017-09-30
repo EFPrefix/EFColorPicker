@@ -1,9 +1,14 @@
-# EFColorPicker
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/EFColorPicker.png)
 
-[![CI Status](http://img.shields.io/travis/EyreFree/EFColorPicker.svg?style=flat)](https://travis-ci.org/EyreFree/EFColorPicker)
-[![Version](https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat)](http://cocoapods.org/pods/EFColorPicker)
-[![License](https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat)](http://cocoapods.org/pods/EFColorPicker)
-[![Platform](https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat)](http://cocoapods.org/pods/EFColorPicker)
+<p align="center">
+<a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="http://img.shields.io/travis/EyreFree/EFColorPicker.svg"></a>
+<a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat"></a>
+<a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat"></a>
+<a href="https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
+<a href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
+<a href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
+<img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
+</p>
 
 EFColorPicker is a lightweight color picker in Swift, inspired by [MSColorPicker](https://github.com/sgl0v/MSColorPicker).
 
@@ -27,7 +32,9 @@ iPhone | iPad
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first, then build and run `EFColorPicker.xcworkspace` in Xcode, the demo shows how to use and integrate the EFColorPicker into your project.
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Then build and run `EFColorPicker.xcworkspace` in Xcode, the demo shows how to use and integrate the EFColorPicker into your project.
 
 ## Requirements
 
