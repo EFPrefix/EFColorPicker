@@ -89,22 +89,20 @@ public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
             let views = [
                 "view" : view
             ]
-            self.addConstraints(
-                NSLayoutConstraint.constraints(
-                    withVisualFormat: "H:|[view]|",
-                    options: NSLayoutFormatOptions(rawValue: 0),
-                    metrics: nil,
-                    views: views
+            let visualFormats = [
+                "H:|[view]|",
+                "V:|[view]|"
+            ]
+            for visualFormat in visualFormats {
+                self.addConstraints(
+                    NSLayoutConstraint.constraints(
+                        withVisualFormat: visualFormat,
+                        options: NSLayoutFormatOptions(rawValue: 0),
+                        metrics: nil,
+                        views: views
+                    )
                 )
-            )
-            self.addConstraints(
-                NSLayoutConstraint.constraints(
-                    withVisualFormat: "V:|[view]|",
-                    options: NSLayoutFormatOptions(rawValue: 0),
-                    metrics: nil,
-                    views: views
-                )
-            )
+            }
         }
     }
 
