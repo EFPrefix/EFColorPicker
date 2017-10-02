@@ -2,15 +2,6 @@
 //  ViewController.swift
 //  EFColorPicker
 //
-//  Created by EyreFree on 09/28/2017.
-//  Copyright (c) 2017 EyreFree. All rights reserved.
-//
-
-import UIKit
-//
-//  ViewController.swift
-//  EFColorPicker
-//
 //  Created by EyreFree on 2017/9/28.
 //
 //  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
@@ -33,6 +24,7 @@ import UIKit
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+import UIKit
 import EFColorPicker
 
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, EFColorSelectionViewControllerDelegate {

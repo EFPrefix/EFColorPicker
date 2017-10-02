@@ -146,22 +146,20 @@ public class EFRGBView: UIView, EFColorView {
             "colorSample" : colorSample
         ]
 
-        self.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-margin-[colorSample]-margin-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
-                metrics: metrics,
-                views: views
+        let visualFormats = [
+            "H:|-margin-[colorSample]-margin-|",
+            "V:|-margin-[colorSample(height)]"
+        ]
+        for visualFormat in visualFormats {
+            self.addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: visualFormat,
+                    options: NSLayoutFormatOptions(rawValue: 0),
+                    metrics: metrics,
+                    views: views
+                )
             )
-        )
-        self.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-margin-[colorSample(height)]",
-                options: NSLayoutFormatOptions(rawValue: 0),
-                metrics: metrics,
-                views: views
-            )
-        )
+        }
 
         var previousView: UIView = colorSample
         for colorComponentView in colorComponentViews {
@@ -169,22 +167,22 @@ public class EFRGBView: UIView, EFColorView {
                 "previousView" : previousView,
                 "colorComponentView" : colorComponentView
             ]
-            self.addConstraints(
-                NSLayoutConstraint.constraints(
-                    withVisualFormat: "H:|-margin-[colorComponentView]-margin-|",
-                    options: NSLayoutFormatOptions(rawValue: 0),
-                    metrics: metrics,
-                    views: views
+
+            let visualFormats = [
+                "H:|-margin-[colorComponentView]-margin-|",
+                "V:[previousView]-slider_margin-[colorComponentView]"
+            ]
+            for visualFormat in visualFormats {
+                self.addConstraints(
+                    NSLayoutConstraint.constraints(
+                        withVisualFormat: visualFormat,
+                        options: NSLayoutFormatOptions(rawValue: 0),
+                        metrics: metrics,
+                        views: views
+                    )
                 )
-            )
-            self.addConstraints(
-                NSLayoutConstraint.constraints(
-                    withVisualFormat: "V:[previousView]-slider_margin-[colorComponentView]",
-                    options: NSLayoutFormatOptions(rawValue: 0),
-                    metrics: metrics,
-                    views: views
-                )
-            )
+            }
+
             previousView = colorComponentView
         }
 
