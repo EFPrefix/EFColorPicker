@@ -96,4 +96,3 @@ public class EFColorSelectionViewController: UIViewController, EFColorViewDelega
         self.delegate?.colorViewController(colorViewCntroller: self, didChangeColor: color)
     }
 }
-
