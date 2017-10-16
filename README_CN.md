@@ -57,6 +57,86 @@ EFColorPicker 可以通过 [CocoaPods](http://cocoapods.org) 进行获取。只�
 pod "EFColorPicker"
 ```
 
+## 使用
+
+1. 首先，需要导入 EFColorPicker 库：
+
+```swift
+import EFColorPicker
+```
+
+2. 接下来，可以通过纯代码调用：
+
+```swift
+let colorSelectionController = EFColorSelectionViewController()
+let navCtrl = UINavigationController(rootViewController: colorSelectionController)
+navCtrl.navigationBar.backgroundColor = UIColor.white
+navCtrl.navigationBar.isTranslucent = false
+navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
+navCtrl.popoverPresentationController?.delegate = self
+navCtrl.popoverPresentationController?.sourceView = sender
+navCtrl.popoverPresentationController?.sourceRect = sender.bounds
+navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(
+    UILayoutFittingCompressedSize
+)
+
+colorSelectionController.delegate = self
+colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+
+if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
+    let doneBtn: UIBarButtonItem = UIBarButtonItem(
+        title: NSLocalizedString("Done", comment: ""),
+        style: UIBarButtonItemStyle.done,
+        target: self,
+        action: #selector(ef_dismissViewController(sender:))
+    )
+    colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
+}
+self.present(navCtrl, animated: true, completion: nil)
+```
+
+也可以通过 Storyboard 调用：
+
+```swift
+if "showPopover" == segue.identifier {
+	guard let destNav: UINavigationController = segue.destination as? UINavigationController else {
+	    return
+	}
+	if let size = destNav.visibleViewController?.view.systemLayoutSizeFitting(UILayoutFittingCompressedSize) {
+	    destNav.preferredContentSize = size
+	}
+	destNav.popoverPresentationController?.delegate = self
+	if let colorSelectionController = destNav.visibleViewController as? EFColorSelectionViewController {
+	    colorSelectionController.delegate = self
+	    colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+
+	    if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
+	        let doneBtn: UIBarButtonItem = UIBarButtonItem(
+	            title: NSLocalizedString("Done", comment: ""),
+	            style: UIBarButtonItemStyle.done,
+	            target: self,
+	            action: #selector(ef_dismissViewController(sender:))
+	        )
+	        colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
+	    }
+	}
+}
+```
+
+具体可参考示例程序。
+
+3. 最后，不要忘记调用的 ViewController 需要继承 EFColorSelectionViewControllerDelegate 来及时获取颜色的变化：
+
+```swift
+// MARK:- EFColorSelectionViewControllerDelegate
+func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {
+    self.view.backgroundColor = color
+
+    // TODO: You can do something here when color changed.
+    print("New color: " + color.debugDescription)
+}
+```
+
 ## 备注
 
 [EFColorPicker](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) 的第一个版本从 [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293) 转换而来，在此对 MSColorPicker 的作者 [sgl0v](https://github.com/sgl0v) 表示感谢！

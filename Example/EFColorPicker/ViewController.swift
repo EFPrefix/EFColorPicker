@@ -32,9 +32,40 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "EFColorPicker"
         self.view.backgroundColor = UIColor.white
     }
 
+    // Programmatically
+    @IBAction func onButtonClick(_ sender: UIButton) {
+        let colorSelectionController = EFColorSelectionViewController()
+        let navCtrl = UINavigationController(rootViewController: colorSelectionController)
+        navCtrl.navigationBar.backgroundColor = UIColor.white
+        navCtrl.navigationBar.isTranslucent = false
+        navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
+        navCtrl.popoverPresentationController?.delegate = self
+        navCtrl.popoverPresentationController?.sourceView = sender
+        navCtrl.popoverPresentationController?.sourceRect = sender.bounds
+        navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(
+            UILayoutFittingCompressedSize
+        )
+
+        colorSelectionController.delegate = self
+        colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+
+        if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
+            let doneBtn: UIBarButtonItem = UIBarButtonItem(
+                title: NSLocalizedString("Done", comment: ""),
+                style: UIBarButtonItemStyle.done,
+                target: self,
+                action: #selector(ef_dismissViewController(sender:))
+            )
+            colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
+        }
+        self.present(navCtrl, animated: true, completion: nil)
+    }
+
+    // Storyboard
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if "showPopover" == segue.identifier {
             guard let destNav: UINavigationController = segue.destination as? UINavigationController else {
@@ -61,41 +92,22 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         }
     }
 
-    @IBAction func onButtonClick(_ sender: UIButton) {
-        let colorSelectionController = EFColorSelectionViewController()
-        let navCtrl = UINavigationController(rootViewController: colorSelectionController)
-
-        navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
-        navCtrl.popoverPresentationController?.delegate = self
-        navCtrl.popoverPresentationController?.sourceView = sender
-        navCtrl.popoverPresentationController?.sourceRect = sender.bounds
-        navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(
-            UILayoutFittingCompressedSize
-        )
-
-        colorSelectionController.delegate = self
-        colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
-
-        if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
-            let doneBtn: UIBarButtonItem = UIBarButtonItem(
-                title: NSLocalizedString("Done", comment: ""),
-                style: UIBarButtonItemStyle.done,
-                target: self,
-                action: #selector(ef_dismissViewController(sender:))
-            )
-            colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
-        }
-        self.present(navCtrl, animated: true, completion: nil)
-    }
-
-    // MARK:- EFColorViewDelegate
+    // MARK:- EFColorSelectionViewControllerDelegate
     func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {
         self.view.backgroundColor = color
-        print(color)
+
+        // TODO: You can do something here when color changed.
+        print("New color: " + color.debugDescription)
     }
 
     // MARK:- Private
     @objc func ef_dismissViewController(sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            [weak self] in
+            if let _ = self {
+                // TODO: You can do something here when EFColorPicker close.
+                print("EFColorPicker closed.")
+            }
+        }
     }
 }
