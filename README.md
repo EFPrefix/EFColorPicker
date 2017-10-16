@@ -52,6 +52,86 @@ it, simply add the following line to your Podfile:
 pod 'EFColorPicker'
 ```
 
+## Use
+
+1. First, include EFColorPicker in your project:
+
+```swift
+import EFColorPicker
+```
+
+2. Next, we can call EFColorPicker with pure code:
+
+```swift
+let colorSelectionController = EFColorSelectionViewController()
+let navCtrl = UINavigationController(rootViewController: colorSelectionController)
+navCtrl.navigationBar.backgroundColor = UIColor.white
+navCtrl.navigationBar.isTranslucent = false
+navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
+navCtrl.popoverPresentationController?.delegate = self
+navCtrl.popoverPresentationController?.sourceView = sender
+navCtrl.popoverPresentationController?.sourceRect = sender.bounds
+navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(
+    UILayoutFittingCompressedSize
+)
+
+colorSelectionController.delegate = self
+colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+
+if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
+    let doneBtn: UIBarButtonItem = UIBarButtonItem(
+        title: NSLocalizedString("Done", comment: ""),
+        style: UIBarButtonItemStyle.done,
+        target: self,
+        action: #selector(ef_dismissViewController(sender:))
+    )
+    colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
+}
+self.present(navCtrl, animated: true, completion: nil)
+```
+
+Also we can use EFColorPicker in Storyboard:
+
+```swift
+if "showPopover" == segue.identifier {
+	guard let destNav: UINavigationController = segue.destination as? UINavigationController else {
+	    return
+	}
+	if let size = destNav.visibleViewController?.view.systemLayoutSizeFitting(UILayoutFittingCompressedSize) {
+	    destNav.preferredContentSize = size
+	}
+	destNav.popoverPresentationController?.delegate = self
+	if let colorSelectionController = destNav.visibleViewController as? EFColorSelectionViewController {
+	    colorSelectionController.delegate = self
+	    colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+
+	    if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
+	        let doneBtn: UIBarButtonItem = UIBarButtonItem(
+	            title: NSLocalizedString("Done", comment: ""),
+	            style: UIBarButtonItemStyle.done,
+	            target: self,
+	            action: #selector(ef_dismissViewController(sender:))
+	        )
+	        colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
+	    }
+	}
+}
+```
+
+For more detail, please see the demo.
+
+3. Last but not the least, you should implement `EFColorSelectionViewControllerDelegate` so you can sense the color changes:
+
+```swift
+// MARK:- EFColorSelectionViewControllerDelegate
+func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {
+    self.view.backgroundColor = color
+
+    // TODO: You can do something here when color changed.
+    print("New color: " + color.debugDescription)
+}
+```
+
 ## PS
 
 The first version of [EFColorPicker](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) is converted from [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293), thanks for [sgl0v](https://github.com/sgl0v)'s work!

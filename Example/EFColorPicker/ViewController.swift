@@ -92,7 +92,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         }
     }
 
-    // MARK:- EFColorViewDelegate
+    // MARK:- EFColorSelectionViewControllerDelegate
     func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {
         self.view.backgroundColor = color
 
