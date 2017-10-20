@@ -123,10 +123,8 @@ public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
         self.accessibilityLabel = "color_selection_view"
 
         self.backgroundColor = UIColor.white
-        if let rgbColorView = self.rgbColorView as? EFColorView, let hsbColorView = self.hsbColorView as? EFColorView {
-            self.addColorView(view: rgbColorView)
-            self.addColorView(view: hsbColorView)
-        }
+        self.addColorView(view: rgbColorView)
+        self.addColorView(view: hsbColorView)
         self.setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
     }
 }
