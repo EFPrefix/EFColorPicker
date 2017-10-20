@@ -122,7 +122,7 @@ You can control the visibility of color textField by change the `isColorTextFiel
 
 | isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
 |:---------------------:|:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone2.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone3.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone4.png)   
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone4.png)   
 
 For more detail, please see the demo.
 
