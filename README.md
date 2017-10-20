@@ -27,9 +27,9 @@ Color picker component for iOS. It allows the user to select a color with color 
 
 ## Preview
 
-|   | iPhone |   | iPad |
-|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone0.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
+| iPhone |   | iPad |
+|:---------------------:|:---------------------:|:---------------------:|
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
 
 ## Example
 
@@ -117,6 +117,12 @@ if "showPopover" == segue.identifier {
 	}
 }
 ```
+
+You can control the visibility of color textField by change the `isColorTextFieldHidden` property of `EFColorSelectionViewController`, for example:
+
+| isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
+|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone2.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone3.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone4.png)   
 
 For more detail, please see the demo.
 
