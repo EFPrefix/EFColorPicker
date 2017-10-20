@@ -27,9 +27,9 @@ iOS 颜色选择器组件，它能够让用户选择自定义颜色，关键特�
 
 ## 预览
 
-iPhone | iPad   
-:---------------------:|:---------------------:
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
+| iPhone |   | iPad |
+|:---------------------:|:---------------------:|:---------------------:|
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
 
 ## 示例
 
@@ -122,6 +122,12 @@ if "showPopover" == segue.identifier {
 	}
 }
 ```
+
+你可以通过修改 `EFColorSelectionViewController` 的 `isColorTextFieldHidden` 属性来控制颜色编辑框的可见性，效果如下：
+
+| isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
+|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone2.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone3.png)![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone4.png)   
 
 具体可参考示例程序。
 

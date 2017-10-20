@@ -80,16 +80,29 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1b-T5-15b">
+                                <rect key="frame" x="20" y="599" width="335" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="sJS-1T-33w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r1b-T5-15b" secondAttribute="trailing" constant="20" id="KD6-gk-x5e"/>
+                            <constraint firstItem="r1b-T5-15b" firstAttribute="leading" secondItem="Ych-uQ-sYm" secondAttribute="leading" constant="20" id="OlH-cY-eDd"/>
                             <constraint firstAttribute="centerY" secondItem="Q3C-3I-Gms" secondAttribute="centerY" constant="100" id="SLi-jS-3sq"/>
                             <constraint firstItem="9Ww-LN-4f3" firstAttribute="centerX" secondItem="Q3C-3I-Gms" secondAttribute="centerX" id="Ybg-At-IIb"/>
                             <constraint firstAttribute="centerX" secondItem="Q3C-3I-Gms" secondAttribute="centerX" id="Zm7-KH-YHg"/>
+                            <constraint firstAttribute="bottom" secondItem="r1b-T5-15b" secondAttribute="bottom" constant="20" id="mvr-Sc-m7k"/>
                             <constraint firstItem="9Ww-LN-4f3" firstAttribute="top" secondItem="Q3C-3I-Gms" secondAttribute="bottom" constant="50" id="s8Y-VK-obT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XjE-79-hKK"/>
+                    <connections>
+                        <outlet property="testButton" destination="r1b-T5-15b" id="nto-yK-YmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXy-GX-vXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

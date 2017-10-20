@@ -34,7 +34,7 @@ public class EFRGBView: UIView, EFColorView {
     let EFRGBColorComponentsSize: Int = 3
 
     private let colorSample: UIView = UIView()
-    private var colorComponentViews: [UIControl] = []
+    var colorComponentViews: [EFColorComponentView] = []
     private var colorComponents: RGB = RGB(1, 1, 1, 1)
 
     weak public var delegate: EFColorViewDelegate?
@@ -80,7 +80,7 @@ public class EFRGBView: UIView, EFColorView {
         colorSample.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(colorSample)
 
-        var tmp: [UIControl] = []
+        var tmp: [EFColorComponentView] = []
         let titles = [
             NSLocalizedString("Red", comment: ""),
             NSLocalizedString("Green", comment: ""),
@@ -127,7 +127,7 @@ public class EFRGBView: UIView, EFColorView {
         }
     }
 
-    private func ef_colorComponentViewWithTitle(title: String, tag: Int, maxValue: CGFloat) -> UIControl {
+    private func ef_colorComponentViewWithTitle(title: String, tag: Int, maxValue: CGFloat) -> EFColorComponentView {
         let colorComponentView: EFColorComponentView = EFColorComponentView()
         colorComponentView.title = title
         colorComponentView.translatesAutoresizingMaskIntoConstraints = false
@@ -207,14 +207,12 @@ public class EFRGBView: UIView, EFColorView {
         let components = self.ef_colorComponentsWithRGB(rgb: colorComponents)
 
         for (idx, colorComponentView) in colorComponentViews.enumerated() {
-            if let colorComponentView = colorComponentView as? EFColorComponentView {
-                colorComponentView.setColors(
-                    colors: self.ef_colorsWithColorComponents(
-                        colorComponents: components, currentColorIndex: colorComponentView.tag
-                    )
+            colorComponentView.setColors(
+                colors: self.ef_colorsWithColorComponents(
+                    colorComponents: components, currentColorIndex: colorComponentView.tag
                 )
-                colorComponentView.value = components[idx] * colorComponentView.maximumValue
-            }
+            )
+            colorComponentView.value = components[idx] * colorComponentView.maximumValue
         }
     }
 

@@ -29,16 +29,33 @@ import EFColorPicker
 
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, EFColorSelectionViewControllerDelegate {
 
+    @IBOutlet weak var testButton: UIButton!
+    var isColorTextFieldHidden: Bool = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "EFColorPicker"
         self.view.backgroundColor = UIColor.white
+
+        testButton.layer.borderColor = UIColor.black.cgColor
+        testButton.layer.cornerRadius = 4.5
+        testButton.layer.borderWidth = 0.5
+        testButton.setTitleColor(UIColor.black, for: .normal)
+        testButton.setTitle("isColorTextFieldHidden: \(isColorTextFieldHidden)", for: .normal)
+        testButton.addTarget(self, action: #selector(onTestButtonClick(_:)), for: .touchUpInside)
+    }
+
+    //
+    @objc func onTestButtonClick(_ sender: UIButton) {
+        isColorTextFieldHidden = !isColorTextFieldHidden
+        testButton.setTitle("isColorTextFieldHidden: \(isColorTextFieldHidden)", for: .normal)
     }
 
     // Programmatically
     @IBAction func onButtonClick(_ sender: UIButton) {
         let colorSelectionController = EFColorSelectionViewController()
+
         let navCtrl = UINavigationController(rootViewController: colorSelectionController)
         navCtrl.navigationBar.backgroundColor = UIColor.white
         navCtrl.navigationBar.isTranslucent = false
@@ -50,6 +67,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
             UILayoutFittingCompressedSize
         )
 
+        colorSelectionController.isColorTextFieldHidden = isColorTextFieldHidden
         colorSelectionController.delegate = self
         colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
 
@@ -76,6 +94,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
             }
             destNav.popoverPresentationController?.delegate = self
             if let colorSelectionController = destNav.visibleViewController as? EFColorSelectionViewController {
+                colorSelectionController.isColorTextFieldHidden = isColorTextFieldHidden
                 colorSelectionController.delegate = self
                 colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
 
