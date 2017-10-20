@@ -27,9 +27,9 @@ iOS 颜色选择器组件，它能够让用户选择自定义颜色，关键特�
 
 ## 预览
 
-iPhone | iPad   
-:---------------------:|:---------------------:
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
+|   | iPhone |   | iPad |
+|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone0.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
 
 ## 示例
 

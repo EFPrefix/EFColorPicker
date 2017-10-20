@@ -299,6 +299,7 @@ public class EFColorComponentView: UIControl, UITextFieldDelegate {
             )
         }
 
+        // Readd control
         for control in [label, slider, textField] {
             control.removeFromSuperview()
             self.addSubview(control)

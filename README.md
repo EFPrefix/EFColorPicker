@@ -27,9 +27,9 @@ Color picker component for iOS. It allows the user to select a color with color 
 
 ## Preview
 
-iPhone | iPad   
-:---------------------:|:---------------------:
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
+|   | iPhone |   | iPad |
+|:---------------------:|:---------------------:|:---------------------:|:---------------------:|
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone0.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
 
 ## Example
 
