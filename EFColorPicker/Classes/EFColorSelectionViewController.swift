@@ -51,6 +51,22 @@ public class EFColorSelectionViewController: UIViewController, EFColorViewDelega
         }
     }
 
+    // Whether colorTextField will hide
+    public var isColorTextFieldHidden: Bool {
+        get {
+            return !((self.view as? EFColorSelectionView)?.hsbColorView.brightnessView.colorTextFieldEnabled ?? false)
+        }
+        set {
+            if let colorSelectionView = self.view as? EFColorSelectionView {
+                colorSelectionView.hsbColorView.brightnessView.colorTextFieldEnabled = !newValue
+
+                for colorComponentView in colorSelectionView.rgbColorView.colorComponentViews {
+                    colorComponentView.colorTextFieldEnabled = !newValue
+                }
+            }
+        }
+    }
+
     override public func loadView() {
         let colorSelectionView: EFColorSelectionView = EFColorSelectionView(frame: UIScreen.main.bounds)
         self.view = colorSelectionView

@@ -41,8 +41,8 @@ public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
     // The selected color view
     private(set) var selectedIndex: EFSelectedColorView = EFSelectedColorView.RGB
 
-    private let rgbColorView: UIView = EFRGBView()
-    private let hsbColorView: UIView = EFHSBView()
+    let rgbColorView: EFRGBView = EFRGBView()
+    let hsbColorView: EFHSBView = EFHSBView()
 
     weak public var delegate: EFColorViewDelegate?
 
