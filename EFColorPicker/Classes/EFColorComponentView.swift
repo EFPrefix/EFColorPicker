@@ -131,7 +131,8 @@ public class EFColorComponentView: UIControl, UITextFieldDelegate {
     // Sets the array of CGColorRef objects defining the color of each gradient stop on a slider's track.
     // The location of each gradient stop is evaluated with formula: i * width_of_the_track / number_of_colors.
     // @param colors An array of CGColorRef objects.
-    func setColors(colors: [CGColor]) {
+    func setColors(colors: [UIColor]) {
+
         if colors.count <= 1 {
             fatalError("‘colors: [CGColor]’ at least need to have 2 elements")
         }
