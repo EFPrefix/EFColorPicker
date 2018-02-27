@@ -46,6 +46,14 @@ public class EFColorWheelView: UIControl {
         }
     }
 
+    // The saturation value.
+    var brightness: CGFloat = 1.0 {
+        didSet {
+            self.setSelectedPoint(point: ef_selectedPoint())
+            self.setNeedsDisplay()
+        }
+    }
+
     private lazy var indicatorLayer: CALayer = {
         let dimension: CGFloat = 33
         let edgeColor = UIColor(white: 0.9, alpha: 0.8)
@@ -118,7 +126,7 @@ public class EFColorWheelView: UIControl {
     }
 
     func setSelectedPoint(point: CGPoint) {
-        let selectedColor: UIColor = UIColor(hue: hue, saturation: saturation, brightness: 1, alpha: 1)
+        let selectedColor: UIColor = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
 
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
@@ -181,7 +189,7 @@ public class EFColorWheelView: UIControl {
                         a = 1.0
                     }
 
-                    let hsb: HSB = HSB(hue, saturation, 1.0, a)
+                    let hsb: HSB = HSB(hue, saturation, brightness, a)
                     rgb = EFHSB2RGB(hsb: hsb)
                 }
 
