@@ -68,7 +68,7 @@ public class EFSliderView: EFControl {
         thumbView.gestureRecognizer.addTarget(self, action: #selector(ef_didPanThumbView(gestureRecognizer:)))
         self.addSubview(thumbView)
 
-        let color = UIColor.blue.cgColor
+        let color = UIColor.blue
         self.setColors(colors: [color, color])
     }
 
@@ -103,11 +103,14 @@ public class EFSliderView: EFControl {
     // Sets the array of CGColorRef objects defining the color of each gradient stop on the track.
     // The location of each gradient stop is evaluated with formula: i * width_of_the_track / number_of_colors.
     // @param colors An array of CGColorRef objects.
-    func setColors(colors: [CGColor]) {
-        if colors.count <= 1 {
+    func setColors(colors: [UIColor]) {
+        let cgColors = colors.map { color -> CGColor in
+            return color.cgColor
+        }
+        if cgColors.count <= 1 {
             fatalError("‘colors: [CGColor]’ at least need to have 2 elements")
         }
-        trackLayer.colors = colors
+        trackLayer.colors = cgColors
         self.ef_updateLocations()
     }
 

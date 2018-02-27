@@ -224,7 +224,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         let tmp: UIColor = UIColor(
             hue: colorComponents.hue, saturation: colorComponents.saturation , brightness: 1, alpha: 1
         )
-        brightnessView.setColors(colors: [UIColor.black.cgColor, tmp.cgColor])
+        brightnessView.setColors(colors: [UIColor.black, tmp])
     }
 
     @objc private func ef_colorDidChangeValue(sender: EFColorWheelView) {

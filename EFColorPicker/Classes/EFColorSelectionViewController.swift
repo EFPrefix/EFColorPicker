@@ -28,7 +28,7 @@ import UIKit
 
 // The delegate of a EFColorSelectionViewController object must adopt the EFColorSelectionViewController protocol.
 // Methods of the protocol allow the delegate to handle color value changes.
-public protocol EFColorSelectionViewControllerDelegate: class {
+@objc public protocol EFColorSelectionViewControllerDelegate: NSObjectProtocol {
 
     // Tells the data source to return the color components.
     // @param colorViewCntroller The color view.

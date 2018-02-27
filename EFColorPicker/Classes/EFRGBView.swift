@@ -207,11 +207,13 @@ public class EFRGBView: UIView, EFColorView {
         let components = self.ef_colorComponentsWithRGB(rgb: colorComponents)
 
         for (idx, colorComponentView) in colorComponentViews.enumerated() {
-            colorComponentView.setColors(
-                colors: self.ef_colorsWithColorComponents(
-                    colorComponents: components, currentColorIndex: colorComponentView.tag
-                )
-            )
+            let cgColors: [CGColor] = self.ef_colorsWithColorComponents(colorComponents: components,
+                                                                             currentColorIndex: colorComponentView.tag)
+            let colors: [UIColor] = cgColors.map({ cgColor -> UIColor in
+                return UIColor(cgColor: cgColor)
+            })
+
+            colorComponentView.setColors(colors: colors)
             colorComponentView.value = components[idx] * colorComponentView.maximumValue
         }
     }
