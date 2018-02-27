@@ -71,7 +71,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         colorSample.backgroundColor = self.color
         colorSample.accessibilityValue = EFHexStringFromColor(color: self.color)
         self.ef_reloadViewsWithColorComponents(colorComponents: colorComponents)
-        self.colorWheel.display(self.layer)
+        self.colorWheel.display(self.colorWheel.layer)
     }
 
     override public func updateConstraints() {
