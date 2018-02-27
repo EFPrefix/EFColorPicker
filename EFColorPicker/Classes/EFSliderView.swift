@@ -30,7 +30,7 @@ public class EFSliderView: EFControl {
 
     let EFSliderViewHeight: CGFloat = 28.0
     let EFSliderViewMinWidth: CGFloat = 150.0
-    let EFSliderViewTrackHeight: CGFloat = 3.0
+    let EFSliderViewTrackHeight: CGFloat = 9.0
     let EFThumbViewEdgeInset: CGFloat = -10.0
 
     private let thumbView: EFThumbView = EFThumbView()
