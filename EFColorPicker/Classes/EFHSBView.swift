@@ -96,6 +96,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         brightnessView.maximumValue = EFHSBColorComponentMaxValue
         brightnessView.format = "%.2f"
         brightnessView.translatesAutoresizingMaskIntoConstraints = false
+        brightnessView.setColors(colors: [UIColor.black, UIColor.white])
         self.addSubview(brightnessView)
 
         colorWheel.addTarget(
