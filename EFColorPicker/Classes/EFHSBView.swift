@@ -71,6 +71,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         colorSample.backgroundColor = self.color
         colorSample.accessibilityValue = EFHexStringFromColor(color: self.color)
         self.ef_reloadViewsWithColorComponents(colorComponents: colorComponents)
+        self.colorWheel.display(self.colorWheel.layer)
     }
 
     override public func updateConstraints() {
@@ -95,6 +96,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         brightnessView.maximumValue = EFHSBColorComponentMaxValue
         brightnessView.format = "%.2f"
         brightnessView.translatesAutoresizingMaskIntoConstraints = false
+        brightnessView.setColors(colors: [UIColor.black, UIColor.white])
         self.addSubview(brightnessView)
 
         colorWheel.addTarget(
@@ -221,10 +223,6 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
 
     private func ef_updateSlidersWithColorComponents(colorComponents: HSB) {
         brightnessView.value = colorComponents.brightness
-        let tmp: UIColor = UIColor(
-            hue: colorComponents.hue, saturation: colorComponents.saturation , brightness: 1, alpha: 1
-        )
-        brightnessView.setColors(colors: [UIColor.black, tmp])
     }
 
     @objc private func ef_colorDidChangeValue(sender: EFColorWheelView) {
@@ -236,6 +234,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
 
     @objc private func ef_brightnessDidChangeValue(sender: EFColorComponentView) {
         colorComponents.brightness = sender.value
+        self.colorWheel.brightness = sender.value
         self.delegate?.colorView(colorView: self, didChangeColor: self.color)
         self.reloadData()
     }
