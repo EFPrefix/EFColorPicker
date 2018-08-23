@@ -163,15 +163,15 @@ func EFRGBColorComponents(color: UIColor) -> RGB {
     }
 
     if CGColorSpaceModel.monochrome == colorSpaceModel {
-        result.red = components[0]
-        result.green = components[0]
-        result.blue = components[0]
-        result.alpha = components[1]
+        result.red = abs(components[0])
+        result.green = abs(components[0])
+        result.blue = abs(components[0])
+        result.alpha = abs(components[1])
     } else {
-        result.red = components[0]
-        result.green = components[1]
-        result.blue = components[2]
-        result.alpha = components[3]
+        result.red = abs(components[0])
+        result.green = abs(components[1])
+        result.blue = abs(components[2])
+        result.alpha = abs(components[3])
     }
 
     return result
@@ -195,15 +195,15 @@ func EFHexStringFromColor(color: UIColor) -> String? {
     var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
 
     if CGColorSpaceModel.monochrome == colorSpaceModel {
-        red = components[0]
-        green = components[0]
-        blue = components[0]
-        alpha = components[1]
+        red = abs(components[0])
+        green = abs(components[0])
+        blue = abs(components[0])
+        alpha = abs(components[1])
     } else {
-        red = components[0]
-        green = components[1]
-        blue = components[2]
-        alpha = components[3]
+        red = abs(components[0])
+        green = abs(components[1])
+        blue = abs(components[2])
+        alpha = abs(components[3])
     }
 
     return String(
