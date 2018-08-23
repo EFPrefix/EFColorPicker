@@ -27,6 +27,8 @@
 import UIKit
 import CoreGraphics
 
+private let colorComponentValueRange = (CGFloat(0.0) ... CGFloat(1.0))
+
 // The structure to represent a color in the Red-Green-Blue-Alpha color space.
 struct RGB {
     var red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat
@@ -163,15 +165,15 @@ func EFRGBColorComponents(color: UIColor) -> RGB {
     }
 
     if CGColorSpaceModel.monochrome == colorSpaceModel {
-        result.red = components[0]
-        result.green = components[0]
-        result.blue = components[0]
-        result.alpha = components[1]
+        result.red = components[0].clamped(to: colorComponentValueRange)
+        result.green = components[0].clamped(to: colorComponentValueRange)
+        result.blue = components[0].clamped(to: colorComponentValueRange)
+        result.alpha = components[1].clamped(to: colorComponentValueRange)
     } else {
-        result.red = components[0]
-        result.green = components[1]
-        result.blue = components[2]
-        result.alpha = components[3]
+        result.red = components[0].clamped(to: colorComponentValueRange)
+        result.green = components[1].clamped(to: colorComponentValueRange)
+        result.blue = components[2].clamped(to: colorComponentValueRange)
+        result.alpha = components[3].clamped(to: colorComponentValueRange)
     }
 
     return result
@@ -195,15 +197,15 @@ func EFHexStringFromColor(color: UIColor) -> String? {
     var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
 
     if CGColorSpaceModel.monochrome == colorSpaceModel {
-        red = components[0]
-        green = components[0]
-        blue = components[0]
-        alpha = components[1]
+        red = components[0].clamped(to: colorComponentValueRange)
+        green = components[0].clamped(to: colorComponentValueRange)
+        blue = components[0].clamped(to: colorComponentValueRange)
+        alpha = components[1].clamped(to: colorComponentValueRange)
     } else {
-        red = components[0]
-        green = components[1]
-        blue = components[2]
-        alpha = components[3]
+        red = components[0].clamped(to: colorComponentValueRange)
+        green = components[1].clamped(to: colorComponentValueRange)
+        blue = components[2].clamped(to: colorComponentValueRange)
+        alpha = components[3].clamped(to: colorComponentValueRange)
     }
 
     return String(
@@ -242,4 +244,10 @@ func EFColorFromHexString(hexColor: String) -> UIColor? {
         blue: b / EFRGBColorComponentMaxValue,
         alpha: a / EFRGBColorComponentMaxValue
     )
+}
+
+extension Comparable {
+    func clamped(to limits: ClosedRange<Self>) -> Self {
+        return min(max(self, limits.lowerBound), limits.upperBound)
+    }
 }
