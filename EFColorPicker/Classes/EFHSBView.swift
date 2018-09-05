@@ -218,6 +218,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
     private func ef_reloadViewsWithColorComponents(colorComponents: HSB) {
         colorWheel.hue = colorComponents.hue
         colorWheel.saturation = colorComponents.saturation
+        colorWheel.brightness = colorComponents.brightness
         self.ef_updateSlidersWithColorComponents(colorComponents: colorComponents)
     }
 
