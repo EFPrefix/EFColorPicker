@@ -106,7 +106,7 @@ public class EFRGBView: UIView, EFColorView {
 
     @objc @IBAction private func ef_colorComponentDidChangeValue(_ sender: EFColorComponentView) {
         self.ef_setColorComponentValue(value: sender.value / sender.maximumValue, atIndex: UInt(sender.tag))
-        self.delegate?.colorView(colorView: self, didChangeColor: self.color)
+        self.delegate?.colorView(self, didChangeColor: self.color)
         self.reloadData()
     }
 
