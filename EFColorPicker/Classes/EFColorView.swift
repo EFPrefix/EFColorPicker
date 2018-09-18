@@ -40,7 +40,7 @@ public protocol EFColorViewDelegate: class {
 public protocol EFColorView: class {
 
     // The object that acts as the delegate of the receiving color selection view.
-    weak var delegate: EFColorViewDelegate? { get set }
+    var delegate: EFColorViewDelegate? { get set }
 
     // The current color.
     var color: UIColor { get set }

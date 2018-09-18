@@ -100,10 +100,10 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         self.addSubview(brightnessView)
 
         colorWheel.addTarget(
-            self, action: #selector(ef_colorDidChangeValue(sender:)), for: UIControlEvents.valueChanged
+            self, action: #selector(ef_colorDidChangeValue(sender:)), for: UIControl.Event.valueChanged
         )
         brightnessView.addTarget(
-            self, action: #selector(ef_brightnessDidChangeValue(sender:)), for: UIControlEvents.valueChanged
+            self, action: #selector(ef_brightnessDidChangeValue(sender:)), for: UIControl.Event.valueChanged
         )
 
         self.setNeedsUpdateConstraints()
@@ -145,7 +145,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
             layoutConstraints.append(
                 contentsOf: NSLayoutConstraint.constraints(
                     withVisualFormat: visualFormat,
-                    options: NSLayoutFormatOptions(rawValue: 0),
+                    options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                     metrics: metrics,
                     views: views
                 )
@@ -154,10 +154,10 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         layoutConstraints.append(
             NSLayoutConstraint(
                 item: colorWheel,
-                attribute: NSLayoutAttribute.width,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.width,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: colorWheel,
-                attribute: NSLayoutAttribute.height,
+                attribute: NSLayoutConstraint.Attribute.height,
                 multiplier: 1,
                 constant: 0)
         )
@@ -186,7 +186,7 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
             layoutConstraints.append(
                 contentsOf: NSLayoutConstraint.constraints(
                     withVisualFormat: visualFormat,
-                    options: NSLayoutFormatOptions(rawValue: 0),
+                    options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                     metrics: metrics,
                     views: views
                 )
@@ -195,20 +195,20 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         layoutConstraints.append(
             NSLayoutConstraint(
                 item: colorWheel,
-                attribute: NSLayoutAttribute.width,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.width,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: colorWheel,
-                attribute: NSLayoutAttribute.height,
+                attribute: NSLayoutConstraint.Attribute.height,
                 multiplier: 1,
                 constant: 0)
         )
         layoutConstraints.append(
             NSLayoutConstraint(
                 item: brightnessView,
-                attribute: NSLayoutAttribute.centerY,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.centerY,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self,
-                attribute: NSLayoutAttribute.centerY,
+                attribute: NSLayoutConstraint.Attribute.centerY,
                 multiplier: 1,
                 constant: 0)
         )

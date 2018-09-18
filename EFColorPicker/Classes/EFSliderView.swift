@@ -121,8 +121,8 @@ public class EFSliderView: EFControl {
 
     // MARK:- UIControl touch tracking events
     @objc func ef_didPanThumbView(gestureRecognizer: UIPanGestureRecognizer) {
-        if gestureRecognizer.state != UIGestureRecognizerState.began
-            && gestureRecognizer.state != UIGestureRecognizerState.changed {
+        if gestureRecognizer.state != UIGestureRecognizer.State.began
+            && gestureRecognizer.state != UIGestureRecognizer.State.changed {
             return
         }
 
@@ -150,7 +150,7 @@ public class EFSliderView: EFControl {
         let value: CGFloat = self.value + valueRange * translation / width
 
         self.setValue(value: value)
-        self.sendActions(for: UIControlEvents.valueChanged)
+        self.sendActions(for: UIControl.Event.valueChanged)
     }
 
     private func ef_updateLocations() {
