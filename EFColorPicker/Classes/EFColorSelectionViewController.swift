@@ -33,7 +33,7 @@ import UIKit
     // Tells the data source to return the color components.
     // @param colorViewCntroller The color view.
     // @param color The new color value.
-    func colorViewController(colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor)
+    func colorViewController(_ colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor)
 }
 
 public class EFColorSelectionViewController: UIViewController, EFColorViewDelegate {
@@ -109,7 +109,7 @@ public class EFColorSelectionViewController: UIViewController, EFColorViewDelega
     }
 
     // MARK:- EFColorViewDelegate
-    public func colorView(colorView: EFColorView, didChangeColor color: UIColor) {
-        self.delegate?.colorViewController(colorViewCntroller: self, didChangeColor: color)
+    public func colorView(_ colorView: EFColorView, didChangeColor color: UIColor) {
+        self.delegate?.colorViewController(self, didChangeColor: color)
     }
 }

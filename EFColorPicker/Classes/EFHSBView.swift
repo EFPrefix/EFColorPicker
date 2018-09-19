@@ -229,14 +229,14 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
     @objc private func ef_colorDidChangeValue(sender: EFColorWheelView) {
         colorComponents.hue = sender.hue
         colorComponents.saturation = sender.saturation
-        self.delegate?.colorView(colorView: self, didChangeColor: self.color)
+        self.delegate?.colorView(self, didChangeColor: self.color)
         self.reloadData()
     }
 
     @objc private func ef_brightnessDidChangeValue(sender: EFColorComponentView) {
         colorComponents.brightness = sender.value
         self.colorWheel.brightness = sender.value
-        self.delegate?.colorView(colorView: self, didChangeColor: self.color)
+        self.delegate?.colorView(self, didChangeColor: self.color)
         self.reloadData()
     }
 }

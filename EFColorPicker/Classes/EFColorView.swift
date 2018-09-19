@@ -33,7 +33,7 @@ public protocol EFColorViewDelegate: class {
     // Tells the data source to return the color components.
     // @param colorView The color view.
     // @param color The new color value.
-    func colorView(colorView: EFColorView, didChangeColor color: UIColor)
+    func colorView(_ colorView: EFColorView, didChangeColor color: UIColor)
 }
 
 /// The \c EFColorView protocol declares a view's interface for displaying and editing color value.
