@@ -1,11 +1,11 @@
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/EFColorPicker.png)
+![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
-<a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master"></a>
+<a href="https://travis-ci.org/EFPrefix/EFColorPicker"><img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat"></a>
 <a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
-<a href="https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
+<a href="https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
 <a href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
 <a href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
 <img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
@@ -13,7 +13,7 @@
 
 EFColorPicker is a lightweight color picker in Swift, inspired by [MSColorPicker](https://github.com/sgl0v/MSColorPicker).
 
-> [中文介绍](https://github.com/EyreFree/EFColorPicker/blob/master/README_CN.md)
+> [中文介绍](https://github.com/EFPrefix/EFColorPicker/blob/master/README_CN.md)
 
 ## Overview
 
@@ -29,7 +29,7 @@ Color picker component for iOS. It allows the user to select a color with color 
 
 | iPhone |   | iPad |
 |:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_ipad.gif)   
+![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_ipad.gif)   
 
 ## Example
 
@@ -123,7 +123,7 @@ You can control the visibility of color textField by change the `isColorTextFiel
 
 | isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
 |:---------------------:|:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone4.png)   
+![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone4.png)   
 
 For more detail, please see the demo.
 
@@ -141,7 +141,7 @@ func colorViewController(colorViewCntroller: EFColorSelectionViewController, did
 
 ## PS
 
-The first version of [EFColorPicker](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) is converted from [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293), thanks for [sgl0v](https://github.com/sgl0v)'s work!
+The first version of [EFColorPicker](https://github.com/EFPrefix/EFColorPicker/releases/tag/0.0.1) is converted from [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293), thanks for [sgl0v](https://github.com/sgl0v)'s work!
 
 ## Author
 

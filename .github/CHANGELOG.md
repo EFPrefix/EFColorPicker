@@ -2,6 +2,14 @@
 
 -----
 
+## [1.2.0](https://github.com/EyreFree/EFColorPicker/releases/tag/1.2.0) (2018-11-05)
+
+#### Add
+
+* Upgrade to Swift 4.2.
+
+---
+
 ## [1.1.0](https://github.com/EyreFree/EFColorPicker/releases/tag/1.1.0) (2018-03-30)
 
 #### Fix

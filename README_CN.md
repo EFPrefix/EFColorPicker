@@ -1,11 +1,11 @@
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/EFColorPicker.png)
+![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
-<a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master"></a>
+<a href="https://travis-ci.org/EFPrefix/EFColorPicker"><img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat"></a>
 <a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
-<a href="https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
+<a href="https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
 <a href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
 <a href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
 <img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
@@ -13,7 +13,7 @@
 
 EFColorPicker 是一个纯 Swift 的轻量级 iOS 颜色选择器，受 [MSColorPicker](https://github.com/sgl0v/MSColorPicker) 启发。
 
-> [English Introduction](https://github.com/EyreFree/EFColorPicker/blob/master/README.md)
+> [English Introduction](https://github.com/EFPrefix/EFColorPicker/blob/master/README.md)
 
 ## 概述
 
@@ -29,7 +29,7 @@ iOS 颜色选择器组件，它能够让用户选择自定义颜色，关键特�
 
 | iPhone |   | iPad |
 |:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_ipad.gif)   
+![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_ipad.gif)   
 
 ## 示例
 
@@ -40,7 +40,7 @@ iOS 颜色选择器组件，它能够让用户选择自定义颜色，关键特�
 或执行以下命令：
 
 ```bash
-git clone git@github.com:EyreFree/EFColorPicker.git; cd EFColorPicker/Example; pod install; open EFColorPicker.xcworkspace
+git clone git@github.com:EFPrefix/EFColorPicker.git; cd EFColorPicker/Example; pod install; open EFColorPicker.xcworkspace
 ```
 
 ## 环境
@@ -128,7 +128,7 @@ if "showPopover" == segue.identifier {
 
 | isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
 |:---------------------:|:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone4.png)   
+![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/sample_iphone4.png)   
 
 具体可参考示例程序。
 
@@ -146,7 +146,7 @@ func colorViewController(colorViewCntroller: EFColorSelectionViewController, did
 
 ## 备注
 
-[EFColorPicker](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) 的第一个版本从 [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293) 转换而来，在此对 MSColorPicker 的作者 [sgl0v](https://github.com/sgl0v) 表示感谢！
+[EFColorPicker](https://github.com/EFPrefix/EFColorPicker/releases/tag/0.0.1) 的第一个版本从 [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293) 转换而来，在此对 MSColorPicker 的作者 [sgl0v](https://github.com/sgl0v) 表示感谢！
 
 ## 作者
 
