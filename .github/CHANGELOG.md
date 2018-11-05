@@ -2,7 +2,7 @@
 
 -----
 
-## [1.2.0](https://github.com/EyreFree/EFColorPicker/releases/tag/1.2.0) (2018-11-05)
+## [1.2.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/1.2.0) (2018-11-05)
 
 #### Add
 
@@ -10,15 +10,15 @@
 
 ---
 
-## [1.1.0](https://github.com/EyreFree/EFColorPicker/releases/tag/1.1.0) (2018-03-30)
+## [1.1.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/1.1.0) (2018-03-30)
 
 #### Fix
 
-* Fix issue [#4](https://github.com/EyreFree/EFColorPicker/issues/4).
+* Fix issue [#4](https://github.com/EFPrefix/EFColorPicker/issues/4).
 
 ---
 
-## [1.0.0](https://github.com/EyreFree/EFColorPicker/releases/tag/1.0.0) (2017-10-20)
+## [1.0.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/1.0.0) (2017-10-20)
 
 #### Add
 
@@ -26,6 +26,6 @@
 
 ---
 
-## [0.0.1](https://github.com/EyreFree/EFColorPicker/releases/tag/0.0.1) (2017-09-30)
+## [0.0.1](https://github.com/EFPrefix/EFColorPicker/releases/tag/0.0.1) (2017-09-30)
 
 First public release.
