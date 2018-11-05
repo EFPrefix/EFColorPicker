@@ -25,6 +25,7 @@
 //  THE SOFTWARE.
 
 import Foundation
+import UIKit
 
 // The enum to define the EFColorView's types.
 public enum EFSelectedColorView: Int {

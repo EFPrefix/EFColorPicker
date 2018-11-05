@@ -25,6 +25,9 @@
 //  THE SOFTWARE.
 
 import Foundation
+import CoreGraphics
+import QuartzCore
+import UIKit
 
 public class EFSliderView: EFControl {
 
