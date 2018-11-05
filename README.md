@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
-<a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="http://img.shields.io/travis/EyreFree/EFColorPicker.svg"></a>
+<a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat"></a>
 <a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat"></a>
 <a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
@@ -40,8 +40,9 @@ Then build and run `EFColorPicker.xcworkspace` in Xcode, the demo shows how to u
 ## Requirements
 
 - iOS 8.0+
-- Xcode 9.0+
+- Xcode 10.1+
 - Swift 4.2+
+- CocoaPods 1.6.0.beta.2+
 
 ## Installation
 
