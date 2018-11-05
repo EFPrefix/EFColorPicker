@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/EFColorPicker.png)
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
 <a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="http://img.shields.io/travis/EyreFree/EFColorPicker.svg"></a>
@@ -29,7 +29,7 @@ Color picker component for iOS. It allows the user to select a color with color 
 
 | iPhone |   | iPad |
 |:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_ipad.gif)   
 
 ## Example
 
@@ -122,7 +122,7 @@ You can control the visibility of color textField by change the `isColorTextFiel
 
 | isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
 |:---------------------:|:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone4.png)   
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone4.png)   
 
 For more detail, please see the demo.
 

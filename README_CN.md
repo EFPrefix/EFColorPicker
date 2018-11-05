@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/EFColorPicker.png)
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
 <a href="https://travis-ci.org/EyreFree/EFColorPicker"><img src="http://img.shields.io/travis/EyreFree/EFColorPicker.svg"></a>
@@ -29,7 +29,7 @@ iOS 颜色选择器组件，它能够让用户选择自定义颜色，关键特�
 
 | iPhone |   | iPad |
 |:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_ipad.gif)   
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone.gif)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_ipad.gif)   
 
 ## 示例
 
@@ -127,7 +127,7 @@ if "showPopover" == segue.identifier {
 
 | isColorTextFieldHidden: true |   | isColorTextFieldHidden: false |   |
 |:---------------------:|:---------------------:|:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/assets/sample_iphone4.png)   
+![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone1.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone2.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone3.png)|![](https://raw.githubusercontent.com/EyreFree/EFColorPicker/master/Assets/sample_iphone4.png)   
 
 具体可参考示例程序。
 
