@@ -1,14 +1,31 @@
 ![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
-<a href="https://travis-ci.org/EFPrefix/EFColorPicker"><img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master"></a>
-<a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat"></a>
-<a href="http://cocoapods.org/pods/EFColorPicker"><img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat"></a>
-<a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
-<a href="https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat"></a>
-<a href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
-<a href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
-<img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
+    <a href="https://travis-ci.org/EFPrefix/EFColorPicker">
+    	<img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master">
+    </a>
+    <a href="http://cocoapods.org/pods/EFColorPicker">
+    	<img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat">
+    </a>
+    <a href="http://cocoapods.org/pods/EFColorPicker">
+    	<img src="https://img.shields.io/cocoapods/p/EFColorPicker.svg?style=flat">
+    </a>
+    <a href="https://github.com/apple/swift">
+    	<img src="https://img.shields.io/badge/language-swift-orange.svg">
+    </a>
+    <a href="https://codebeat.co/projects/github-com-efprefix-efcolorpicker-master">
+        <img src="https://codebeat.co/badges/e22f3d53-5bdd-4a77-9f36-6824b10b2330">
+    </a>
+    <a href="https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/LICENSE">
+    	<img src="https://img.shields.io/cocoapods/l/EFColorPicker.svg?style=flat">
+    </a>
+    <a href="https://twitter.com/EyreFree777">
+    	<img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat">
+    </a>
+    <a href="http://weibo.com/eyrefree777">
+    	<img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat">
+    </a>
+    <img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
 </p>
 
 EFColorPicker is a lightweight color picker in Swift, inspired by [MSColorPicker](https://github.com/sgl0v/MSColorPicker).
