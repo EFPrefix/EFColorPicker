@@ -29,6 +29,8 @@ import UIKit
 // The view to edit a color component.
 public class EFColorComponentView: UIControl, UITextFieldDelegate {
 
+    var isCurrentlyTouched = false
+    
     // Temporary disabled the color component editing via text field
     public var colorTextFieldEnabled: Bool = false {
         didSet {
@@ -138,6 +140,13 @@ public class EFColorComponentView: UIControl, UITextFieldDelegate {
         }
 
         slider.setColors(colors: colors)
+    }
+    
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.isCurrentlyTouched = true
+    }
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.isCurrentlyTouched = false
     }
 
     // MARK:- Private methods
