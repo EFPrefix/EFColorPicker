@@ -29,6 +29,7 @@ import UIKit
 // The view to edit a color component.
 public class EFColorComponentView: UIControl, UITextFieldDelegate {
 
+    // Indicates if the user touches the control at the moment
     var isCurrentlyTouched = false
     
     // Temporary disabled the color component editing via text field
