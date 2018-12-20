@@ -30,7 +30,7 @@ import CoreGraphics
 // The color wheel view.
 public class EFColorWheelView: UIControl {
     
-    var isCurrentlyTouched = false
+    var isTouched = false
 
     // The hue value.
     var hue: CGFloat = 0.0 {
@@ -96,7 +96,7 @@ public class EFColorWheelView: UIControl {
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.isCurrentlyTouched = true
+        self.isTouched = true
         if let position: CGPoint = touches.first?.location(in: self) {
             self.onTouchEventWithPosition(point: position)
         }
@@ -109,7 +109,7 @@ public class EFColorWheelView: UIControl {
     }
 
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.isCurrentlyTouched = false
+        self.isTouched = false
         if let position: CGPoint = touches.first?.location(in: self) {
             self.onTouchEventWithPosition(point: position)
         }

@@ -48,6 +48,9 @@ public class EFSliderView: EFControl {
     // The maximum value of the slider. The default value is 1.0.
     var maximumValue: CGFloat = 1
 
+    // Indicates if the user touches the control at the moment
+    var isTouched = false
+
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -124,6 +127,12 @@ public class EFSliderView: EFControl {
 
     // MARK:- UIControl touch tracking events
     @objc func ef_didPanThumbView(gestureRecognizer: UIPanGestureRecognizer) {
+        if gestureRecognizer.state == UIGestureRecognizer.State.ended {
+            self.isTouched = false
+        } else if gestureRecognizer.state == UIGestureRecognizer.State.began {
+            self.isTouched = true
+        }
+
         if gestureRecognizer.state != UIGestureRecognizer.State.began
             && gestureRecognizer.state != UIGestureRecognizer.State.changed {
             return

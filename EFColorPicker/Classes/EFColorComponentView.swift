@@ -30,7 +30,9 @@ import UIKit
 public class EFColorComponentView: UIControl, UITextFieldDelegate {
 
     // Indicates if the user touches the control at the moment
-    var isCurrentlyTouched = false
+    var isTouched: Bool {
+        return slider.isTouched
+    }
     
     // Temporary disabled the color component editing via text field
     public var colorTextFieldEnabled: Bool = false {
@@ -141,13 +143,6 @@ public class EFColorComponentView: UIControl, UITextFieldDelegate {
         }
 
         slider.setColors(colors: colors)
-    }
-    
-    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.isCurrentlyTouched = true
-    }
-    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.isCurrentlyTouched = false
     }
 
     // MARK:- Private methods

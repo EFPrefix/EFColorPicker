@@ -39,8 +39,8 @@ public class EFRGBView: UIView, EFColorView {
 
     weak public var delegate: EFColorViewDelegate?
 
-    public var isCurrentlyTouched: Bool {
-        return self.colorComponentViews.filter { $0.isCurrentlyTouched }.count > 0
+    public var isTouched: Bool {
+        return self.colorComponentViews.filter { $0.isTouched }.count > 0
     }
 
     public var color: UIColor {
