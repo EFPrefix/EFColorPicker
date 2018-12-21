@@ -42,6 +42,18 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
 
     weak public var delegate: EFColorViewDelegate?
 
+    public var isTouched: Bool {
+        if self.colorWheel.isTouched {
+            return true
+        }
+
+        if self.brightnessView.isTouched {
+            return true
+        }
+
+        return false
+    }
+
     public var color: UIColor {
         get {
             return UIColor(
