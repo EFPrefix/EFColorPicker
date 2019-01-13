@@ -121,6 +121,9 @@ public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
 
     // MARK:- Private
     private func ef_init() {
+        if #available(iOS 11.0, *) {
+            self.accessibilityIgnoresInvertColors = true
+        }
         self.accessibilityLabel = "color_selection_view"
 
         self.backgroundColor = UIColor.white

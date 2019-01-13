@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		110A874738016AE6EDCF6A955A06486C /* EFColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922FB823068DB8AEF86BEDB904021B7 /* EFColorSelectionView.swift */; };
-		339FD24A31762E85F2C63E6214EABDBA /* Pods-EFColorPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F38FEEE464B5C12B66FC736FE765379D /* Pods-EFColorPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		339FD24A31762E85F2C63E6214EABDBA /* Pods-EFColorPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DF1F76FF41F299D74A31242A3B649AF /* Pods-EFColorPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DB1B69AB74A873A9CE02ED93ACF8B95 /* EFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6CBF2188718B6E1AACA2CFF503E500 /* EFSliderView.swift */; };
 		424FD960A9466FB0B9D27E50CC60C305 /* EFHSBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64223374E7E098EDB62BBC65F991684F /* EFHSBView.swift */; };
 		4BABD9D033AAE23CC8A2C5E8CFDBDD48 /* EFControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07640F74A4A7E8420FA754F4AF3E907F /* EFControl.swift */; };
-		6243297D2545E2D98AB51C534987A989 /* EFColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFE3934838B1143F32288D4CEA1BE95 /* EFColorPicker-dummy.m */; };
+		6243297D2545E2D98AB51C534987A989 /* EFColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98953C2B6D102B13908A715B6622C279 /* EFColorPicker-dummy.m */; };
 		6885A5D41848017A2832B32453FF09AB /* EFColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FFA76A1ADB29E3D981D52470BA79C /* EFColorUtils.swift */; };
 		6A7329AEA6C6F38EABFFFC9E91B4983D /* EFColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF785FEC2FEDB9A520F91D55BA53C /* EFColorView.swift */; };
 		937EFB2738F6EB8DCEFE69CE81B32B22 /* EFColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F798D2D697CB23EB22CCF60C47CF6F /* EFColorSelectionViewController.swift */; };
-		A1ED9A98BBC7BF15BF4FFFEA63D4B64E /* Pods-EFColorPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CB55FE884A3469A6A0CB78790C9578 /* Pods-EFColorPicker_Example-dummy.m */; };
+		A1ED9A98BBC7BF15BF4FFFEA63D4B64E /* Pods-EFColorPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 399A0D57292DFF4BB7BE02ADA060224E /* Pods-EFColorPicker_Example-dummy.m */; };
 		A8946BC3E313A93940F8EEE48F16E251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		B3118820C0A7D76828048B213603868A /* EFColorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE65731B3C0CEAD4661EE53DE2C0DCD /* EFColorWheelView.swift */; };
-		B3C32A2E116FDD75E64CB5C4DB84C5C8 /* Pods-EFColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B11A49A1C199777D5677DFE6EE87968C /* Pods-EFColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3C32A2E116FDD75E64CB5C4DB84C5C8 /* Pods-EFColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4DC3D9E1D39BAF780877BAB090A652 /* Pods-EFColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC6B066463A10473CCA2E3DDB00D099E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		C1AC7E4465EDA631643656AA560D5BA1 /* EFRGBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798F3FD92C23A2F1DC4F1514E1870CB /* EFRGBView.swift */; };
 		C359983177BB77901B4B9D82693B520B /* EFThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB6323AB69C4AFC6BC2ED2CC7C455A9 /* EFThumbView.swift */; };
-		C8A0CEA3E329C8923E6E7AD65E82C43C /* EFColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 578E7A714DE829CF28D1B7AC30BB78F6 /* EFColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8A0CEA3E329C8923E6E7AD65E82C43C /* EFColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF252A62B5136158A58C37E7AA1675D4 /* EFColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA49D4DF91D75BB10D00E5E4AE190D89 /* EFColorComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDB12F7F75DA4AB8843BD2CBB412CB /* EFColorComponentView.swift */; };
 		ED94F684D7842D4BEC2AD63848FE598D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		FDF5B7CFC5E2012AFEDF549AB6ED610C /* Pods-EFColorPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 275F94E74EC4E1ECDE955D8A2C045EC5 /* Pods-EFColorPicker_Tests-dummy.m */; };
+		FDF5B7CFC5E2012AFEDF549AB6ED610C /* Pods-EFColorPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99180D91AE41870F59F207E265AAF840 /* Pods-EFColorPicker_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,48 +47,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CB55FE884A3469A6A0CB78790C9578 /* Pods-EFColorPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFColorPicker_Example-dummy.m"; sourceTree = "<group>"; };
 		047FFA76A1ADB29E3D981D52470BA79C /* EFColorUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorUtils.swift; path = EFColorPicker/Classes/EFColorUtils.swift; sourceTree = "<group>"; };
 		07640F74A4A7E8420FA754F4AF3E907F /* EFControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFControl.swift; path = EFColorPicker/Classes/EFControl.swift; sourceTree = "<group>"; };
-		0C1E6A9B41B3B9DE8E2672E0C1D9A93A /* EFColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFColorPicker.xcconfig; sourceTree = "<group>"; };
+		0C0FFCE5B8AD9DE1F2EB95B274E70D7B /* Pods-EFColorPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		0DF1F76FF41F299D74A31242A3B649AF /* Pods-EFColorPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
 		0F6CBF2188718B6E1AACA2CFF503E500 /* EFSliderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFSliderView.swift; path = EFColorPicker/Classes/EFSliderView.swift; sourceTree = "<group>"; };
-		1917F6E2CD79F518DB884E6A98FB12CF /* Pods-EFColorPicker_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Example-Info.plist"; sourceTree = "<group>"; };
-		25BFDFAC99A8210B9050D301DC430D71 /* EFColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFColorPicker-Info.plist"; sourceTree = "<group>"; };
-		273078CD1B19DC421F684C1E1C631568 /* Pods-EFColorPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFColorPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		275F94E74EC4E1ECDE955D8A2C045EC5 /* Pods-EFColorPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFColorPicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		10E289561E32EC5E93A63C90789A07D4 /* Pods-EFColorPicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		173A90F2D777FD424498808642256F32 /* Pods-EFColorPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Example-resources.sh"; sourceTree = "<group>"; };
+		17EBC5BDC9CA748059B7360802368015 /* EFColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFColorPicker.xcconfig; sourceTree = "<group>"; };
 		2CE65731B3C0CEAD4661EE53DE2C0DCD /* EFColorWheelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorWheelView.swift; path = EFColorPicker/Classes/EFColorWheelView.swift; sourceTree = "<group>"; };
+		2EE094D3859B019488F8763E93D908B3 /* Pods-EFColorPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Tests-resources.sh"; sourceTree = "<group>"; };
+		34598AC6ED99F978715B667AE588E87B /* Pods-EFColorPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3798F3FD92C23A2F1DC4F1514E1870CB /* EFRGBView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFRGBView.swift; path = EFColorPicker/Classes/EFRGBView.swift; sourceTree = "<group>"; };
+		399A0D57292DFF4BB7BE02ADA060224E /* Pods-EFColorPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFColorPicker_Example-dummy.m"; sourceTree = "<group>"; };
+		3B1BBBEF2F9B12ECE1B1BA500091069F /* EFColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-prefix.pch"; sourceTree = "<group>"; };
 		3C2FF785FEC2FEDB9A520F91D55BA53C /* EFColorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorView.swift; path = EFColorPicker/Classes/EFColorView.swift; sourceTree = "<group>"; };
-		4024160CE306AFB3599906813FFC649C /* EFColorPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EFColorPicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		532E5533934595CE85788460C2A288C9 /* Pods-EFColorPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		56061CF7CEFAC46EB1263AE976C9F092 /* Pods-EFColorPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		578E7A714DE829CF28D1B7AC30BB78F6 /* EFColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-umbrella.h"; sourceTree = "<group>"; };
-		58F81DECEC046506C961C951CAA333AD /* Pods-EFColorPicker_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Tests-Info.plist"; sourceTree = "<group>"; };
-		60B22F24B8781E18E5054DF5089DCFE2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		539ED610FF544BE4F414D47359A14BE2 /* Pods-EFColorPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5B4DC3D9E1D39BAF780877BAB090A652 /* Pods-EFColorPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Example-umbrella.h"; sourceTree = "<group>"; };
+		60374923B6764099BFD51F5A17AB0A8C /* Pods-EFColorPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFColorPicker_Example.modulemap"; sourceTree = "<group>"; };
 		64223374E7E098EDB62BBC65F991684F /* EFHSBView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFHSBView.swift; path = EFColorPicker/Classes/EFHSBView.swift; sourceTree = "<group>"; };
 		6B5A38FFC34CECFE7DB7EDBAF765CA41 /* EFColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFColorPicker.framework; path = EFColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB6323AB69C4AFC6BC2ED2CC7C455A9 /* EFThumbView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFThumbView.swift; path = EFColorPicker/Classes/EFThumbView.swift; sourceTree = "<group>"; };
+		7CF946F7847B151A082B74204BDED6C3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7E4D20C220F2331355E3339A5C50779B /* Pods-EFColorPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		83F798D2D697CB23EB22CCF60C47CF6F /* EFColorSelectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorSelectionViewController.swift; path = EFColorPicker/Classes/EFColorSelectionViewController.swift; sourceTree = "<group>"; };
 		8922FB823068DB8AEF86BEDB904021B7 /* EFColorSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorSelectionView.swift; path = EFColorPicker/Classes/EFColorSelectionView.swift; sourceTree = "<group>"; };
-		8D217BEAF69D4FD8B9F59644A049F605 /* Pods-EFColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8D85B14D596C2FA2FC81E2120FC3F744 /* Pods-EFColorPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		98F1CB267603489C338FDF63933543A8 /* Pods-EFColorPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F80942934488F541AF18EED70F1F8F0 /* EFColorPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = EFColorPicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95DC808929C33BAC801945B995D95329 /* Pods-EFColorPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFColorPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		96C9928CBFB667184B21849899E05705 /* Pods-EFColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		98953C2B6D102B13908A715B6622C279 /* EFColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFColorPicker-dummy.m"; sourceTree = "<group>"; };
+		99180D91AE41870F59F207E265AAF840 /* Pods-EFColorPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFColorPicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		9C350C2AB94D7677B33F823AF36AEBFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F933D185DAF6BBA97E74DAB79A9613F /* Pods_EFColorPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFColorPicker_Example.framework; path = "Pods-EFColorPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A160065882AD5FB0EEFA11EC3A2D12BF /* Pods-EFColorPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFColorPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A2D54B8689E9B5D367B8F68F736FFF11 /* EFColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		A49C270CC748C6F3BDDE5A82B9766AA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BB3D2DD6112E9807EDAA9209858DDA /* Pods_EFColorPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFColorPicker_Tests.framework; path = "Pods-EFColorPicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEFE3934838B1143F32288D4CEA1BE95 /* EFColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFColorPicker-dummy.m"; sourceTree = "<group>"; };
-		B11A49A1C199777D5677DFE6EE87968C /* Pods-EFColorPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B42D764F78335B8C914CE2C9D80144AF /* Pods-EFColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
-		C7D131F7F505E956752003CAC0D71262 /* EFColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFColorPicker.modulemap; sourceTree = "<group>"; };
-		CAE350145E5CECFEDAD61153B173C0FE /* Pods-EFColorPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D1B7408D982C39A6F10CC917B4657EBC /* Pods-EFColorPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFColorPicker_Example.modulemap"; sourceTree = "<group>"; };
+		A691F2CA355066D8D22BE4C2EEB7C14D /* Pods-EFColorPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFColorPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF252A62B5136158A58C37E7AA1675D4 /* EFColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		C20287519E38D6309AEF7474CD7B7F7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FDB12F7F75DA4AB8843BD2CBB412CB /* EFColorComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorComponentView.swift; path = EFColorPicker/Classes/EFColorComponentView.swift; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DE3006ECB969F8E8FC7F1BFCB19F4E29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F38FEEE464B5C12B66FC736FE765379D /* Pods-EFColorPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFColorPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F81E383E9E0CBF32934E2C618560038B /* Pods-EFColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E0FDE69C8F7654A0C1E824218EF8F461 /* Pods-EFColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E22B470AFE725D0717CE442078C74D1D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E7784AD0D8A9F477DE969D4C38B1F55A /* EFColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFColorPicker.modulemap; sourceTree = "<group>"; };
+		F7680E4E1A2644F21040588CAFC8921E /* Pods-EFColorPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFColorPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FF26860FA57393F772F12E5EF1A46571 /* Pods-EFColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +144,21 @@
 				3798F3FD92C23A2F1DC4F1514E1870CB /* EFRGBView.swift */,
 				0F6CBF2188718B6E1AACA2CFF503E500 /* EFSliderView.swift */,
 				6BB6323AB69C4AFC6BC2ED2CC7C455A9 /* EFThumbView.swift */,
-				F05F7D4E3A7F609A3A269307D25D51FB /* Pod */,
-				EBBF94E2C3E9CF806AC60E4F7675AC6A /* Support Files */,
+				4C3348005B9543DB33C786B93FDCD1BC /* Pod */,
+				D3426CD77CD80C6206980620FA1EDCB3 /* Support Files */,
 			);
 			name = EFColorPicker;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		4C3348005B9543DB33C786B93FDCD1BC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8F80942934488F541AF18EED70F1F8F0 /* EFColorPicker.podspec */,
+				E22B470AFE725D0717CE442078C74D1D /* LICENSE */,
+				7CF946F7847B151A082B74204BDED6C3 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		60F07B5B4515B14FDB537BDC9E3EDC51 /* Development Pods */ = {
@@ -156,11 +169,11 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		7A43F3BB5553EF3731C11FFB65218308 /* Targets Support Files */ = {
+		64C748E7D8104CE99C56D5B9976528D2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BE3BD398567228886029F72886045139 /* Pods-EFColorPicker_Example */,
-				D9EEA2EDA7F79763AFF2BD77FDFC5FAF /* Pods-EFColorPicker_Tests */,
+				9D6BE30EB1C93BC6A989910F6DF8AAEA /* Pods-EFColorPicker_Example */,
+				AD570C98D188CA2A06CBDDCDD4922F6D /* Pods-EFColorPicker_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -168,12 +181,48 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				60F07B5B4515B14FDB537BDC9E3EDC51 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				CB4C45B11C1338F89035C6413533E39C /* Products */,
-				7A43F3BB5553EF3731C11FFB65218308 /* Targets Support Files */,
+				64C748E7D8104CE99C56D5B9976528D2 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9D6BE30EB1C93BC6A989910F6DF8AAEA /* Pods-EFColorPicker_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C20287519E38D6309AEF7474CD7B7F7B /* Info.plist */,
+				60374923B6764099BFD51F5A17AB0A8C /* Pods-EFColorPicker_Example.modulemap */,
+				E0FDE69C8F7654A0C1E824218EF8F461 /* Pods-EFColorPicker_Example-acknowledgements.markdown */,
+				0C0FFCE5B8AD9DE1F2EB95B274E70D7B /* Pods-EFColorPicker_Example-acknowledgements.plist */,
+				399A0D57292DFF4BB7BE02ADA060224E /* Pods-EFColorPicker_Example-dummy.m */,
+				34598AC6ED99F978715B667AE588E87B /* Pods-EFColorPicker_Example-frameworks.sh */,
+				173A90F2D777FD424498808642256F32 /* Pods-EFColorPicker_Example-resources.sh */,
+				5B4DC3D9E1D39BAF780877BAB090A652 /* Pods-EFColorPicker_Example-umbrella.h */,
+				539ED610FF544BE4F414D47359A14BE2 /* Pods-EFColorPicker_Example.debug.xcconfig */,
+				96C9928CBFB667184B21849899E05705 /* Pods-EFColorPicker_Example.release.xcconfig */,
+			);
+			name = "Pods-EFColorPicker_Example";
+			path = "Target Support Files/Pods-EFColorPicker_Example";
+			sourceTree = "<group>";
+		};
+		AD570C98D188CA2A06CBDDCDD4922F6D /* Pods-EFColorPicker_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A49C270CC748C6F3BDDE5A82B9766AA3 /* Info.plist */,
+				FF26860FA57393F772F12E5EF1A46571 /* Pods-EFColorPicker_Tests.modulemap */,
+				95DC808929C33BAC801945B995D95329 /* Pods-EFColorPicker_Tests-acknowledgements.markdown */,
+				A691F2CA355066D8D22BE4C2EEB7C14D /* Pods-EFColorPicker_Tests-acknowledgements.plist */,
+				99180D91AE41870F59F207E265AAF840 /* Pods-EFColorPicker_Tests-dummy.m */,
+				10E289561E32EC5E93A63C90789A07D4 /* Pods-EFColorPicker_Tests-frameworks.sh */,
+				2EE094D3859B019488F8763E93D908B3 /* Pods-EFColorPicker_Tests-resources.sh */,
+				0DF1F76FF41F299D74A31242A3B649AF /* Pods-EFColorPicker_Tests-umbrella.h */,
+				7E4D20C220F2331355E3339A5C50779B /* Pods-EFColorPicker_Tests.debug.xcconfig */,
+				F7680E4E1A2644F21040588CAFC8921E /* Pods-EFColorPicker_Tests.release.xcconfig */,
+			);
+			name = "Pods-EFColorPicker_Tests";
+			path = "Target Support Files/Pods-EFColorPicker_Tests";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -182,23 +231,6 @@
 				44D5347904CF754D6785B84253F2574A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BE3BD398567228886029F72886045139 /* Pods-EFColorPicker_Example */ = {
-			isa = PBXGroup;
-			children = (
-				D1B7408D982C39A6F10CC917B4657EBC /* Pods-EFColorPicker_Example.modulemap */,
-				F81E383E9E0CBF32934E2C618560038B /* Pods-EFColorPicker_Example-acknowledgements.markdown */,
-				56061CF7CEFAC46EB1263AE976C9F092 /* Pods-EFColorPicker_Example-acknowledgements.plist */,
-				00CB55FE884A3469A6A0CB78790C9578 /* Pods-EFColorPicker_Example-dummy.m */,
-				A160065882AD5FB0EEFA11EC3A2D12BF /* Pods-EFColorPicker_Example-frameworks.sh */,
-				1917F6E2CD79F518DB884E6A98FB12CF /* Pods-EFColorPicker_Example-Info.plist */,
-				B11A49A1C199777D5677DFE6EE87968C /* Pods-EFColorPicker_Example-umbrella.h */,
-				CAE350145E5CECFEDAD61153B173C0FE /* Pods-EFColorPicker_Example.debug.xcconfig */,
-				8D217BEAF69D4FD8B9F59644A049F605 /* Pods-EFColorPicker_Example.release.xcconfig */,
-			);
-			name = "Pods-EFColorPicker_Example";
-			path = "Target Support Files/Pods-EFColorPicker_Example";
 			sourceTree = "<group>";
 		};
 		CB4C45B11C1338F89035C6413533E39C /* Products */ = {
@@ -211,44 +243,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D9EEA2EDA7F79763AFF2BD77FDFC5FAF /* Pods-EFColorPicker_Tests */ = {
+		D3426CD77CD80C6206980620FA1EDCB3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B42D764F78335B8C914CE2C9D80144AF /* Pods-EFColorPicker_Tests.modulemap */,
-				273078CD1B19DC421F684C1E1C631568 /* Pods-EFColorPicker_Tests-acknowledgements.markdown */,
-				8D85B14D596C2FA2FC81E2120FC3F744 /* Pods-EFColorPicker_Tests-acknowledgements.plist */,
-				275F94E74EC4E1ECDE955D8A2C045EC5 /* Pods-EFColorPicker_Tests-dummy.m */,
-				58F81DECEC046506C961C951CAA333AD /* Pods-EFColorPicker_Tests-Info.plist */,
-				F38FEEE464B5C12B66FC736FE765379D /* Pods-EFColorPicker_Tests-umbrella.h */,
-				98F1CB267603489C338FDF63933543A8 /* Pods-EFColorPicker_Tests.debug.xcconfig */,
-				532E5533934595CE85788460C2A288C9 /* Pods-EFColorPicker_Tests.release.xcconfig */,
-			);
-			name = "Pods-EFColorPicker_Tests";
-			path = "Target Support Files/Pods-EFColorPicker_Tests";
-			sourceTree = "<group>";
-		};
-		EBBF94E2C3E9CF806AC60E4F7675AC6A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7D131F7F505E956752003CAC0D71262 /* EFColorPicker.modulemap */,
-				0C1E6A9B41B3B9DE8E2672E0C1D9A93A /* EFColorPicker.xcconfig */,
-				AEFE3934838B1143F32288D4CEA1BE95 /* EFColorPicker-dummy.m */,
-				25BFDFAC99A8210B9050D301DC430D71 /* EFColorPicker-Info.plist */,
-				A2D54B8689E9B5D367B8F68F736FFF11 /* EFColorPicker-prefix.pch */,
-				578E7A714DE829CF28D1B7AC30BB78F6 /* EFColorPicker-umbrella.h */,
+				E7784AD0D8A9F477DE969D4C38B1F55A /* EFColorPicker.modulemap */,
+				17EBC5BDC9CA748059B7360802368015 /* EFColorPicker.xcconfig */,
+				98953C2B6D102B13908A715B6622C279 /* EFColorPicker-dummy.m */,
+				3B1BBBEF2F9B12ECE1B1BA500091069F /* EFColorPicker-prefix.pch */,
+				BF252A62B5136158A58C37E7AA1675D4 /* EFColorPicker-umbrella.h */,
+				9C350C2AB94D7677B33F823AF36AEBFA /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/EFColorPicker";
-			sourceTree = "<group>";
-		};
-		F05F7D4E3A7F609A3A269307D25D51FB /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4024160CE306AFB3599906813FFC649C /* EFColorPicker.podspec */,
-				60B22F24B8781E18E5054DF5089DCFE2 /* LICENSE */,
-				DE3006ECB969F8E8FC7F1BFCB19F4E29 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,9 +449,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2211DB2C3CB3E8D7934CF6F1457CB0B1 /* Release */ = {
+		0047CBAEA19CBD32EF987FFDB722B4A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1E6A9B41B3B9DE8E2672E0C1D9A93A /* EFColorPicker.xcconfig */;
+			baseConfigurationReference = 17EBC5BDC9CA748059B7360802368015 /* EFColorPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -457,7 +463,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/EFColorPicker/EFColorPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFColorPicker/EFColorPicker-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/EFColorPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -475,9 +481,9 @@
 			};
 			name = Release;
 		};
-		AD1CE2A6F96B46EFD10F1EFE2131D24A /* Debug */ = {
+		2EDA835B3D0A7C7EFD823DA274B9905F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98F1CB267603489C338FDF63933543A8 /* Pods-EFColorPicker_Tests.debug.xcconfig */;
+			baseConfigurationReference = 539ED610FF544BE4F414D47359A14BE2 /* Pods-EFColorPicker_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -489,7 +495,40 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Tests/Pods-EFColorPicker_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FF7230E1C8C9457122FCA42047857F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E4D20C220F2331355E3339A5C50779B /* Pods-EFColorPicker_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -508,43 +547,9 @@
 			};
 			name = Debug;
 		};
-		AF25D95717F5B7A3E45540D5943E7615 /* Release */ = {
+		6F390C29216A4B8938BB5BB1DCC47F03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D217BEAF69D4FD8B9F59644A049F605 /* Pods-EFColorPicker_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B6F2E50BCED4D53E3AD5F072391D8AD4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1E6A9B41B3B9DE8E2672E0C1D9A93A /* EFColorPicker.xcconfig */;
+			baseConfigurationReference = 17EBC5BDC9CA748059B7360802368015 /* EFColorPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -556,7 +561,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/EFColorPicker/EFColorPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFColorPicker/EFColorPicker-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/EFColorPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -573,7 +578,41 @@
 			};
 			name = Debug;
 		};
-		BE01AF5D395AE305A54D518A9B774D2A /* Release */ = {
+		78CC6A235E6E38DB061C4B23DCFF62E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7680E4E1A2644F21040588CAFC8921E /* Pods-EFColorPicker_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFColorPicker_Tests/Pods-EFColorPicker_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -605,6 +644,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -633,7 +674,41 @@
 			};
 			name = Release;
 		};
-		CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */ = {
+		96BE1B91679BECFB5CA3F9AAD693673E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C9928CBFB667184B21849899E05705 /* Pods-EFColorPicker_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -665,6 +740,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -697,81 +774,14 @@
 			};
 			name = Debug;
 		};
-		D463013C92447BA22B667D8844C75895 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE350145E5CECFEDAD61153B173C0FE /* Pods-EFColorPicker_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FE47C2DAAF3DCB26CE9BBE87BF822AF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 532E5533934595CE85788460C2A288C9 /* Pods-EFColorPicker_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFColorPicker_Tests/Pods-EFColorPicker_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFColorPicker_Tests/Pods-EFColorPicker_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0A6F3BFD3722A848F8CBE5D704E3B652 /* Build configuration list for PBXNativeTarget "EFColorPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6F2E50BCED4D53E3AD5F072391D8AD4 /* Debug */,
-				2211DB2C3CB3E8D7934CF6F1457CB0B1 /* Release */,
+				6F390C29216A4B8938BB5BB1DCC47F03 /* Debug */,
+				0047CBAEA19CBD32EF987FFDB722B4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -779,8 +789,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */,
-				BE01AF5D395AE305A54D518A9B774D2A /* Release */,
+				A73625DEBD810B78234FA1958C191C8C /* Debug */,
+				85B95B1234E227C814CCC2C7902D0916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -788,8 +798,8 @@
 		B0255D38A31DCC804D159449C140CA0C /* Build configuration list for PBXNativeTarget "Pods-EFColorPicker_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD1CE2A6F96B46EFD10F1EFE2131D24A /* Debug */,
-				FE47C2DAAF3DCB26CE9BBE87BF822AF2 /* Release */,
+				3FF7230E1C8C9457122FCA42047857F5 /* Debug */,
+				78CC6A235E6E38DB061C4B23DCFF62E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -797,8 +807,8 @@
 		B18042B8616FA7A3AFD59B8CC4DAF855 /* Build configuration list for PBXNativeTarget "Pods-EFColorPicker_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D463013C92447BA22B667D8844C75895 /* Debug */,
-				AF25D95717F5B7A3E45540D5943E7615 /* Release */,
+				2EDA835B3D0A7C7EFD823DA274B9905F /* Debug */,
+				96BE1B91679BECFB5CA3F9AAD693673E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
