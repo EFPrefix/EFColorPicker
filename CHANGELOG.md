@@ -2,6 +2,14 @@
 
 -----
 
+## [1.2.1](https://github.com/EFPrefix/EFColorPicker/releases/tag/1.2.1) (2019-01-13)
+
+#### Add
+
+* Make accessibilityIgnoresInvertColors.
+
+---
+
 ## [1.2.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/1.2.0) (2018-11-05)
 
 #### Add
