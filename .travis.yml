@@ -1,5 +1,5 @@
-osx_image: xcode10
-env: SWIFT_SNAPSHOT=4.2
+osx_image: xcode10.2
+env: SWIFT_SNAPSHOT=5.0
 language: objective-c
 
 cache: cocoapods

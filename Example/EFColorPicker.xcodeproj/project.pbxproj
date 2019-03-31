@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12ED54D72250990400B84777 /* README_CN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README_CN.md; path = ../README_CN.md; sourceTree = "<group>"; };
 		4E0693B61CB89F59B63E299E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EFColorPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFColorPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,7 +43,7 @@
 		66363CE54747C0CE52946CEE /* Pods-EFColorPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFColorPicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFColorPicker_Tests/Pods-EFColorPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A1767F18911529A8B2770D80 /* Pods-EFColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFColorPicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B80ED36874B9B1871306EF13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C732E9AA81435E364115454A /* EFColorPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EFColorPicker.podspec; path = ../EFColorPicker.podspec; sourceTree = "<group>"; };
+		C732E9AA81435E364115454A /* EFColorPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EFColorPicker.podspec; path = ../EFColorPicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C7AEF8D49DD9B32EE9F74210 /* Pods-EFColorPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFColorPicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFColorPicker_Tests/Pods-EFColorPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBA3BDDD7D56ED74B0A8FD74 /* Pods-EFColorPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFColorPicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D33A37D9FF5CC2221263E969 /* Pods_EFColorPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFColorPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C732E9AA81435E364115454A /* EFColorPicker.podspec */,
+				12ED54D72250990400B84777 /* README_CN.md */,
 				4E0693B61CB89F59B63E299E /* README.md */,
 				B80ED36874B9B1871306EF13 /* LICENSE */,
 			);
@@ -207,25 +209,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = P3X2725LYY;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = P3X2725LYY;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "EFColorPicker" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -287,7 +287,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EFColorPicker/EFColorPicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -296,7 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EFColorPicker_Example/Pods-EFColorPicker_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B286CFD9A8440973DDCE7242 /* [CP] Check Pods Manifest.lock */ = {
@@ -371,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -419,7 +420,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -427,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -467,7 +469,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -477,14 +479,13 @@
 			baseConfigurationReference = CBA3BDDD7D56ED74B0A8FD74 /* Pods-EFColorPicker_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P3X2725LYY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EFColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -494,14 +495,13 @@
 			baseConfigurationReference = A1767F18911529A8B2770D80 /* Pods-EFColorPicker_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P3X2725LYY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EFColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -510,7 +510,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7AEF8D49DD9B32EE9F74210 /* Pods-EFColorPicker_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = P3X2725LYY;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -523,8 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -532,7 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66363CE54747C0CE52946CEE /* Pods-EFColorPicker_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = P3X2725LYY;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -541,8 +540,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

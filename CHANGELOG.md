@@ -2,6 +2,12 @@
 
 -----
 
+## [5.0.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.0.0) (2019-03-31)
+
+- Upgrade to Swift 5.0.
+
+---
+
 ## [1.2.1](https://github.com/EFPrefix/EFColorPicker/releases/tag/1.2.1) (2019-01-13)
 
 #### Add
