@@ -164,9 +164,22 @@ func colorViewController(colorViewCntroller: EFColorSelectionViewController, did
 }
 ```
 
-## 备注
+## 使用 EFColorPicker 的应用
 
-[EFColorPicker](https://github.com/EFPrefix/EFColorPicker/releases/tag/0.0.1) 的第一个版本从 [MSColorPicker](https://github.com/sgl0v/MSColorPicker/commit/b15f6cfabf4e406368f730f3f66f823bf1593293) 转换而来，在此对 MSColorPicker 的作者 [sgl0v](https://github.com/sgl0v) 表示感谢！
+<table>
+    <tr>
+        <td>
+            <a href='https://www.appsight.io/app/m%C3%AA-%C4%91%E1%BB%8Dc-truy%E1%BB%87n' title='Mê đọc truyện'>
+                <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/317/171/media/small.png?1539682483'>
+            </a>
+        </td>
+        <td>
+            <a href='https://www.appsight.io/app/m%C3%AA-%C4%91%E1%BB%8Dc-truy%E1%BB%87n-b%E1%BA%A3n-ti%E1%BB%83u-thuy%E1%BA%BFt' title='Mê Đọc Truyện-Bản Tiểu Thuyết'>
+                <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/340/196/media/small.png?1551382455'>
+            </a>
+        </td>
+    </tr>
+</table>
 
 ## 作者
 
