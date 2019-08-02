@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name             = 'EFColorPicker'
-    s.version          = '5.0.0'
+    s.version          = '5.1.0'
     s.summary          = 'A lightweight color picker in Swift.'
-
+    
     s.description      = <<-DESC
     EFColorPicker is a lightweight color picker in Swift, inspired by MSColorPicker.
     DESC

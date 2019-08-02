@@ -70,6 +70,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         colorSelectionController.isColorTextFieldHidden = isColorTextFieldHidden
         colorSelectionController.delegate = self
         colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+        // colorSelectionController.setMode(mode: EFColorSelectionMode.hsb)
 
         if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
             let doneBtn: UIBarButtonItem = UIBarButtonItem(

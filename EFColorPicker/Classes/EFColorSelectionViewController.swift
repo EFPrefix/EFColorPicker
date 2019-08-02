@@ -26,6 +26,12 @@
 
 import UIKit
 
+public enum EFColorSelectionMode: Int {
+    case all = 0
+    case rgb = 1
+    case hsb = 2
+}
+
 // The delegate of a EFColorSelectionViewController object must adopt the EFColorSelectionViewController protocol.
 // Methods of the protocol allow the delegate to handle color value changes.
 @objc public protocol EFColorSelectionViewControllerDelegate: NSObjectProtocol {
@@ -90,6 +96,22 @@ public class EFColorSelectionViewController: UIViewController, EFColorViewDelega
         self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
         self.colorSelectionView().delegate = self
         self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
+    }
+
+    public func setMode(mode: EFColorSelectionMode) {
+        guard let segmentControl: UISegmentedControl = self.navigationItem.titleView as? UISegmentedControl else { return }
+        switch mode {
+        case .rgb:
+            segmentControl.isHidden = true
+            segmentControl.selectedSegmentIndex = 0
+            self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
+        case .hsb:
+            segmentControl.isHidden = true
+            segmentControl.selectedSegmentIndex = 1
+            self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.HSB, animated: false)
+        default:
+            segmentControl.isHidden = false
+        }
     }
 
     @IBAction func segmentControlDidChangeValue(_ segmentedControl: UISegmentedControl) {

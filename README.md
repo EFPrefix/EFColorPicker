@@ -95,6 +95,7 @@ navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFit
 
 colorSelectionController.delegate = self
 colorSelectionController.color = self.view.backgroundColor ?? UIColor.white
+colorSelectionController.setMode(mode: EFColorSelectionMode.all)
 
 if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
     let doneBtn: UIBarButtonItem = UIBarButtonItem(
@@ -161,13 +162,18 @@ func colorViewController(colorViewCntroller: EFColorSelectionViewController, did
 <table>
     <tr>
         <td>
-            <a href='https://www.appsight.io/app/m%C3%AA-%C4%91%E1%BB%8Dc-truy%E1%BB%87n' title='Mê đọc truyện'>
-                <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/317/171/media/small.png?1539682483'>
+            <a href='https://www.appsight.io/app/conduit-bending-assistant-pro' title='Conduit Bending Assistant PRO'>
+                <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/373/829/media/small.png?1555108249'>
             </a>
         </td>
         <td>
             <a href='https://www.appsight.io/app/m%C3%AA-%C4%91%E1%BB%8Dc-truy%E1%BB%87n-b%E1%BA%A3n-ti%E1%BB%83u-thuy%E1%BA%BFt' title='Mê Đọc Truyện-Bản Tiểu Thuyết'>
                 <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/340/196/media/small.png?1551382455'>
+            </a>
+        </td>
+        <td>
+            <a href='https://www.appsight.io/app/m%C3%AA-%C4%91%E1%BB%8Dc-truy%E1%BB%87n' title='Mê đọc truyện - Manga online'>
+                <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/379/101/media/small.png?1555620553'>
             </a>
         </td>
     </tr>
