@@ -2,6 +2,13 @@
 
 -----
 
+## [5.2.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.2.0) (2020-02-15)
+
+- Add SwiftPM support；
+- iOS 13 Dark Mode support.
+
+---
+
 ## [5.1.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.1.0) (2019-08-02)
 
 - Add parameter `mode`, issue [#22](https://github.com/EFPrefix/EFColorPicker/issues/22).
