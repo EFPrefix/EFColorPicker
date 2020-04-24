@@ -71,7 +71,7 @@ func EFRGB2HSB(rgb: RGB) -> HSB {
     let rd = Double(rgb.red)
     let gd = Double(rgb.green)
     let bd = Double(rgb.blue)
-    let max = fmax (rd, fmax(gd, bd))
+    let max = fmax(rd, fmax(gd, bd))
     let min = fmin(rd, fmin(gd, bd))
     var h = 0.0, b = max
 
@@ -115,32 +115,26 @@ func EFHSB2RGB(hsb: HSB) -> RGB {
         r = hsb.brightness
         g = t
         b = p
-        break
     case 1:
         r = q
         g = hsb.brightness
         b = p
-        break
     case 2:
         r = p
         g = hsb.brightness
         b = t
-        break
     case 3:
         r = p
         g = q
         b = hsb.brightness
-        break
     case 4:
         r = t
         g = p
         b = hsb.brightness
-        break
     case 5:
         r = hsb.brightness
         g = p
         b = q
-        break
     default:
         break
     }
@@ -152,11 +146,11 @@ func EFHSB2RGB(hsb: HSB) -> RGB {
 // @return The values of the color components (including alpha).
 func EFRGBColorComponents(color: UIColor) -> RGB {
     var result = RGB(1, 1, 1, 1)
-    guard let colorSpaceModel: CGColorSpaceModel = color.cgColor.colorSpace?.model else {
+    guard let colorSpaceModel = color.cgColor.colorSpace?.model else {
         return result
     }
 
-    if (CGColorSpaceModel.rgb != colorSpaceModel && CGColorSpaceModel.monochrome != colorSpaceModel) {
+    if .rgb != colorSpaceModel && .monochrome != colorSpaceModel {
         return result
     }
 
@@ -164,7 +158,7 @@ func EFRGBColorComponents(color: UIColor) -> RGB {
         return result
     }
 
-    if CGColorSpaceModel.monochrome == colorSpaceModel {
+    if .monochrome == colorSpaceModel {
         result.red = components[0].clamped(to: colorComponentValueRange)
         result.green = components[0].clamped(to: colorComponentValueRange)
         result.blue = components[0].clamped(to: colorComponentValueRange)
@@ -183,11 +177,11 @@ func EFRGBColorComponents(color: UIColor) -> RGB {
 // @param color The color value.
 // @return The hex string color value.
 func EFHexStringFromColor(color: UIColor) -> String? {
-    guard let colorSpaceModel: CGColorSpaceModel = color.cgColor.colorSpace?.model else {
+    guard let colorSpaceModel = color.cgColor.colorSpace?.model else {
         return nil
     }
 
-    if (CGColorSpaceModel.rgb != colorSpaceModel && CGColorSpaceModel.monochrome != colorSpaceModel) {
+    if .rgb != colorSpaceModel && .monochrome != colorSpaceModel {
         return nil
     }
 
@@ -196,7 +190,7 @@ func EFHexStringFromColor(color: UIColor) -> String? {
     }
     var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
 
-    if CGColorSpaceModel.monochrome == colorSpaceModel {
+    if .monochrome == colorSpaceModel {
         red = components[0].clamped(to: colorComponentValueRange)
         green = components[0].clamped(to: colorComponentValueRange)
         blue = components[0].clamped(to: colorComponentValueRange)

@@ -40,19 +40,20 @@ public enum EFSelectedColorView: Int {
 public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
 
     // The selected color view
-    private(set) var selectedIndex: EFSelectedColorView = EFSelectedColorView.RGB
+    private(set) var selectedIndex = EFSelectedColorView.RGB
 
-    let rgbColorView: EFRGBView = EFRGBView()
-    let hsbColorView: EFHSBView = EFHSBView()
+    let rgbColorView = EFRGBView()
+    let hsbColorView = EFHSBView()
 
     weak public var delegate: EFColorViewDelegate?
-
-    public var color: UIColor = UIColor.white {
+    var selectedView: EFColorView {
+        return selectedIndex == .RGB ? rgbColorView : hsbColorView
+    }
+    public var color = UIColor.white {
         didSet {
-            self.selectedView()?.color = color
+            selectedView.color = color
         }
     }
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.ef_init()
@@ -67,43 +68,37 @@ public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
     // @param index    This index define a view to show.
     // @param animated If YES, the view is being appeared using an animation.
     func setSelectedIndex(index: EFSelectedColorView, animated: Bool) {
-        self.selectedIndex = index
-        self.selectedView()?.color = self.color
-        UIView.animate(withDuration: animated ? 0.5 : 0.0) {
-            [weak self] in
+        selectedIndex = index
+        selectedView.color = color
+        UIView.animate(withDuration: animated ? 0.5 : 0.0) { [weak self] in
             if let strongSelf = self {
-                strongSelf.rgbColorView.alpha = EFSelectedColorView.RGB == index ? 1.0 : 0.0
-                strongSelf.hsbColorView.alpha = EFSelectedColorView.HSB == index ? 1.0 : 0.0
+                strongSelf.rgbColorView.alpha = .RGB == index ? 1.0 : 0.0
+                strongSelf.hsbColorView.alpha = .HSB == index ? 1.0 : 0.0
             }
         }
     }
 
-    func selectedView() -> EFColorView? {
-        return (EFSelectedColorView.RGB == self.selectedIndex ? self.rgbColorView : self.hsbColorView) as? EFColorView
-    }
-
     func addColorView(view: EFColorView) {
         view.delegate = self
-        if let view = view as? UIView {
-            self.addSubview(view)
-            view.translatesAutoresizingMaskIntoConstraints = false
-            let views = [
-                "view" : view
-            ]
-            let visualFormats = [
-                "H:|[view]|",
-                "V:|[view]|"
-            ]
-            for visualFormat in visualFormats {
-                self.addConstraints(
-                    NSLayoutConstraint.constraints(
-                        withVisualFormat: visualFormat,
-                        options: NSLayoutConstraint.FormatOptions(rawValue: 0),
-                        metrics: nil,
-                        views: views
-                    )
+        guard let view = view as? UIView else { return }
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let views = [
+            "view": view
+        ]
+        let visualFormats = [
+            "H:|[view]|",
+            "V:|[view]|"
+        ]
+        for visualFormat in visualFormats {
+            addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: visualFormat,
+                    options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+                    metrics: nil,
+                    views: views
                 )
-            }
+            )
         }
     }
 
@@ -113,27 +108,26 @@ public class EFColorSelectionView: UIView, EFColorView, EFColorViewDelegate {
         super.updateConstraints()
     }
 
-    // MARK:- FBColorViewDelegate methods
+    // MARK: - FBColorViewDelegate methods
     public func colorView(_ colorView: EFColorView, didChangeColor color: UIColor) {
         self.color = color
-        self.delegate?.colorView(self, didChangeColor: self.color)
+        delegate?.colorView(self, didChangeColor: self.color)
     }
 
-    // MARK:- Private
+    // MARK: - Private
     private func ef_init() {
         if #available(iOS 11.0, *) {
-            self.accessibilityIgnoresInvertColors = true
+            accessibilityIgnoresInvertColors = true
         }
-        self.accessibilityLabel = "color_selection_view"
-
-		if #available(iOS 13.0, *) {
-			self.backgroundColor = UIColor.systemBackground
-		} else {
-			self.backgroundColor = UIColor.white
-		}
-		
-        self.addColorView(view: rgbColorView)
-        self.addColorView(view: hsbColorView)
-        self.setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
+        accessibilityLabel = "color_selection_view"
+        
+        if #available(iOS 13.0, *) {
+            backgroundColor = .systemBackground
+        } else {
+            backgroundColor = .white
+        }
+        addColorView(view: rgbColorView)
+        addColorView(view: hsbColorView)
+        setSelectedIndex(index: .RGB, animated: false)
     }
 }

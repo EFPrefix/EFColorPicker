@@ -42,96 +42,84 @@ public enum EFColorSelectionMode: Int {
     func colorViewController(_ colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor)
 }
 
-public class EFColorSelectionViewController: UIViewController, EFColorViewDelegate {
+public class EFColorSelectionViewController: UIViewController {
 
     // The controller's delegate. Controller notifies a delegate on color change.
     public weak var delegate: EFColorSelectionViewControllerDelegate?
-
+    
     // The current color value.
     public var color: UIColor {
         get {
-            return self.colorSelectionView().color
+            return colorSelectionView.color
         }
         set {
-            self.colorSelectionView().color = newValue
+            colorSelectionView.color = newValue
         }
     }
-
+    let colorSelectionView = EFColorSelectionView(frame: UIScreen.main.bounds)
+    let segmentControl = UISegmentedControl(items: [NSLocalizedString("RGB", comment: ""), NSLocalizedString("HSB", comment: "")])
     // Whether colorTextField will hide, default is `true`
     public var isColorTextFieldHidden: Bool {
         get {
-            return !((self.view as? EFColorSelectionView)?.hsbColorView.brightnessView.colorTextFieldEnabled ?? false)
+            return !colorSelectionView.hsbColorView.brightnessView.colorTextFieldEnabled
         }
         set {
-            if let colorSelectionView = self.view as? EFColorSelectionView,
-                colorSelectionView.hsbColorView.brightnessView.colorTextFieldEnabled != !newValue {
+            if colorSelectionView.hsbColorView.brightnessView.colorTextFieldEnabled == newValue {
                 colorSelectionView.hsbColorView.brightnessView.colorTextFieldEnabled = !newValue
-
                 for colorComponentView in colorSelectionView.rgbColorView.colorComponentViews {
                     colorComponentView.colorTextFieldEnabled = !newValue
                 }
             }
         }
     }
-
     override public func loadView() {
-        let colorSelectionView: EFColorSelectionView = EFColorSelectionView(frame: UIScreen.main.bounds)
         self.view = colorSelectionView
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-
-        let segmentControl: UISegmentedControl = UISegmentedControl(
-            items: [NSLocalizedString("RGB", comment: ""), NSLocalizedString("HSB", comment: "")]
-        )
         segmentControl.addTarget(
             self,
             action: #selector(segmentControlDidChangeValue(_:)),
-            for: UIControl.Event.valueChanged
+            for: .valueChanged
         )
         segmentControl.selectedSegmentIndex = 0
-        self.navigationItem.titleView = segmentControl
+        navigationItem.titleView = segmentControl
 
-        self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
-        self.colorSelectionView().delegate = self
-        self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
+        colorSelectionView.setSelectedIndex(index: .RGB, animated: false)
+        colorSelectionView.delegate = self
+        edgesForExtendedLayout = UIRectEdge(rawValue: 0)
     }
 
     public func setMode(mode: EFColorSelectionMode) {
-        guard let segmentControl: UISegmentedControl = self.navigationItem.titleView as? UISegmentedControl else { return }
         switch mode {
         case .rgb:
             segmentControl.isHidden = true
             segmentControl.selectedSegmentIndex = 0
-            self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.RGB, animated: false)
+            colorSelectionView.setSelectedIndex(index: .RGB, animated: false)
         case .hsb:
             segmentControl.isHidden = true
             segmentControl.selectedSegmentIndex = 1
-            self.colorSelectionView().setSelectedIndex(index: EFSelectedColorView.HSB, animated: false)
+            colorSelectionView.setSelectedIndex(index: .HSB, animated: false)
         default:
             segmentControl.isHidden = false
         }
     }
 
     @IBAction func segmentControlDidChangeValue(_ segmentedControl: UISegmentedControl) {
-        self.colorSelectionView().setSelectedIndex(
-            index: EFSelectedColorView(rawValue: segmentedControl.selectedSegmentIndex) ?? EFSelectedColorView.RGB,
+        colorSelectionView.setSelectedIndex(
+            index: EFSelectedColorView(rawValue: segmentedControl.selectedSegmentIndex) ?? .RGB,
             animated: true
         )
     }
 
     override public func viewWillLayoutSubviews() {
-        self.colorSelectionView().setNeedsUpdateConstraints()
-        self.colorSelectionView().updateConstraintsIfNeeded()
+        colorSelectionView.setNeedsUpdateConstraints()
+        colorSelectionView.updateConstraintsIfNeeded()
     }
-
-    func colorSelectionView() -> EFColorSelectionView {
-        return self.view as? EFColorSelectionView ?? EFColorSelectionView()
-    }
-
-    // MARK:- EFColorViewDelegate
+}
+extension EFColorSelectionViewController: EFColorViewDelegate {
     public func colorView(_ colorView: EFColorView, didChangeColor color: UIColor) {
-        self.delegate?.colorViewController(self, didChangeColor: color)
+        delegate?.colorViewController(self, didChangeColor: color)
     }
 }

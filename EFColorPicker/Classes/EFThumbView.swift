@@ -28,30 +28,29 @@ import UIKit
 
 public class EFThumbView: EFControl {
 
-    private(set) var gestureRecognizer: UIGestureRecognizer = UIPanGestureRecognizer(target: nil, action: nil)
+    private(set) var gestureRecognizer = UIPanGestureRecognizer(target: nil, action: nil)
 
     private let EFSliderViewThumbDimension: CGFloat = 28.0
-    private let thumbLayer: CALayer = CALayer()
+    private lazy var thumbLayer: CALayer = {
+        let layer = CALayer()
+        layer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
+        layer.borderWidth = 0.5
+        layer.cornerRadius = EFSliderViewThumbDimension / 2
+        layer.backgroundColor = UIColor.white.cgColor
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.shadowRadius = 2
+        layer.shadowOpacity = 0.3
+        return layer
+    }()
 
     override init(frame: CGRect) {
-        super.init(
-            frame: CGRect(
-                x: frame.origin.x, y: frame.origin.y,
-                width: EFSliderViewThumbDimension, height: EFSliderViewThumbDimension
+        super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y,
+                                 width: EFSliderViewThumbDimension, height: EFSliderViewThumbDimension
             )
         )
-
-        self.thumbLayer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
-        self.thumbLayer.borderWidth = 0.5
-        self.thumbLayer.cornerRadius = EFSliderViewThumbDimension / 2
-        self.thumbLayer.backgroundColor = UIColor.white.cgColor
-        self.thumbLayer.shadowColor = UIColor.black.cgColor
-        self.thumbLayer.shadowOffset = CGSize(width: 0, height: 3)
-        self.thumbLayer.shadowRadius = 2
-        self.thumbLayer.shadowOpacity = 0.3
-        self.layer.addSublayer(self.thumbLayer)
-
-        self.addGestureRecognizer(self.gestureRecognizer)
+        layer.addSublayer(thumbLayer)
+        addGestureRecognizer(gestureRecognizer)
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -65,10 +64,10 @@ public class EFThumbView: EFControl {
 
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
-        self.thumbLayer.bounds = CGRect(
+        thumbLayer.bounds = CGRect(
             x: 0, y: 0, width: EFSliderViewThumbDimension, height: EFSliderViewThumbDimension
         )
-        self.thumbLayer.position = CGPoint(x: EFSliderViewThumbDimension / 2, y: EFSliderViewThumbDimension / 2)
+        thumbLayer.position = CGPoint(x: EFSliderViewThumbDimension / 2, y: EFSliderViewThumbDimension / 2)
         CATransaction.commit()
     }
 }

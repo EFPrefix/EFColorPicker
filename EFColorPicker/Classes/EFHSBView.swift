@@ -33,11 +33,25 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
     let EFViewMargin: CGFloat = 20.0
     let EFColorWheelDimension: CGFloat = 200.0
 
-    private let colorWheel: EFColorWheelView = EFColorWheelView()
-    let brightnessView: EFColorComponentView = EFColorComponentView()
-    private let colorSample: UIView = UIView()
-
-    private var colorComponents: HSB = HSB(1, 1, 1, 1)
+    private let colorWheel = EFColorWheelView()
+    public let brightnessView: EFColorComponentView = {
+        let view = EFColorComponentView()
+        view.title = NSLocalizedString("Brightness", comment: "")
+        view.maximumValue = EFHSBColorComponentMaxValue
+        view.format = "%.2f"
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setColors(colors: [.black, .white])
+        return view
+    }()
+    private let colorSample: UIView = {
+        let view = UIView()
+        view.accessibilityLabel = "color_sample"
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 0.5
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    private var colorComponents = HSB(1, 1, 1, 1)
     private var layoutConstraints: [NSLayoutConstraint] = []
 
     weak public var delegate: EFColorViewDelegate?
@@ -46,11 +60,9 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         if self.colorWheel.isTouched {
             return true
         }
-
         if self.brightnessView.isTouched {
             return true
         }
-
         return false
     }
 
@@ -80,36 +92,24 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
     }
 
     func reloadData() {
-        colorSample.backgroundColor = self.color
-        colorSample.accessibilityValue = EFHexStringFromColor(color: self.color)
+        colorSample.backgroundColor = color
+        colorSample.accessibilityValue = EFHexStringFromColor(color: color)
         self.ef_reloadViewsWithColorComponents(colorComponents: colorComponents)
-        self.colorWheel.display(self.colorWheel.layer)
+        self.colorWheel.display(colorWheel.layer)
     }
-
     override public func updateConstraints() {
         self.ef_updateConstraints()
         super.updateConstraints()
     }
 
-    // MARK:- Private methods
+    // MARK: - Private methods
     private func ef_baseInit() {
-        self.accessibilityLabel = "hsb_view"
-
-        colorSample.accessibilityLabel = "color_sample"
-        colorSample.layer.borderColor = UIColor.black.cgColor
-        colorSample.layer.borderWidth = 0.5
-        colorSample.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(colorSample)
-
+        accessibilityLabel = "hsb_view"
+        addSubview(colorSample)
+        
         colorWheel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(colorWheel)
-
-        brightnessView.title = NSLocalizedString("Brightness", comment: "")
-        brightnessView.maximumValue = EFHSBColorComponentMaxValue
-        brightnessView.format = "%.2f"
-        brightnessView.translatesAutoresizingMaskIntoConstraints = false
-        brightnessView.setColors(colors: [UIColor.black, UIColor.white])
-        self.addSubview(brightnessView)
+        addSubview(colorWheel)
+        addSubview(brightnessView)
 
         colorWheel.addTarget(
             self, action: #selector(ef_colorDidChangeValue(sender:)), for: UIControl.Event.valueChanged
@@ -117,33 +117,31 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         brightnessView.addTarget(
             self, action: #selector(ef_brightnessDidChangeValue(sender:)), for: UIControl.Event.valueChanged
         )
-
-        self.setNeedsUpdateConstraints()
+        setNeedsUpdateConstraints()
     }
 
     private func ef_updateConstraints() {
         // remove all constraints first
         if !layoutConstraints.isEmpty {
-            self.removeConstraints(layoutConstraints)
+            removeConstraints(layoutConstraints)
         }
 
-        layoutConstraints = UIUserInterfaceSizeClass.compact == self.traitCollection.verticalSizeClass
-            ? self.ef_constraintsForCompactVerticalSizeClass()
-            : self.ef_constraintsForRegularVerticalSizeClass()
-
-        self.addConstraints(layoutConstraints)
+        layoutConstraints = UIUserInterfaceSizeClass.compact == traitCollection.verticalSizeClass
+            ? ef_constraintsForCompactVerticalSizeClass()
+            : ef_constraintsForRegularVerticalSizeClass()
+        addConstraints(layoutConstraints)
     }
 
     private func ef_constraintsForRegularVerticalSizeClass() -> [NSLayoutConstraint] {
         let metrics = [
-            "margin" : EFViewMargin,
-            "height" : EFColorSampleViewHeight,
-            "color_wheel_dimension" : EFColorWheelDimension
+            "margin": EFViewMargin,
+            "height": EFColorSampleViewHeight,
+            "color_wheel_dimension": EFColorWheelDimension
         ]
         let views = [
-            "colorSample" : colorSample,
-            "colorWheel" : colorWheel,
-            "brightnessView" : brightnessView
+            "colorSample": colorSample,
+            "colorWheel": colorWheel,
+            "brightnessView": brightnessView
         ]
 
         var layoutConstraints: [NSLayoutConstraint] = []
@@ -166,26 +164,25 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         layoutConstraints.append(
             NSLayoutConstraint(
                 item: colorWheel,
-                attribute: NSLayoutConstraint.Attribute.width,
-                relatedBy: NSLayoutConstraint.Relation.equal,
+                attribute: .width,
+                relatedBy: .equal,
                 toItem: colorWheel,
-                attribute: NSLayoutConstraint.Attribute.height,
+                attribute: .height,
                 multiplier: 1,
                 constant: 0)
         )
         return layoutConstraints
     }
-
     private func ef_constraintsForCompactVerticalSizeClass() -> [NSLayoutConstraint] {
         let metrics = [
-            "margin" : EFViewMargin,
-            "height" : EFColorSampleViewHeight,
-            "color_wheel_dimension" : EFColorWheelDimension
+            "margin": EFViewMargin,
+            "height": EFColorSampleViewHeight,
+            "color_wheel_dimension": EFColorWheelDimension
         ]
         let views = [
-            "colorSample" : colorSample,
-            "colorWheel" : colorWheel,
-            "brightnessView" : brightnessView
+            "colorSample": colorSample,
+            "colorWheel": colorWheel,
+            "brightnessView": brightnessView
         ]
 
         var layoutConstraints: [NSLayoutConstraint] = []
@@ -207,20 +204,20 @@ public class EFHSBView: UIView, EFColorView, UITextFieldDelegate {
         layoutConstraints.append(
             NSLayoutConstraint(
                 item: colorWheel,
-                attribute: NSLayoutConstraint.Attribute.width,
-                relatedBy: NSLayoutConstraint.Relation.equal,
+                attribute: .width,
+                relatedBy: .equal,
                 toItem: colorWheel,
-                attribute: NSLayoutConstraint.Attribute.height,
+                attribute: .height,
                 multiplier: 1,
                 constant: 0)
         )
         layoutConstraints.append(
             NSLayoutConstraint(
                 item: brightnessView,
-                attribute: NSLayoutConstraint.Attribute.centerY,
-                relatedBy: NSLayoutConstraint.Relation.equal,
+                attribute: .centerY,
+                relatedBy: .equal,
                 toItem: self,
-                attribute: NSLayoutConstraint.Attribute.centerY,
+                attribute: .centerY,
                 multiplier: 1,
                 constant: 0)
         )
