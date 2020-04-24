@@ -30,27 +30,27 @@ import CoreGraphics
 // The color wheel view.
 public class EFColorWheelView: UIControl {
     
-    var isTouched = false
+    public var isTouched = false
     var wheelImage: CGImage?
 
     // The hue value.
-    var hue: CGFloat = 0.0 {
+    public var hue: CGFloat = 0.0 {
         didSet {
-            self.setSelectedPoint(point: ef_selectedPoint())
-            self.setNeedsDisplay()
+            setSelectedPoint(point: ef_selectedPoint())
+            setNeedsDisplay()
         }
     }
 
     // The saturation value.
-    var saturation: CGFloat = 0.0 {
+    public var saturation: CGFloat = 0.0 {
         didSet {
-            self.setSelectedPoint(point: ef_selectedPoint())
-            self.setNeedsDisplay()
+            setSelectedPoint(point: ef_selectedPoint())
+            setNeedsDisplay()
         }
     }
 
     // The saturation value.
-    var brightness: CGFloat = 1.0 {
+    public var brightness: CGFloat = 1.0 {
         didSet {
             self.setSelectedPoint(point: ef_selectedPoint())
             if oldValue != brightness {
@@ -78,18 +78,15 @@ public class EFColorWheelView: UIControl {
     }()
 
     override open class var requiresConstraintBasedLayout: Bool {
-        get {
-            return true
-        }
+        return true
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.accessibilityLabel = "color_wheel_view"
-
-        self.layer.delegate = self
-        self.layer.addSublayer(self.indicatorLayer)
+        accessibilityLabel = "color_wheel_view"
+        layer.delegate = self
+        layer.addSublayer(indicatorLayer)
 
         // [self setSelectedPoint:CGPointMake(dimension / 2, dimension / 2)];
     }
@@ -99,41 +96,41 @@ public class EFColorWheelView: UIControl {
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.isTouched = true
-        if let position: CGPoint = touches.first?.location(in: self) {
-            self.onTouchEventWithPosition(point: position)
+        isTouched = true
+        if let position = touches.first?.location(in: self) {
+            onTouchEventWithPosition(point: position)
         }
     }
-
+    
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let position: CGPoint = touches.first?.location(in: self) {
-            self.onTouchEventWithPosition(point: position)
+        if let position = touches.first?.location(in: self) {
+            onTouchEventWithPosition(point: position)
         }
     }
-
+    
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.isTouched = false
-        if let position: CGPoint = touches.first?.location(in: self) {
-            self.onTouchEventWithPosition(point: position)
+        isTouched = false
+        if let position = touches.first?.location(in: self) {
+            onTouchEventWithPosition(point: position)
         }
     }
-
+    
     func onTouchEventWithPosition(point: CGPoint) {
-        let radius: CGFloat = self.bounds.width / 2
+        let radius = self.bounds.width / 2
 
         let mx = Double(radius - point.x)
         let my = Double(radius - point.y)
-        let dist: CGFloat = CGFloat(sqrt(mx * mx + my * my))
+        let dist = CGFloat(sqrt(mx * mx + my * my))
 
         if dist <= radius {
-            self.ef_colorWheelValueWithPosition(position: point, hue: &hue, saturation: &saturation)
-            self.setSelectedPoint(point: point)
-            self.sendActions(for: UIControl.Event.valueChanged)
+            ef_colorWheelValueWithPosition(position: point, hue: &hue, saturation: &saturation)
+            setSelectedPoint(point: point)
+            sendActions(for: .valueChanged)
         }
     }
 
     func setSelectedPoint(point: CGPoint) {
-        let selectedColor: UIColor = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
+        let selectedColor = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
 
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
@@ -142,7 +139,7 @@ public class EFColorWheelView: UIControl {
         CATransaction.commit()
     }
 
-    // MARK:- CALayerDelegate methods
+    // MARK: - CALayerDelegate methods
     override public func display(_ layer: CALayer) {
         guard wheelImage == nil else { return }
         drawWheelImage()
@@ -155,7 +152,7 @@ public class EFColorWheelView: UIControl {
         }
     }
 
-    // MARK:- Private methods
+    // MARK: - Private methods
     private func drawWheelImage() {
         let dimension: CGFloat = min(self.frame.width, self.frame.height)
         guard let bitmapData = CFDataCreateMutable(nil, 0) else {
@@ -174,11 +171,11 @@ public class EFColorWheelView: UIControl {
     }
 
     private func ef_selectedPoint() -> CGPoint {
-        let dimension: CGFloat = min(self.frame.width, self.frame.height)
+        let dimension = min(frame.width, frame.height)
 
-        let radius: CGFloat = saturation * dimension / 2
-        let x: CGFloat = dimension / 2 + radius * CGFloat(cos(Double(hue) * Double.pi * 2.0))
-        let y: CGFloat = dimension / 2 + radius * CGFloat(sin(Double(hue) * Double.pi * 2.0))
+        let radius = saturation * dimension / 2
+        let x = dimension / 2 + radius * CGFloat(cos(Double(hue) * Double.pi * 2.0))
+        let y = dimension / 2 + radius * CGFloat(sin(Double(hue) * Double.pi * 2.0))
 
         return CGPoint(x: x, y: y)
     }
@@ -191,9 +188,9 @@ public class EFColorWheelView: UIControl {
         for y in 0 ..< Int(size.width) {
             for x in 0 ..< Int(size.height) {
                 var hue: CGFloat = 0, saturation: CGFloat = 0, a: CGFloat = 0.0
-                self.ef_colorWheelValueWithPosition(position: CGPoint(x: x, y: y), hue: &hue, saturation: &saturation)
+                ef_colorWheelValueWithPosition(position: CGPoint(x: x, y: y), hue: &hue, saturation: &saturation)
 
-                var rgb: RGB = RGB(1, 1, 1, 1)
+                var rgb = RGB(1, 1, 1, 1)
                 if saturation < 1.0 {
                     // Antialias the edge of the circle.
                     if saturation > 0.99 {
@@ -202,11 +199,11 @@ public class EFColorWheelView: UIControl {
                         a = 1.0
                     }
 
-                    let hsb: HSB = HSB(hue, saturation, brightness, a)
+                    let hsb = HSB(hue, saturation, brightness, a)
                     rgb = EFHSB2RGB(hsb: hsb)
                 }
 
-                let i: Int = 4 * (x + y * Int(size.width))
+                let i = 4 * (x + y * Int(size.width))
                 bitmap?[i] = UInt8(rgb.red * 0xff)
                 bitmap?[i + 1] = UInt8(rgb.green * 0xff)
                 bitmap?[i + 2] = UInt8(rgb.blue * 0xff)
@@ -216,10 +213,10 @@ public class EFColorWheelView: UIControl {
     }
 
     private func ef_colorWheelValueWithPosition(position: CGPoint, hue: inout CGFloat, saturation: inout CGFloat) {
-        let c: Int = Int(self.bounds.width / 2)
-        let dx: CGFloat = (position.x - CGFloat(c)) / CGFloat(c)
-        let dy: CGFloat = (position.y - CGFloat(c)) / CGFloat(c)
-        let d: CGFloat = CGFloat(sqrt(Double(dx * dx + dy * dy)))
+        let c = Int(bounds.width / 2)
+        let dx = (position.x - CGFloat(c)) / CGFloat(c)
+        let dy = (position.y - CGFloat(c)) / CGFloat(c)
+        let d = CGFloat(sqrt(Double(dx * dx + dy * dy)))
 
         saturation = d
 

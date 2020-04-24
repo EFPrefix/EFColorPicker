@@ -29,10 +29,10 @@ import UIKit
 public class EFControl: UIControl {
 
     // Edge inset values are applied to a view bounds to shrink or expand the touchable area.
-    var hitTestEdgeInsets: UIEdgeInsets = UIEdgeInsets.zero
+    var hitTestEdgeInsets = UIEdgeInsets.zero
 
     override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        if self.hitTestEdgeInsets == UIEdgeInsets.zero
+        if self.hitTestEdgeInsets == .zero
             || !self.isEnabled
             || self.isHidden
             || !self.isUserInteractionEnabled
