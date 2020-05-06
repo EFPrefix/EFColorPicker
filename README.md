@@ -71,7 +71,7 @@ pod 'EFColorPicker'
 ```
 ### Carthage
 
-You can use [Carthage](https://github.com/Carthage/Carthage) to install SwiftyBeaver by adding that to your Cartfile:
+You can use [Carthage](https://github.com/Carthage/Carthage) to install `EFColorPicker` by adding that to your Cartfile:
 
 ``` Swift
 github "EFPrefix/EFColorPicker"
