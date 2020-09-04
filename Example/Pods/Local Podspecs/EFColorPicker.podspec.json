@@ -1,6 +1,6 @@
 {
   "name": "EFColorPicker",
-  "version": "5.1.0",
+  "version": "5.2.1",
   "summary": "A lightweight color picker in Swift.",
   "description": "EFColorPicker is a lightweight color picker in Swift, inspired by MSColorPicker.",
   "homepage": "https://github.com/EFPrefix/EFColorPicker",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/EFPrefix/EFColorPicker.git",
-    "tag": "5.1.0"
+    "tag": "5.2.1"
   },
   "social_media_url": "https://twitter.com/EyreFree777",
   "platforms": {

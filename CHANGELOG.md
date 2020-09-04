@@ -2,6 +2,14 @@
 
 -----
 
+## [5.2.1](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.2.1) (2020-09-04)
+
+#### Fix
+
+* Fix issue [#32](https://github.com/EFPrefix/EFColorPicker/issues/32).
+
+---
+
 ## [5.2.0](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.2.0) (2020-02-15)
 
 - Add SwiftPM support；
