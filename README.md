@@ -69,6 +69,13 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'EFColorPicker'
 ```
+### Carthage
+
+You can use [Carthage](https://github.com/Carthage/Carthage) to install `EFColorPicker` by adding that to your Cartfile:
+
+``` Swift
+github "EFPrefix/EFColorPicker"
+```
 
 ## Use
 
