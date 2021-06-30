@@ -4,6 +4,9 @@
     <a href="https://travis-ci.org/EFPrefix/EFColorPicker">
     	<img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master">
     </a>
+    <a href="https://swiftpackageindex.com/EFPrefix/EFColorPicker">
+        <img src="https://img.shields.io/badge/SPM-ready-orange.svg">
+    </a>
     <a href="http://cocoapods.org/pods/EFColorPicker">
     	<img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat">
     </a>
@@ -63,6 +66,8 @@ Then build and run `EFColorPicker.xcworkspace` in Xcode, the demo shows how to u
 
 ## Installation
 
+### CocoaPods
+
 EFColorPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -75,6 +80,18 @@ You can use [Carthage](https://github.com/Carthage/Carthage) to install `EFColor
 
 ``` Swift
 github "EFPrefix/EFColorPicker"
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the Swift compiler.
+
+Once you have your Swift package set up, adding EFColorPicker as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/EFPrefix/EFColorPicker.git", .upToNextMinor(from: "5.2.1"))
+]
 ```
 
 ## Use

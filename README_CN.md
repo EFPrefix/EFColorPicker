@@ -4,6 +4,9 @@
     <a href="https://travis-ci.org/EFPrefix/EFColorPicker">
     	<img src="https://api.travis-ci.org/EFPrefix/EFColorPicker.svg?branch=master">
     </a>
+    <a href="https://swiftpackageindex.com/EFPrefix/EFColorPicker">
+        <img src="https://img.shields.io/badge/SPM-ready-orange.svg">
+    </a>
     <a href="http://cocoapods.org/pods/EFColorPicker">
     	<img src="https://img.shields.io/cocoapods/v/EFColorPicker.svg?style=flat">
     </a>
@@ -72,10 +75,24 @@ git clone git@github.com:EFPrefix/EFColorPicker.git; cd EFColorPicker/Example; p
 
 ## 安装
 
+### CocoaPods
+
 EFColorPicker 可以通过 [CocoaPods](http://cocoapods.org) 进行获取。只需要在你的 Podfile 中添加如下代码就能实现引入：
 
 ```
 pod "EFColorPicker"
+```
+
+### Swift Package Manager
+
+[Swift Package Manager](https://swift.org/package-manager/) 是一个集成在 Swift 编译器中的用来进行 Swift 代码自动化发布的工具。
+
+如果你已经建立了你的 Swift 包，将 EFColorPicker 加入依赖是十分容易的，只需要将其添加到你的 `Package.swift` 文件的 `dependencies` 项中即可：
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/EFPrefix/EFColorPicker.git", .upToNextMinor(from: "5.2.1"))
+]
 ```
 
 ## 使用
