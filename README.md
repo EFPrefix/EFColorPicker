@@ -90,7 +90,7 @@ Once you have your Swift package set up, adding EFColorPicker as a dependency is
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/EFPrefix/EFColorPicker.git", .upToNextMinor(from: "5.2.1"))
+    .package(url: "https://github.com/EFPrefix/EFColorPicker.git", .upToNextMinor(from: "5.2.2"))
 ]
 ```
 

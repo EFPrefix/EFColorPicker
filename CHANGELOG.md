@@ -2,6 +2,14 @@
 
 -----
 
+## [5.2.2](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.2.2) (2021-07-19)
+
+#### Fix
+
+* Fix issue [#25](https://github.com/EFPrefix/EFColorPicker/issues/25).
+
+---
+
 ## [5.2.1](https://github.com/EFPrefix/EFColorPicker/releases/tag/5.2.1) (2020-09-04)
 
 #### Fix

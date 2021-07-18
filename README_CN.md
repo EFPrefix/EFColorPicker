@@ -91,7 +91,7 @@ pod "EFColorPicker"
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/EFPrefix/EFColorPicker.git", .upToNextMinor(from: "5.2.1"))
+    .package(url: "https://github.com/EFPrefix/EFColorPicker.git", .upToNextMinor(from: "5.2.2"))
 ]
 ```
 

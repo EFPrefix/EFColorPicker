@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'EFColorPicker'
-    s.version          = '5.2.1'
+    s.version          = '5.2.2'
     s.summary          = 'A lightweight color picker in Swift.'
     
     s.description      = <<-DESC
