@@ -261,3 +261,16 @@ public class EFColorWheelView: UIControl {
         return imageRef
     }
 }
+
+// MARK: - Fix iOS 13 popover style doesn't play well with the Color Wheel
+// https://github.com/EFPrefix/EFColorPicker/issues/25
+extension EFColorWheelView{
+    override public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer is UIPanGestureRecognizer{
+            if let hsbView = self.superview as? EFHSBView{
+                return !hsbView.isTouched
+            }
+        }
+        return true
+    }
+}
