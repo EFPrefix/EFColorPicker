@@ -1,3 +1,7 @@
+已归档，建议使用 [UIColorPickerViewController](https://developer.apple.com/documentation/uikit/uicolorpickerviewcontroller) / [ColorPicker](https://developer.apple.com/documentation/swiftui/colorpicker) 替代。
+
+---
+
 ![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">

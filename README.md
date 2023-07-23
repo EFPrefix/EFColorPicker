@@ -1,3 +1,7 @@
+DEPRECATED, use [UIColorPickerViewController](https://developer.apple.com/documentation/uikit/uicolorpickerviewcontroller) / [ColorPicker](https://developer.apple.com/documentation/swiftui/colorpicker) instead.
+
+---
+
 ![](https://raw.githubusercontent.com/EFPrefix/EFColorPicker/master/Assets/EFColorPicker.png)
 
 <p align="center">
